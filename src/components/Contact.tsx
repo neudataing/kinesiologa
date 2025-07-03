@@ -19,55 +19,45 @@ const Contact: React.FC = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Get in <span className="text-emerald-600">Touch</span>
+              <span className="text-emerald-600">Contáctame</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to start your wellness journey? I'm here to answer your questions and help you take the first step towards better health and movement.
-            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="bg-emerald-50 rounded-3xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Información de contacto</h3>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <Phone className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">Phone</h4>
+                      <h4 className="font-semibold text-gray-900">Celular</h4>
                       <p className="text-gray-600">
-                        <a href="tel:+15551234567" className="hover:text-emerald-600 transition-colors">
-                          (555) 123-4567
+                        <a href="tel:+542993277906" className="hover:text-emerald-600 transition-colors">
+                          (299) 3277906
                         </a>
-                      </p>
-                      <p className="text-sm text-gray-500">Available Mon-Fri, 9AM-6PM</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <Mail className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">Email</h4>
+                      <h4 className="font-semibold text-gray-900">Correo electrónico</h4>
                       <p className="text-gray-600">
                         <a href="mailto:hello@elianakinesiology.com" className="hover:text-emerald-600 transition-colors">
-                          hello@elianakinesiology.com
+                          elianaschenkel@gmail.com
                         </a>
-                      </p>
-                      <p className="text-sm text-gray-500">24-hour response guarantee</p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
                     <MapPin className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold text-gray-900">Clinic Location</h4>
+                      <h4 className="font-semibold text-gray-900">Dirección del consultorio</h4>
                       <p className="text-gray-600">
-                        123 Wellness Street<br />
-                        Suite 400<br />
-                        City, State 12345
-                      </p>
-                      <p className="text-sm text-gray-500">Free parking available</p>
+                        Los aromos 1328<br />
+                        General Fernández Oro, Río Negro
                     </div>
                   </div>
 
@@ -76,42 +66,14 @@ const Contact: React.FC = () => {
                     <div>
                       <h4 className="font-semibold text-gray-900">WhatsApp</h4>
                       <p className="text-gray-600">
-                        <a href="https://wa.me/15551234567" className="hover:text-emerald-600 transition-colors">
-                          Quick chat available
+                        <a href="https://wa.me/+542993277906" className="hover:text-emerald-600 transition-colors">
+                          Click aquí para enviar un mensaje
                         </a>
-                      </p>
-                      <p className="text-sm text-gray-500">Fast responses during business hours</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-blue-50 rounded-3xl p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Office Hours</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Monday - Friday</span>
-                    <span className="text-gray-900 font-medium">9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Saturday</span>
-                    <span className="text-gray-900 font-medium">10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Sunday</span>
-                    <span className="text-gray-500">Closed</span>
-                  </div>
-                </div>
-                <div className="mt-6 p-4 bg-white rounded-xl">
-                  <div className="flex items-center space-x-2">
-                    <Clock className="h-5 w-5 text-emerald-600" />
-                    <span className="text-sm font-medium text-gray-900">
-                      Emergency consultations available by appointment
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Map and Additional Info */}
             <div className="space-y-8">
