@@ -32,10 +32,6 @@ const About: React.FC = () => {
                 <p className="text-lg leading-relaxed">
                   Con más de 5 años de experiencia en kinesiología y terapia del movimiento, he dedicado mi carrera a ayudar a personas a superar limitaciones físicas y alcanzar sus objetivos de bienestar. Mi enfoque combina técnicas basadas en la evidencia con atención personalizada para abordar las necesidades únicas de cada cliente.
                 </p>
-                
-                <p className="text-lg leading-relaxed">
-                  I specialize in postural correction and reductive treatments, offering both virtual consultations and in-person sessions. My mission is to empower you with the knowledge and tools needed to maintain a healthy, active lifestyle.
-                </p>
               </div>
 
               <div className="grid grid-cols-2 gap-6">
@@ -86,10 +82,7 @@ const About: React.FC = () => {
                 <div className="text-3xl font-bold">+5</div>
                 <div className="text-sm opacity-90">Años de experiencia</div>
               </div>
-              
-              <div className="absolute -top-8 -right-8 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="text-3xl font-bold text-emerald-600">500+</div>
-                <div className="text-sm text-gray-600">Success Stories</div>
+            
               </div>
             </div>
           </div>
