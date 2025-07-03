@@ -39,19 +39,19 @@ const Header: React.FC = () => {
               onClick={() => scrollToSection('home')}
               className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
             >
-              Home
+              Inicio
             </button>
             <button 
               onClick={() => scrollToSection('about')}
               className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
             >
-              About
+              Acerca de
             </button>
             <button 
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
             >
-              Services
+              Servicios
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
@@ -63,7 +63,7 @@ const Header: React.FC = () => {
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
             >
-              Contact
+              Contacto
             </button>
             <button 
               onClick={() => scrollToSection('booking')}
