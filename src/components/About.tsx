@@ -21,7 +21,7 @@ const About: React.FC = () => {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Conoce a <span className="text-emerald-600">Eliana</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mx-auto">
               Soy Eliana, Licenciada en Kinesiología y Fisiatría. Me especializo en Reeducación Postural Global (RPG) y Ergonomía Ocupacional, ofreciendo asesoramiento a empresas para mejorar el bienestar laboral.
             </p>
           </div>
