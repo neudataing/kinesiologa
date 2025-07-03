@@ -32,10 +32,6 @@ const About: React.FC = () => {
                 <p className="text-lg leading-relaxed">
                   With over 10 years of experience in kinesiology and movement therapy, I've dedicated my career to helping individuals overcome physical limitations and achieve their wellness goals. My approach combines evidence-based techniques with personalized care to address each client's unique needs.
                 </p>
-                
-                <p className="text-lg leading-relaxed">
-                  I specialize in postural correction and reductive treatments, offering both virtual consultations and in-person sessions. My mission is to empower you with the knowledge and tools needed to maintain a healthy, active lifestyle.
-                </p>
               </div>
 
               <div className="grid grid-cols-2 gap-6">
