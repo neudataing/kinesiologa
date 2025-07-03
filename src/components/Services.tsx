@@ -51,9 +51,8 @@ const Services: React.FC = () => {
                 Análisis de puestos de trabajo, con el fin de evaluar la presencia de factores de riesgo disergonomicos, determinar cuál es el nivel de exposición a los mismos y brindar las recomendaciones personalizadas para disminuir el impacto.
               </p>
             </div>
-          </div>
 
-          <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center mb-6">
                 <Heart className="h-12 w-12 text-emerald-600 mr-4" />
                 <div>
@@ -76,8 +75,10 @@ const Services: React.FC = () => {
                 Serie de charlas y formaciones tanto para empleados como empleadores, con el objetivo de brindar herramientas para una correcta higiene postural. Como así también brindar planes estratégicos para mejorar el bienestar y la productividad, disminuir la tasa de ausentismo y reducir las dolencias físicas.
               </p>
             </div>
-
           
+          </div>
+
+  
 
           {/* Delivery Methods */}
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg">
