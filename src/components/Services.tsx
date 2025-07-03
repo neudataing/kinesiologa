@@ -33,11 +33,10 @@ const Services: React.FC = () => {
                 <Heart className="h-12 w-12 text-emerald-600 mr-4" />
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">RPG (Reeducación Postural Global)</h3>
-                  <p className="text-emerald-600 font-medium">Correct & Align</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                sesiones personalizadas de terapia manual que brindan diagnóstico y tratamiento, con el objetivo de mejorar la postura y aliviar la sintomatologia que ésta puede ocasionar.
+                Sesiones personalizadas de terapia manual que brindan diagnóstico y tratamiento, con el objetivo de mejorar la postura y aliviar la sintomatologia que ésta puede ocasionar.
               </p>
             </div>
 
@@ -45,33 +44,40 @@ const Services: React.FC = () => {
               <div className="flex items-center mb-6">
                 <Zap className="h-12 w-12 text-blue-600 mr-4" />
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Reductive Treatments</h3>
-                  <p className="text-blue-600 font-medium">Strengthen & Optimize</p>
+                  <h3 className="text-2xl font-bold text-gray-900">ERGONOMÍA OCUPACIONAL</h3>
                 </div>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Targeted interventions to reduce dysfunction, improve mobility, and restore optimal movement patterns for enhanced performance.
+                Análisis de puestos de trabajo, con el fin de evaluar la presencia de factores de riesgo disergonomicos, determinar cuál es el nivel de exposición a los mismos y brindar las recomendaciones personalizadas para disminuir el impacto.
               </p>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  Movement pattern analysis
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  Muscle imbalance correction
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  Injury prevention programs
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  Performance optimization
-                </li>
-              </ul>
             </div>
           </div>
+
+          <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                <Heart className="h-12 w-12 text-emerald-600 mr-4" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">TRATAMIENTOS HÍBRIDOS</h3>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Es la posibilidad de combinar presencialidad y virtualidad para poder dar continuidad y adherencia a las propuestas terapéuticas, incluso desde la comodidad del hogar.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                <Zap className="h-12 w-12 text-blue-600 mr-4" />
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900">ASESORAMIENTO EMPRESARIAL</h3>
+                </div>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Serie de charlas y formaciones tanto para empleados como empleadores, con el objetivo de brindar herramientas para una correcta higiene postural. Como así también brindar planes estratégicos para mejorar el bienestar y la productividad, disminuir la tasa de ausentismo y reducir las dolencias físicas.
+              </p>
+            </div>
+
+          
 
           {/* Delivery Methods */}
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg">
