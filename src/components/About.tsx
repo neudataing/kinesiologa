@@ -78,7 +78,7 @@ const About: React.FC = () => {
                 <img
                   src="/img/Eliana.jpeg"
                   alt="Eliana, Professional Kinesiologist"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-[500] object-cover object-top"
                 />
               </div>
               
