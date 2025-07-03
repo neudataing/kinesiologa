@@ -21,6 +21,9 @@ const Services: React.FC = () => {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Servicios <span className="text-emerald-600">profesionales</span>
             </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Tratamientos kinesiológicos personalizados. Atención presencial y virtual.
+            </p>
           </div>
 
           {/* Service Categories */}
@@ -29,31 +32,13 @@ const Services: React.FC = () => {
               <div className="flex items-center mb-6">
                 <Heart className="h-12 w-12 text-emerald-600 mr-4" />
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">Postural Treatments</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">RPG (Reeducación Postural Global)</h3>
                   <p className="text-emerald-600 font-medium">Correct & Align</p>
                 </div>
               </div>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Comprehensive postural analysis and correction techniques to improve alignment, reduce pain, and enhance overall movement quality.
+                sesiones personalizadas de terapia manual que brindan diagnóstico y tratamiento, con el objetivo de mejorar la postura y aliviar la sintomatologia que ésta puede ocasionar.
               </p>
-              <ul className="space-y-3 text-gray-600">
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-emerald-600 rounded-full mr-3"></div>
-                  Spinal alignment assessment
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-emerald-600 rounded-full mr-3"></div>
-                  Corrective exercise programs
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-emerald-600 rounded-full mr-3"></div>
-                  Ergonomic consultations
-                </li>
-                <li className="flex items-center">
-                  <div className="w-2 h-2 bg-emerald-600 rounded-full mr-3"></div>
-                  Pain reduction strategies
-                </li>
-              </ul>
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
