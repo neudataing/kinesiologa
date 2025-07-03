@@ -19,10 +19,10 @@ const About: React.FC = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Meet <span className="text-emerald-600">Eliana</span>
+              Conocé a<span className="text-emerald-600">Eliana</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A passionate kinesiologist dedicated to helping people achieve optimal health through personalized movement therapy and postural correction.
+              Soy Eliana Schenkel, kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. Trabajo en sesiones individuales y también acompaño a empresas en el cuidado postural de sus equipos.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ const About: React.FC = () => {
             <div className="space-y-8">
               <div className="prose prose-lg text-gray-600">
                 <p className="text-lg leading-relaxed">
-                  With over 10 years of experience in kinesiology and movement therapy, I've dedicated my career to helping individuals overcome physical limitations and achieve their wellness goals. My approach combines evidence-based techniques with personalized care to address each client's unique needs.
+                  Con más de 10 años de experiencia en kinesiología y terapia del movimiento, he dedicado mi carrera a ayudar a personas a superar limitaciones físicas y alcanzar sus objetivos de bienestar. Mi enfoque combina técnicas basadas en la evidencia con atención personalizada para abordar las necesidades únicas de cada cliente.
                 </p>
               </div>
 
@@ -38,32 +38,33 @@ const About: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Award className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Certified Professional</h3>
-                    <p className="text-sm text-gray-600">Licensed Kinesiologist with multiple certifications</p>
+                    <h3 className="font-semibold text-gray-900">Profesional certificada</h3>
+                    <p className="text-sm text-gray-600">Licenciada en kinesiología con múltiples certificaciones.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-3">
                   <BookOpen className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Continuous Learning</h3>
-                    <p className="text-sm text-gray-600">Regularly updated with latest techniques and research</p>
+                    <h3 className="font-semibold text-gray-900">Capacitación continua</h3>
+                    <p className="text-sm text-gray-600">Actualizaciones constantes en las últimas técnicas.
+                    </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-3">
                   <Users className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Client-Centered</h3>
-                    <p className="text-sm text-gray-600">Personalized treatment plans for every individual</p>
+                    <h3 className="font-semibold text-gray-900">Centrada en el cliente</h3>
+                    <p className="text-sm text-gray-600">Tratamientos y planes personalizados para cada individuo.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-3">
                   <Target className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Results-Driven</h3>
-                    <p className="text-sm text-gray-600">Focused on achieving measurable improvements</p>
+                    <h3 className="font-semibold text-gray-900">Orientada a resultados</h3>
+                    <p className="text-sm text-gray-600">Enfocada en lograr mejoras mensurables</p>
                   </div>
                 </div>
               </div>
@@ -73,8 +74,8 @@ const About: React.FC = () => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="/img/Eliana.jpeg"
-                  alt="Eliana, Professional Kinesiologist"
-                  className="w-full h-[500px] object-cover"
+                  alt="Eliana, kinesiologa profesional"
+                  className="w-full h-[500px] object-cover object-top"
                 />
               </div>
               
