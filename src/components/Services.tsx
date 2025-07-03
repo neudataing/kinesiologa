@@ -1,6 +1,7 @@
 import React from 'react';
 import { Monitor, MapPin, Zap, Heart, Users, Clock } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
+import { Accessibility } from 'lucide-react';
 
 const Services: React.FC = () => {
   const { ref, inView } = useInView({
@@ -30,7 +31,7 @@ const Services: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center mb-6">
-                <Heart className="h-12 w-12 text-emerald-600 mr-4" />
+                <Accessibility className="h-12 w-12 text-emerald-600 mr-4" />
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">RPG (Reeducación Postural Global)</h3>
                 </div>
