@@ -37,6 +37,7 @@ const Contact: React.FC = () => {
                         <a href="tel:+542993277906" className="hover:text-emerald-600 transition-colors">
                           (299) 3277906
                         </a>
+                        </p>
                     </div>
                   </div>
 
@@ -48,6 +49,7 @@ const Contact: React.FC = () => {
                         <a href="mailto:hello@elianakinesiology.com" className="hover:text-emerald-600 transition-colors">
                           elianaschenkel@gmail.com
                         </a>
+                        </p>
                     </div>
                   </div>
 
@@ -58,6 +60,7 @@ const Contact: React.FC = () => {
                       <p className="text-gray-600">
                         Los aromos 1328<br />
                         General Fernández Oro, Río Negro
+                        </p>
                     </div>
                   </div>
 
@@ -69,7 +72,9 @@ const Contact: React.FC = () => {
                         <a href="https://wa.me/+542993277906" className="hover:text-emerald-600 transition-colors">
                           Click aquí para enviar un mensaje
                         </a>
+                        </p>
                     </div>
+                  </div>
                   </div>
                 </div>
               </div>
