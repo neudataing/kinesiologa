@@ -22,7 +22,7 @@ const About: React.FC = () => {
               Meet <span className="text-emerald-600">Eliana</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              PUTOOOOO GAYYYYY LEIO SE LA COMEaaaaasdasd A passionate kinesiologist dedicated to helping people achieve optimal health through personalized movement therapy and postural correction.
+              A passionate kinesiologist dedicated to helping people achieve optimal health through personalized movement therapy and postural correction.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.pexels.com/photos/6303761/pexels-photo-6303761.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="img/Eliana.jpeg"
                   alt="Eliana, Professional Kinesiologist"
                   className="w-full h-[500px] object-cover"
                 />
