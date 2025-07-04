@@ -58,7 +58,7 @@ const Contact: React.FC = () => {
                     <div>
                       <h4 className="font-semibold text-gray-900">Dirección del consultorio</h4>
                       <p className="text-gray-600">
-                        Los aromos 1328<br />
+                        Los Aromos 1328<br />
                         General Fernández Oro, Río Negro
                         </p>
                     </div>

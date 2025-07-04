@@ -71,7 +71,7 @@ const FAQ: React.FC = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Frequently Asked <span className="text-emerald-600">Questions</span>
+              Preguntas <span className="text-emerald-600">Frecuentes</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Everything you need to know about kinesiology treatments, virtual sessions, and how I can help you achieve your health goals.

@@ -96,7 +96,7 @@ const Services: React.FC = () => {
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">Sesiones virtuales</h4>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Consultas en línea desde la comodidad de tu hogar. Ideal para evaluaciones posturales, orientación sobre ejercicios y sesiones de seguimiento.
+                  Consultas en línea desde la comodidad de tu hogar. Ideal para evaluaciones posturales, orientación sobre ejercicios y seguimiento.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center justify-center space-x-2">
