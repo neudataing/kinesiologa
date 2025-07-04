@@ -6,31 +6,44 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
+
+      /* ──────────────────  PALETA DE COLOR DE MARCA  ────────────────── */
       colors: {
-        emerald: {
-          50: '#ecfdf5',
-          100: '#d1fae5',
-          200: '#a7f3d0',
-          300: '#6ee7b7',
-          400: '#34d399',
-          500: '#10b981',
-          600: '#059669',
-          700: '#047857',
-          800: '#065f46',
-          900: '#064e3b',
-        }
+        /* Escala del AZUL corporativo (#082951).
+           500 es el color exacto del logo; los demás son tonos aproximados
+           generados para tener variaciones de hover, backgrounds, etc. */
+        brand: {
+          50:  '#edf1f7',
+          100: '#d6deeb',
+          200: '#afbed7',
+          300: '#899ec3',
+          400: '#5f7aa8',
+          500: '#082951',   // azul del logo
+          600: '#062144',
+          700: '#041933',
+          800: '#031224',
+          900: '#020b16',
+        },
+
+        /* Gris corporativo de apoyo */
+        'brand-gray': '#BDC7D3',
+
+        /* Blanco corporativo (opcional, pero así lo tenés nombrado) */
+        'brand-white': '#FFFFFF',
       },
+
+      /* ──────────────────  ANIMACIONES PERSONALIZADAS  ────────────────── */
       animation: {
         'fade-in-up': 'fadeInUp 0.8s ease-out',
         'fade-in': 'fadeIn 1s ease-out',
       },
       keyframes: {
         fadeInUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '0%':   { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         fadeIn: {
-          '0%': { opacity: '0' },
+          '0%':   { opacity: '0' },
           '100%': { opacity: '1' },
         },
       },
