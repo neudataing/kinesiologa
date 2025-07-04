@@ -2,6 +2,8 @@ import React from 'react';
 import { Monitor, MapPin, Zap, Heart, Users, Clock } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { AlignVerticalJustifyStart } from 'lucide-react';
+import { StretchVertical as ErgonomiaIcon } from 'lucide-react';
+
 
 const Services: React.FC = () => {
   const { ref, inView } = useInView({
@@ -43,7 +45,7 @@ const Services: React.FC = () => {
 
             <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center mb-6">
-                <Zap className="h-12 w-12 text-blue-600 mr-4" />
+                <ErgonomiaIcon className="h-12 w-12 text-blue-600 mr-4" />
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">ERGONOMÍA OCUPACIONAL</h3>
                 </div>
