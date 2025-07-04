@@ -86,7 +86,7 @@ const Services: React.FC = () => {
           {/* Delivery Methods */}
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg">
             <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-              Choose Your Preferred Format
+              Elige tu formato preferido
             </h3>
             
             <div className="grid lg:grid-cols-2 gap-12">
@@ -94,64 +94,43 @@ const Services: React.FC = () => {
                 <div className="bg-emerald-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Monitor className="h-10 w-10 text-emerald-600" />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-4">Virtual Sessions</h4>
+                <h4 className="text-2xl font-bold text-gray-900 mb-4">Sesiones virtuales</h4>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Convenient online consultations from the comfort of your home. Perfect for postural assessments, exercise guidance, and follow-up sessions.
+                  Consultas en línea desde la comodidad de tu hogar. Ideal para evaluaciones posturales, orientación sobre ejercicios y sesiones de seguimiento.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center justify-center space-x-2">
                     <Clock className="h-5 w-5 text-emerald-600" />
-                    <span className="text-sm text-gray-600">45-60 min</span>
+                    <span className="text-sm text-gray-600">45-60 minutos</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Users className="h-5 w-5 text-emerald-600" />
-                    <span className="text-sm text-gray-600">1-on-1</span>
+                    <span className="text-sm text-gray-600">1-a-1</span>
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-emerald-600 mb-2">$75</div>
-                <div className="text-sm text-gray-600">per session</div>
               </div>
 
               <div className="text-center">
                 <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <MapPin className="h-10 w-10 text-blue-600" />
                 </div>
-                <h4 className="text-2xl font-bold text-gray-900 mb-4">In-Person Sessions</h4>
+                <h4 className="text-2xl font-bold text-gray-900 mb-4">Sesiones presenciales</h4>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Hands-on treatment sessions in a professional clinic setting. Ideal for comprehensive assessments and manual therapy techniques.
+                  Sesiones de tratamiento en un entorno clínico profesional. Ideal para evaluaciones integrales y técnicas de terapia manual.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center justify-center space-x-2">
                     <Clock className="h-5 w-5 text-blue-600" />
-                    <span className="text-sm text-gray-600">60-90 min</span>
+                    <span className="text-sm text-gray-600">60-90 minutos</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Users className="h-5 w-5 text-blue-600" />
-                    <span className="text-sm text-gray-600">1-on-1</span>
+                    <span className="text-sm text-gray-600">1-a-1</span>
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-blue-600 mb-2">$120</div>
-                <div className="text-sm text-gray-600">per session</div>
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
-              <h4 className="text-lg font-bold text-gray-900 mb-4 text-center">Package Deals Available</h4>
-              <div className="grid md:grid-cols-3 gap-4 text-center">
-                <div className="bg-white p-4 rounded-xl shadow-sm">
-                  <div className="text-lg font-bold text-emerald-600">3 Sessions</div>
-                  <div className="text-sm text-gray-600">Save 10%</div>
-                </div>
-                <div className="bg-white p-4 rounded-xl shadow-sm">
-                  <div className="text-lg font-bold text-emerald-600">6 Sessions</div>
-                  <div className="text-sm text-gray-600">Save 15%</div>
-                </div>
-                <div className="bg-white p-4 rounded-xl shadow-sm">
-                  <div className="text-lg font-bold text-emerald-600">12 Sessions</div>
-                  <div className="text-sm text-gray-600">Save 20%</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
