@@ -78,13 +78,14 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-brand-50 rounded-3xl shadow-lg h-full flex items-center justify-center">
+              <div className="bg-brand-50 rounded-3xl shadow-lg h-full flex items-center justify-center overflow-hidden">
                 <iframe
                   title="Ubicación"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d548.5102992182807!2d-67.93180131000817!3d-38.950419124761225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a3a94597a3047%3A0xe5fa58e35e344fd5!2sLos%20Aromos%201328%2C%20R8324%20Gral.%20Fernandez%20Oro%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses!2$ar!4v1751837678944!5m2!1ses!2$ar"
                   className="w-full h-80 border-0"
                   allowFullScreen
                   loading="lazy"
+                  style={{ height: '100%' }}
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
