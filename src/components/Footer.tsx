@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Instagram} from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -43,14 +43,6 @@ const Footer: React.FC = () => {
                 className="text-gray-400 hover:text-brand-400 transition-colors"
               >
                 <Instagram className="h-6 w-6" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/tu_perfil"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-brand-400 transition-colors"
-              >
-                <Linkedin className="h-6 w-6" />
               </a>
             </div>
 
