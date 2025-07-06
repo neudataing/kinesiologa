@@ -19,7 +19,7 @@ const About: React.FC = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Conocé a <span className="text-emerald-600">Eliana</span>
+              Conocé a <span className="text-brand-600">Eliana</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Soy Eliana Schenkel, kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. Trabajo en sesiones individuales y también acompaño a empresas en el cuidado postural de sus equipos.
@@ -36,7 +36,7 @@ const About: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3">
-                  <Award className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
+                  <Award className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Profesional certificada</h3>
                     <p className="text-sm text-gray-600">Licenciada en kinesiología con múltiples certificaciones.</p>
@@ -44,7 +44,7 @@ const About: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <BookOpen className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
+                  <BookOpen className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Capacitación continua</h3>
                     <p className="text-sm text-gray-600">Actualizaciones constantes en las últimas técnicas.
@@ -53,7 +53,7 @@ const About: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <Users className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
+                  <Users className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Centrada en el cliente</h3>
                     <p className="text-sm text-gray-600">Tratamientos y planes personalizados para cada individuo.</p>
@@ -61,7 +61,7 @@ const About: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-3">
-                  <Target className="h-8 w-8 text-emerald-600 flex-shrink-0 mt-1" />
+                  <Target className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Orientada a resultados</h3>
                     <p className="text-sm text-gray-600">Enfocada en lograr mejoras mensurables</p>
@@ -79,7 +79,7 @@ const About: React.FC = () => {
                 />
               </div>
               
-              <div className="absolute -bottom-8 -left-8 bg-emerald-600 text-white p-6 rounded-2xl shadow-xl">
+              <div className="absolute -bottom-8 -left-8 bg-brand-600 text-white p-6 rounded-2xl shadow-xl">
                 <div className="text-3xl font-bold">+10</div>
                 <div className="text-sm opacity-90">Años de experiencia</div>
               </div>
@@ -87,28 +87,28 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-16 bg-emerald-50 rounded-3xl p-8 lg:p-12">
+          <div className="mt-16 bg-brand-50 rounded-3xl p-8 lg:p-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Educación y certificaciones</h3>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="bg-white rounded-xl p-6 shadow-sm">
                   <h4 className="font-semibold text-gray-900 mb-2">Master's in Kinesiology</h4>
                   <p className="text-sm text-gray-600">University of Health Sciences</p>
-                  <p className="text-xs text-emerald-600 mt-1">2018</p>
+                  <p className="text-xs text-brand-600 mt-1">2018</p>
                 </div>
               </div>
               <div>
                 <div className="bg-white rounded-xl p-6 shadow-sm">
                   <h4 className="font-semibold text-gray-900 mb-2">Postural Restoration Certified</h4>
                   <p className="text-sm text-gray-600">Postural Restoration Institute</p>
-                  <p className="text-xs text-emerald-600 mt-1">2019</p>
+                  <p className="text-xs text-brand-600 mt-1">2019</p>
                 </div>
               </div>
               <div>
                 <div className="bg-white rounded-xl p-6 shadow-sm">
                   <h4 className="font-semibold text-gray-900 mb-2">Movement Specialist</h4>
                   <p className="text-sm text-gray-600">International Movement Institute</p>
-                  <p className="text-xs text-emerald-600 mt-1">2020</p>
+                  <p className="text-xs text-brand-600 mt-1">2020</p>
                 </div>
               </div>
             </div>
