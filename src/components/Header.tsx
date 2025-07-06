@@ -29,7 +29,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center h-16 lg:h-20">
         <div className="flex items-center space-x-2">
           <img
-            src="/public/img/Logo-ES.png"
+            src="/img/Logo-ES.png"
             alt="Logo"
             className="h-8 w-8 object-contain"
           />
