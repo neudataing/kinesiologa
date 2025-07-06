@@ -27,11 +27,16 @@ const Header: React.FC = () => {
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          <div className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-brand-600" />
-            <span className="text-xl lg:text-2xl font-bold text-gray-900">Eliana</span>
-            <span className="text-sm text-brand-600 font-medium">Kinesiologist</span>
-          </div>
+        <div className="flex items-center space-x-2">
+          <img
+            src="/public/img/Logo-ES.png"
+            alt="Logo"
+            className="h-8 w-8 object-contain"
+          />
+          <span className="text-xl lg:text-2xl font-bold text-gray-900">Eliana</span>
+          <span className="text-xl lg:text-2xl font-bold text-gray-900">Schenkel</span>
+        </div>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
