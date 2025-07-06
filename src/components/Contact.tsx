@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="bg-brand-50 rounded-3xl p-8">
@@ -78,7 +78,6 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-            <div className="space-y-8">
               <div className="bg-brand-50 rounded-3xl shadow-lg h-full flex items-center justify-center">
                 <iframe
                   title="Ubicación"
@@ -89,7 +88,6 @@ const Contact: React.FC = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-            </div>
           </div>
         </div>
       </div>
