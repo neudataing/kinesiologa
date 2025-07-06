@@ -78,9 +78,6 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-
-
-            {/* Map and Additional Info */}
             <div className="space-y-8">
               <div className="h-80 rounded-3xl overflow-hidden shadow-lg">
                 <iframe
@@ -91,39 +88,6 @@ const Contact: React.FC = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
-              </div>
-              <div className="bg-white rounded-3xl p-8 border-2 border-brand-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Quick Response Promise</h3>
-                <p className="text-gray-600 mb-6">
-                  I understand that health concerns can't wait. That's why I guarantee a response to all inquiries within 24 hours, often much sooner during business hours.
-                </p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm text-gray-700">Email responses within 2-4 hours</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm text-gray-700">Phone calls returned same day</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm text-gray-700">WhatsApp messages answered immediately</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="text-center">
-                <button 
-                  onClick={() => {
-                    const element = document.getElementById('booking');
-                    if (element) element.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="inline-flex items-center px-8 py-4 bg-brand-600 text-white text-lg font-semibold rounded-full hover:bg-brand-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
-                  Schedule Your Consultation
-                </button>
               </div>
             </div>
           </div>
