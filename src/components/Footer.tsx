@@ -21,8 +21,8 @@ const Footer: React.FC = () => {
                 alt="Logo"
                 className="h-8 w-8 object-contain"
               />
-              <span className="text-xl lg:text-2xl font-bold text-gray-900">Eliana</span>
-              <span className="text-xl lg:text-2xl font-bold text-gray-900">Schenkel</span>
+              <span className="text-xl lg:text-2xl font-bold text-gray-300">Eliana</span>
+              <span className="text-xl lg:text-2xl font-bold text-gray-300">Schenkel</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Transformando vidas a través de tratamientos expertos de kinesiología. Corrección postural profesional y terapia reductiva disponibles de forma virtual y presencial.
