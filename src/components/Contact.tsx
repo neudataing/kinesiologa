@@ -19,22 +19,22 @@ const Contact: React.FC = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              <span className="text-emerald-600">Contáctame</span>
+              <span className="text-brand-600">Contáctame</span>
             </h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="bg-emerald-50 rounded-3xl p-8">
+              <div className="bg-brand-50 rounded-3xl p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Información de contacto</h3>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <Phone className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
+                    <Phone className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Celular</h4>
                       <p className="text-gray-600">
-                        <a href="tel:+542993277906" className="hover:text-emerald-600 transition-colors">
+                        <a href="tel:+542993277906" className="hover:text-brand-600 transition-colors">
                           (299) 3277906
                         </a>
                         </p>
@@ -42,11 +42,11 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <Mail className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
+                    <Mail className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Correo electrónico</h4>
                       <p className="text-gray-600">
-                        <a href="mailto:hello@elianakinesiology.com" className="hover:text-emerald-600 transition-colors">
+                        <a href="mailto:hello@elianakinesiology.com" className="hover:text-brand-600 transition-colors">
                           elianaschenkel@gmail.com
                         </a>
                         </p>
@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <MapPin className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
+                    <MapPin className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Dirección del consultorio</h4>
                       <p className="text-gray-600">
@@ -65,11 +65,11 @@ const Contact: React.FC = () => {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <MessageCircle className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
+                    <MessageCircle className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">WhatsApp</h4>
                       <p className="text-gray-600">
-                        <a href="https://wa.me/+542993277906" className="hover:text-emerald-600 transition-colors">
+                        <a href="https://wa.me/+542993277906" className="hover:text-brand-600 transition-colors">
                           Click aquí para enviar un mensaje
                         </a>
                         </p>
@@ -83,9 +83,9 @@ const Contact: React.FC = () => {
             {/* Map and Additional Info */}
             <div className="space-y-8">
               <div className="bg-gray-100 rounded-3xl overflow-hidden shadow-lg">
-                <div className="h-80 bg-gradient-to-br from-emerald-200 to-blue-200 flex items-center justify-center">
+                <div className="h-80 bg-gradient-to-br from-brand-200 to-blue-200 flex items-center justify-center">
                   <div className="text-center text-gray-600">
-                    <MapPin className="h-16 w-16 mx-auto mb-4 text-emerald-600" />
+                    <MapPin className="h-16 w-16 mx-auto mb-4 text-brand-600" />
                     <p className="text-lg font-medium">Interactive Map</p>
                     <p className="text-sm">Google Maps integration would go here</p>
                     <p className="text-xs mt-2">
@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-3xl p-8 border-2 border-emerald-100">
+              <div className="bg-white rounded-3xl p-8 border-2 border-brand-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Quick Response Promise</h3>
                 <p className="text-gray-600 mb-6">
                   I understand that health concerns can't wait. That's why I guarantee a response to all inquiries within 24 hours, often much sooner during business hours.
@@ -124,7 +124,7 @@ const Contact: React.FC = () => {
                     const element = document.getElementById('booking');
                     if (element) element.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="inline-flex items-center px-8 py-4 bg-emerald-600 text-white text-lg font-semibold rounded-full hover:bg-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center px-8 py-4 bg-brand-600 text-white text-lg font-semibold rounded-full hover:bg-brand-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Schedule Your Consultation
                 </button>

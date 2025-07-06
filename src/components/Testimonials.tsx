@@ -64,7 +64,7 @@ const Testimonials: React.FC = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              What Clients <span className="text-emerald-600">Say</span>
+              What Clients <span className="text-brand-600">Say</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Real stories from people who have transformed their health and wellness through our kinesiology services.
@@ -75,7 +75,7 @@ const Testimonials: React.FC = () => {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-emerald-200"
+                className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-brand-200"
               >
                 <div className="flex items-center mb-6">
                   <img
@@ -95,7 +95,7 @@ const Testimonials: React.FC = () => {
                 </div>
                 
                 <div className="relative">
-                  <Quote className="h-8 w-8 text-emerald-200 absolute -top-2 -left-2" />
+                  <Quote className="h-8 w-8 text-brand-200 absolute -top-2 -left-2" />
                   <p className="text-gray-600 leading-relaxed italic pl-6">
                     "{testimonial.text}"
                   </p>
@@ -104,7 +104,7 @@ const Testimonials: React.FC = () => {
             ))}
           </div>
 
-          <div className="mt-16 bg-emerald-50 rounded-3xl p-8 lg:p-12 text-center">
+          <div className="mt-16 bg-brand-50 rounded-3xl p-8 lg:p-12 text-center">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Join Our Success Stories</h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               Ready to experience the transformation? Book your consultation today and start your journey to better health and movement.
@@ -114,7 +114,7 @@ const Testimonials: React.FC = () => {
                 const element = document.getElementById('booking');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center px-8 py-4 bg-emerald-600 text-white text-lg font-semibold rounded-full hover:bg-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-brand-600 text-white text-lg font-semibold rounded-full hover:bg-brand-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Book Your Consultation
             </button>

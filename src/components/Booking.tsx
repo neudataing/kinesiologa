@@ -49,11 +49,11 @@ const Booking: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <section id="booking" className="py-20 bg-emerald-50">
+      <section id="booking" className="py-20 bg-brand-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <div className="bg-white rounded-3xl p-12 shadow-lg">
-              <CheckCircle className="h-16 w-16 text-emerald-600 mx-auto mb-6" />
+              <CheckCircle className="h-16 w-16 text-brand-600 mx-auto mb-6" />
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Booking Request Received!</h2>
               <p className="text-gray-600 mb-6">
                 Thank you for your interest! I'll review your request and contact you within 24 hours to confirm your appointment and discuss any specific needs.
@@ -69,7 +69,7 @@ const Booking: React.FC = () => {
   }
 
   return (
-    <section id="booking" className="py-20 bg-emerald-50">
+    <section id="booking" className="py-20 bg-brand-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={ref}
@@ -79,7 +79,7 @@ const Booking: React.FC = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Book Your <span className="text-emerald-600">Consultation</span>
+              Book Your <span className="text-brand-600">Consultation</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Ready to start your journey to better health? Schedule your personalized consultation today and take the first step towards optimal movement and wellness.
@@ -94,28 +94,28 @@ const Booking: React.FC = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">What to Expect</h3>
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
-                      <Calendar className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
+                      <Calendar className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-gray-900">Flexible Scheduling</h4>
                         <p className="text-gray-600 text-sm">Available Monday-Saturday with morning, afternoon, and evening slots</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
-                      <Clock className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
+                      <Clock className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-gray-900">Session Duration</h4>
                         <p className="text-gray-600 text-sm">45-60 minutes for virtual, 60-90 minutes for in-person consultations</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
-                      <Monitor className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
+                      <Monitor className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-gray-900">Virtual Sessions</h4>
                         <p className="text-gray-600 text-sm">Secure video consultations via Zoom or your preferred platform</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
-                      <MapPin className="h-6 w-6 text-emerald-600 mt-1 flex-shrink-0" />
+                      <MapPin className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                       <div>
                         <h4 className="font-semibold text-gray-900">In-Person Location</h4>
                         <p className="text-gray-600 text-sm">Professional clinic in downtown area with easy parking access</p>
@@ -147,7 +147,7 @@ const Booking: React.FC = () => {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
                         placeholder="Your full name"
                       />
                     </div>
@@ -161,7 +161,7 @@ const Booking: React.FC = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
                         placeholder="(555) 123-4567"
                       />
                     </div>
@@ -178,7 +178,7 @@ const Booking: React.FC = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -193,7 +193,7 @@ const Booking: React.FC = () => {
                       required
                       value={formData.sessionType}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
                     >
                       <option value="">Select session type</option>
                       <option value="virtual-postural">Virtual - Postural Treatment</option>
@@ -216,7 +216,7 @@ const Booking: React.FC = () => {
                         value={formData.preferredDate}
                         onChange={handleInputChange}
                         min={new Date().toISOString().split('T')[0]}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
                       />
                     </div>
                     <div>
@@ -228,7 +228,7 @@ const Booking: React.FC = () => {
                         name="preferredTime"
                         value={formData.preferredTime}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
                       >
                         <option value="">Select time</option>
                         <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
@@ -248,14 +248,14 @@ const Booking: React.FC = () => {
                       rows={4}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors resize-none"
                       placeholder="Describe your current concerns, goals, or any specific areas you'd like to focus on..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-emerald-600 text-white py-4 px-6 rounded-xl font-bold text-lg hover:bg-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                    className="w-full bg-brand-600 text-white py-4 px-6 rounded-xl font-bold text-lg hover:bg-brand-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
                   >
                     Book My Consultation
                   </button>

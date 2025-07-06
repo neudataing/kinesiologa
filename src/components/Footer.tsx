@@ -16,23 +16,23 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <Heart className="h-8 w-8 text-emerald-400" />
+              <Heart className="h-8 w-8 text-brand-400" />
               <div>
                 <span className="text-xl font-bold">Eliana</span>
-                <span className="block text-sm text-emerald-400">Kinesiologist</span>
+                <span className="block text-sm text-brand-400">Kinesiologist</span>
               </div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Transforming lives through expert kinesiology treatments. Professional postural correction and reductive therapy available virtually and in-person.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-brand-400 transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-brand-400 transition-colors">
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-brand-400 transition-colors">
                 <Linkedin className="h-6 w-6" />
               </a>
             </div>
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('home')}
-                  className="text-gray-300 hover:text-emerald-400 transition-colors"
+                  className="text-gray-300 hover:text-brand-400 transition-colors"
                 >
                   Home
                 </button>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('about')}
-                  className="text-gray-300 hover:text-emerald-400 transition-colors"
+                  className="text-gray-300 hover:text-brand-400 transition-colors"
                 >
                   About Eliana
                 </button>
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('services')}
-                  className="text-gray-300 hover:text-emerald-400 transition-colors"
+                  className="text-gray-300 hover:text-brand-400 transition-colors"
                 >
                   Services
                 </button>
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('testimonials')}
-                  className="text-gray-300 hover:text-emerald-400 transition-colors"
+                  className="text-gray-300 hover:text-brand-400 transition-colors"
                 >
                   Testimonials
                 </button>
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
               <li>
                 <button 
                   onClick={() => scrollToSection('booking')}
-                  className="text-gray-300 hover:text-emerald-400 transition-colors"
+                  className="text-gray-300 hover:text-brand-400 transition-colors"
                 >
                   Book Consultation
                 </button>
@@ -103,23 +103,23 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-6">Contact</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <Phone className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                <Phone className="h-5 w-5 text-brand-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <a href="tel:+15551234567" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                  <a href="tel:+15551234567" className="text-gray-300 hover:text-brand-400 transition-colors">
                     (555) 123-4567
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Mail className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                <Mail className="h-5 w-5 text-brand-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <a href="mailto:hello@elianakinesiology.com" className="text-gray-300 hover:text-emerald-400 transition-colors">
+                  <a href="mailto:hello@elianakinesiology.com" className="text-gray-300 hover:text-brand-400 transition-colors">
                     hello@elianakinesiology.com
                   </a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                <MapPin className="h-5 w-5 text-brand-400 mt-0.5 flex-shrink-0" />
                 <div className="text-gray-300">
                   123 Wellness Street<br />
                   Suite 400<br />
@@ -136,13 +136,13 @@ const Footer: React.FC = () => {
               © 2024 Eliana Kinesiology. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-brand-400 transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-brand-400 transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-400 hover:text-emerald-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-brand-400 transition-colors">
                 Accessibility
               </a>
             </div>

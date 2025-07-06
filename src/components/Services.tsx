@@ -22,7 +22,7 @@ const Services: React.FC = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Servicios <span className="text-emerald-600">profesionales</span>
+              Servicios <span className="text-brand-600">profesionales</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Tratamientos kinesiológicos personalizados. Atención presencial y virtual.
@@ -33,7 +33,7 @@ const Services: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center mb-6">
-                <AlignVerticalJustifyStart className="h-12 w-12 text-emerald-600 mr-4" />
+                <AlignVerticalJustifyStart className="h-12 w-12 text-brand-600 mr-4" />
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">RPG (Reeducación Postural Global)</h3>
                 </div>
@@ -57,7 +57,7 @@ const Services: React.FC = () => {
 
             <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center mb-6">
-                <Heart className="h-12 w-12 text-emerald-600 mr-4" />
+                <Heart className="h-12 w-12 text-brand-600 mr-4" />
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900">TRATAMIENTOS HÍBRIDOS</h3>
                 </div>
@@ -91,8 +91,8 @@ const Services: React.FC = () => {
             
             <div className="grid lg:grid-cols-2 gap-12">
               <div className="text-center">
-                <div className="bg-emerald-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Monitor className="h-10 w-10 text-emerald-600" />
+                <div className="bg-brand-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Monitor className="h-10 w-10 text-brand-600" />
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">Sesiones virtuales</h4>
                 <p className="text-gray-600 mb-6 leading-relaxed">
@@ -100,11 +100,11 @@ const Services: React.FC = () => {
                 </p>
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center justify-center space-x-2">
-                    <Clock className="h-5 w-5 text-emerald-600" />
+                    <Clock className="h-5 w-5 text-brand-600" />
                     <span className="text-sm text-gray-600">45-60 minutos</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
-                    <Users className="h-5 w-5 text-emerald-600" />
+                    <Users className="h-5 w-5 text-brand-600" />
                     <span className="text-sm text-gray-600">1-a-1</span>
                   </div>
                 </div>

@@ -28,46 +28,46 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           <div className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-emerald-600" />
+            <Heart className="h-8 w-8 text-brand-600" />
             <span className="text-xl lg:text-2xl font-bold text-gray-900">Eliana</span>
-            <span className="text-sm text-emerald-600 font-medium">Kinesiologist</span>
+            <span className="text-sm text-brand-600 font-medium">Kinesiologist</span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-brand-600 transition-colors font-medium"
             >
               Inicio
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-brand-600 transition-colors font-medium"
             >
               Acerca de
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-brand-600 transition-colors font-medium"
             >
               Servicios
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-brand-600 transition-colors font-medium"
             >
               Testimonials
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+              className="text-gray-700 hover:text-brand-600 transition-colors font-medium"
             >
               Contacto
             </button>
             <button 
               onClick={() => scrollToSection('booking')}
-              className="bg-emerald-600 text-white px-6 py-2 rounded-full hover:bg-emerald-700 transition-colors font-medium"
+              className="bg-brand-600 text-white px-6 py-2 rounded-full hover:bg-brand-700 transition-colors font-medium"
             >
               Book Now
             </button>
@@ -76,7 +76,7 @@ const Header: React.FC = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-emerald-600"
+            className="md:hidden p-2 text-gray-700 hover:text-brand-600"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -88,37 +88,37 @@ const Header: React.FC = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button 
                 onClick={() => scrollToSection('home')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-md"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md"
               >
                 Home
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-md"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md"
               >
                 About
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-md"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md"
               >
                 Services
               </button>
               <button 
                 onClick={() => scrollToSection('testimonials')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-md"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md"
               >
                 Testimonials
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-md"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md"
               >
                 Contact
               </button>
               <button 
                 onClick={() => scrollToSection('booking')}
-                className="block w-full text-left px-3 py-2 bg-emerald-600 text-white hover:bg-emerald-700 rounded-md font-medium"
+                className="block w-full text-left px-3 py-2 bg-brand-600 text-white hover:bg-brand-700 rounded-md font-medium"
               >
                 Book Now
               </button>

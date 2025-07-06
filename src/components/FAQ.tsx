@@ -71,7 +71,7 @@ const FAQ: React.FC = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Preguntas <span className="text-emerald-600">Frecuentes</span>
+              Preguntas <span className="text-brand-600">Frecuentes</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Everything you need to know about kinesiology treatments, virtual sessions, and how I can help you achieve your health goals.
@@ -93,7 +93,7 @@ const FAQ: React.FC = () => {
                       {faq.question}
                     </h3>
                     {openItems.includes(index) ? (
-                      <ChevronUp className="h-6 w-6 text-emerald-600 flex-shrink-0" />
+                      <ChevronUp className="h-6 w-6 text-brand-600 flex-shrink-0" />
                     ) : (
                       <ChevronDown className="h-6 w-6 text-gray-400 flex-shrink-0" />
                     )}
@@ -122,7 +122,7 @@ const FAQ: React.FC = () => {
                 const element = document.getElementById('contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="inline-flex items-center px-8 py-4 bg-emerald-600 text-white text-lg font-semibold rounded-full hover:bg-emerald-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-brand-600 text-white text-lg font-semibold rounded-full hover:bg-brand-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Get in Touch
             </button>
