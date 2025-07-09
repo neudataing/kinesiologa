@@ -26,10 +26,10 @@ const Contact: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="py-20 bg-gray-50 rounded-3xl p-8">
+              <div className="py-20 bg-gray-50 rounded-3xl p-8 flex flex-col items-center text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Información de contacto</h3>
                 <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4 justify-center">
                     <Phone className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Celular</h4>
@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4 justify-center">
                     <Mail className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Correo electrónico</h4>
@@ -53,7 +53,7 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4 justify-center">
                     <MapPin className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Dirección del consultorio</h4>
@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4 justify-center">
                     <MessageCircle className="h-6 w-6 text-brand-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">WhatsApp</h4>
