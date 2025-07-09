@@ -42,21 +42,21 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-12">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-black-700 hover:text-brand-600 font-bold transition-colors font-medium"
+              className="text-black text-lg font-bold hover:text-brand-600 transition-colors"
             >
               Inicio
-            </button>
 
+            </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-black-700 hover:text-brand-600 transition-colors font-medium"
+              className="text-black text-lg font-bold hover:text-brand-600 transition-colors"
             >
               Acerca de
-            </button>
 
+            </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-black-700 hover:text-brand-600 transition-colors font-medium"
+              className="text-black text-lg font-bold hover:text-brand-600 transition-colors"
             >
               Servicios
             
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-black-700 hover:text-brand-600 transition-colors font-medium"
+              className="text-black text-lg font-bold hover:text-brand-600 transition-colors"
             >
               Contacto
 
