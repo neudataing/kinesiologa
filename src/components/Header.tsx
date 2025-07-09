@@ -40,7 +40,7 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-12">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-black text-lg font-bold hover:text-brand-600 transition-colors"
+              className="text-black text-lg font-bold hover:text-brand-300 hover:underline underline-offset-4 transition-all duration-200"
             >
               Inicio
 
@@ -74,28 +74,18 @@ const Header: React.FC = () => {
               className="text-black text-lg font-bold hover:text-brand-600 transition-colors"
             >
               Contacto
-
-            {/**
-            </button>
-            <button 
-              onClick={() => scrollToSection('booking')}
-              className="bg-brand-300 text-white px-6 py-2 rounded-full hover:bg-brand-400 transition-colors font-medium"
-            >
-              Agendar Consulta
             
-            */}
-
+            
+           
             <a
               href="https://wa.me/5492993277906?text=Hola%2C%20quiero%20agendar%20una%20consulta"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-brand-300 text-white px-6 py-2 rounded-full hover:bg-brand-400 transition-colors font-medium"
+              className="bg-brand-200 text-white px-6 py-2 rounded-full hover:bg-brand-500 transition-colors font-medium ml-4"
             >
               Agendar consulta
             </a>
-
-
-
+              
             </button>
 
           </div>
