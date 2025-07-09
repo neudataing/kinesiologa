@@ -277,6 +277,9 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
       style={{ marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}
     >
       {/* Main Gallery Container */}
+      <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+        Nuestro trabajo en imágenes
+      </h3>
       <div className="relative w-full h-full">
         {photos.map((photo, index) => {
           const position = getSlidePosition(index);
