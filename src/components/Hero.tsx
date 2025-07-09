@@ -43,12 +43,12 @@ const Hero: React.FC = () => {
               <img
                 src="/img/Logo-ES.png"
                 alt="Logo"
-                className="w-[300] h-[300] object-cover"
+                className="w-72 h-72 object-contain mx-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
             
-            {/* Floating Cards */}
+            
 
           </div>
         </div>

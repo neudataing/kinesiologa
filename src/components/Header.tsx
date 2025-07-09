@@ -31,7 +31,7 @@ const Header: React.FC = () => {
           <img
             src="/img/Logo-ES.png"
             alt="Logo"
-            className="h-8 w-8 object-contain"
+            className="h-12 w-12 object-contain"
           />
           <span className="text-xl lg:text-2xl font-bold text-gray-900">Eliana</span>
           <span className="text-xl lg:text-2xl font-bold text-gray-900">Schenkel</span>
