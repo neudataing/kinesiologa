@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
               <img
                 src="/img/Logo-ES.png"
                 alt="Logo"
-                className="w-[400] h-[400] object-cover"
+                className="w-[300] h-[300] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>

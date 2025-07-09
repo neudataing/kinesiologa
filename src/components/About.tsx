@@ -19,7 +19,7 @@ const About: React.FC = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Conocé a <span className="text-brand-600">Eliana</span>
+              Conocé a <span className="text-brand-900">Eliana</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Soy Eliana Schenkel, kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. Trabajo en sesiones individuales y también acompaño a empresas en el cuidado postural de sus equipos.
