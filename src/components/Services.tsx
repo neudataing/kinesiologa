@@ -12,10 +12,10 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 const gallery = [
-  { src: '/images/1.jpg',    alt: 'Corrección postural',       caption: 'Sesión de RPG en acción' },
-  { src: '/images/2.jpg',  alt: 'Ergonomía laboral',         caption: 'Evaluación ergonómica in-situ' },
-  { src: '/images/3.jpg',    alt: 'Tratamientos híbridos',     caption: 'Seguimiento virtual al paciente' },
-  { src: '/images/4.jpg',     alt: 'Capacitación empresarial',  caption: 'Workshop de higiene postural' },
+  { src: '/img/1.jpg',    alt: 'Corrección postural',       caption: 'Sesión de RPG en acción' },
+  { src: '/img/2.jpg',  alt: 'Ergonomía laboral',         caption: 'Evaluación ergonómica in-situ' },
+  { src: '/img/3.jpg',    alt: 'Tratamientos híbridos',     caption: 'Seguimiento virtual al paciente' },
+  { src: '/img/4.jpg',     alt: 'Capacitación empresarial',  caption: 'Workshop de higiene postural' },
 ];
 
 const Services: React.FC = () => {
