@@ -4,6 +4,11 @@ import ServiceSelector from './ServiceSelector';
 import ServiceDetails from './ServiceDetails';
 import TabButton from './TabButton';
 import { individualServices, businessServices } from '../data/servicesData';
+import { PhotoGallery } from './PhotoGallery';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const samplePhotos = [
   {

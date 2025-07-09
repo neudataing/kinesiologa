@@ -6,7 +6,7 @@ interface Service {
   id: string;
   title: string;
   description: string;
-  icon: DivideIcon;
+  icon: typeof DivideIcon; // ✅ así está correcto
   color: string;
 }
 
