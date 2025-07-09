@@ -48,6 +48,7 @@ const Footer: React.FC = () => {
 
           </div>
 
+        {/**
           <div>
             <h3 className="text-lg font-semibold mb-6">Enlaces</h3>
             <ul className="space-y-3">
@@ -74,47 +75,14 @@ const Footer: React.FC = () => {
                 >
                   Servicios
 
-                {/** 
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('testimonials')}
-                  className="text-gray-300 hover:text-brand-400 transition-colors"
-                >
-                  Testimonios
-                  
-
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('booking')}
-                  className="text-gray-300 hover:text-brand-400 transition-colors"
-                >
-                  Agendar Consulta
-                  */}
-                
                 </button>
               </li>
             </ul>
             
           </div>
+        */}
 
-
-          {/** Services 
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Servicios</h3>
-            <ul className="space-y-3 text-gray-300">
-              <li>Postural Correction</li>
-              <li>Reductive Treatments</li>
-              <li>Virtual Consultations</li>
-              <li>In-Person Sessions</li>
-              <li>Movement Analysis</li>
-              <li>Injury Prevention</li>
-            </ul>
-          </div>
-          */}
+    
 
           {/* Contact Info */}
           <div>
@@ -155,20 +123,6 @@ const Footer: React.FC = () => {
             
             </div>
             
-            {/**
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-brand-400 transition-colors">
-                Política de privacidad
-              </a>
-              <a href="#" className="text-gray-400 hover:text-brand-400 transition-colors">
-                Terminos de servicio
-              </a>
-              <a href="#" className="text-gray-400 hover:text-brand-400 transition-colors">
-                Accesibilidad
-              </a>
-            </div>
-          */}
-
           </div>
         </div>
       </div>

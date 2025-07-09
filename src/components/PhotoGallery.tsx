@@ -122,15 +122,15 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
   };
 
   const getSlideClasses = (position: number) => {
-    const baseClasses = 'absolute top-0 h-full transition-all duration-300 ease-in-out';
+    const baseClasses = 'absolute top-0 h-full transition-all duration-300 ease-in-out cursor-pointer';
     
     switch (position) {
       case -1:
-        return `${baseClasses} left-0 w-1/4 opacity-60 scale-90 z-10`;
+        return `${baseClasses} left-4 w-1/3 opacity-70 scale-95 z-10`;
       case 0:
-        return `${baseClasses} left-1/2 w-1/2 -translate-x-1/2 opacity-100 scale-100 z-20`;
+        return `${baseClasses} left-1/2 w-3/5 -translate-x-1/2 opacity-100 scale-100 z-20 cursor-default`;
       case 1:
-        return `${baseClasses} right-0 w-1/4 opacity-60 scale-90 z-10`;
+        return `${baseClasses} right-4 w-1/3 opacity-70 scale-95 z-10`;
       default:
         return `${baseClasses} opacity-0 scale-75 z-0`;
     }
@@ -138,7 +138,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
 
   return (
     <div 
-      className={`relative w-full h-96 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden shadow-2xl ${className}`}
+      className={`relative w-full h-[500px] bg-white rounded-2xl overflow-hidden shadow-2xl ${className}`}
       ref={galleryRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -161,7 +161,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
               tabIndex={position === 0 ? 0 : -1}
               aria-label={`Photo ${index + 1} of ${photos.length}: ${photo.alt}`}
             >
-              <div className="relative w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="relative w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                 {shouldLoad && (
                   <img
                     src={photo.url}
@@ -171,13 +171,15 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
                   />
                 )}
                 
-                {/* Image Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                {/* Text Overlay with Dark Gradient */}
+                {photo.title && position === 0 && (
+                  <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                )}
                 
                 {/* Image Title */}
                 {photo.title && position === 0 && (
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-white text-lg font-semibold drop-shadow-lg">
+                  <div className="absolute bottom-16 left-6 right-6 z-10">
+                    <h3 className="text-white text-xl font-bold drop-shadow-2xl leading-tight">
                       {photo.title}
                     </h3>
                   </div>
@@ -193,33 +195,33 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
         <>
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-all duration-200 hover:scale-110"
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-30 bg-black/20 hover:bg-black/30 backdrop-blur-sm rounded-full p-3 transition-all duration-200 hover:scale-110 shadow-lg"
             aria-label="Previous image"
           >
-            <ChevronLeft className="w-6 h-6 text-white" />
+            <ChevronLeft className="w-6 h-6 text-white drop-shadow-lg" />
           </button>
           
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 transition-all duration-200 hover:scale-110"
+            className="absolute right-6 top-1/2 -translate-y-1/2 z-30 bg-black/20 hover:bg-black/30 backdrop-blur-sm rounded-full p-3 transition-all duration-200 hover:scale-110 shadow-lg"
             aria-label="Next image"
           >
-            <ChevronRight className="w-6 h-6 text-white" />
+            <ChevronRight className="w-6 h-6 text-white drop-shadow-lg" />
           </button>
         </>
       )}
 
       {/* Dots Indicator */}
       {showDots && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex space-x-2">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex space-x-3 bg-black/20 backdrop-blur-sm rounded-full px-4 py-2">
           {photos.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-200 ${
+              className={`w-3 h-3 rounded-full transition-all duration-200 ${
                 index === currentIndex
-                  ? 'bg-white scale-125'
-                  : 'bg-white/50 hover:bg-white/75'
+                  ? 'bg-white scale-125 shadow-lg'
+                  : 'bg-white/60 hover:bg-white/80'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -229,8 +231,8 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
 
       {/* Loading Indicator */}
       {isTransitioning && (
-        <div className="absolute inset-0 bg-black/10 z-40 flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin" />
+        <div className="absolute inset-0 bg-white/20 z-40 flex items-center justify-center backdrop-blur-sm">
+          <div className="w-8 h-8 border-2 border-gray-600 border-t-transparent rounded-full animate-spin" />
         </div>
       )}
     </div>
