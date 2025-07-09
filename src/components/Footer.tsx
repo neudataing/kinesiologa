@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <img
               src="/img/Logo-Completo-ES-blanco.png"
               alt="Logo"
-              className="h-20 w-auto mb-6"
+              className="h-32 w-auto mb-6"
             />
             <div className="flex space-x-4">
               <a
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="text-gray-400 text-sm">
-              Desarrollado por <a href="https://www.neudata.com.ar" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-400">Neudata Ingeniería</a>
+            Desarrollado por <a href="https://www.neudata.com.ar" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-400">Neudata Ingeniería</a>
             </div>
           </div>
         </div>
