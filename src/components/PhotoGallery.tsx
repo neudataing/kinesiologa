@@ -29,36 +29,48 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]));
+  const [isMobile, setIsMobile] = useState(false);
   const galleryRef = useRef<HTMLDivElement>(null);
   const intervalRef = useRef<number | null>(null);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Navigation functions
   const goToNext = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prev) => (prev + 1) % photos.length);
-    setTimeout(() => setIsTransitioning(false), 600);
-  }, [photos.length, isTransitioning]);
+    setTimeout(() => setIsTransitioning(false), isMobile ? 400 : 600);
+  }, [photos.length, isTransitioning, isMobile]);
 
   const goToPrevious = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length);
-    setTimeout(() => setIsTransitioning(false), 600);
-  }, [photos.length, isTransitioning]);
+    setTimeout(() => setIsTransitioning(false), isMobile ? 400 : 600);
+  }, [photos.length, isTransitioning, isMobile]);
 
   const goToSlide = useCallback((index: number) => {
     if (isTransitioning || index === currentIndex) return;
     setIsTransitioning(true);
     setCurrentIndex(index);
-    setTimeout(() => setIsTransitioning(false), 600);
-  }, [currentIndex, isTransitioning]);
+    setTimeout(() => setIsTransitioning(false), isMobile ? 400 : 600);
+  }, [currentIndex, isTransitioning, isMobile]);
 
-  // Swipe handlers
+  // Swipe handlers with mobile-optimized threshold
   const swipeHandlers = useSwipeHandlers({
     onSwipeLeft: goToNext,
     onSwipeRight: goToPrevious,
-    threshold: 50
+    threshold: isMobile ? 30 : 50
   });
 
   // Keyboard navigation
@@ -82,30 +94,38 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
     };
   }, [autoPlay, autoPlayInterval, goToNext]);
 
-  // Enhanced lazy loading - preload more images for smooth navigation
+  // Enhanced lazy loading - mobile loads fewer images to save data
   useEffect(() => {
     const preloadImages = () => {
       const toLoad = new Set(loadedImages);
       
-      // Load current and 2 images on each side for smooth transitions
-      for (let i = -2; i <= 2; i++) {
-        const index = (currentIndex + i + photos.length) % photos.length;
-        toLoad.add(index);
+      if (isMobile) {
+        // Mobile: Load current and 1 image on each side
+        for (let i = -1; i <= 1; i++) {
+          const index = (currentIndex + i + photos.length) % photos.length;
+          toLoad.add(index);
+        }
+      } else {
+        // Desktop: Load current and 2 images on each side for smooth transitions
+        for (let i = -2; i <= 2; i++) {
+          const index = (currentIndex + i + photos.length) % photos.length;
+          toLoad.add(index);
+        }
       }
       
       setLoadedImages(toLoad);
     };
 
     preloadImages();
-  }, [currentIndex, photos.length, loadedImages]);
+  }, [currentIndex, photos.length, loadedImages, isMobile]);
 
-  // Pause auto-play on hover
+  // Pause auto-play on hover (desktop only)
   const handleMouseEnter = () => {
-    if (intervalRef.current) clearInterval(intervalRef.current);
+    if (!isMobile && intervalRef.current) clearInterval(intervalRef.current);
   };
 
   const handleMouseLeave = () => {
-    if (autoPlay) {
+    if (!isMobile && autoPlay) {
       intervalRef.current = setInterval(goToNext, autoPlayInterval);
     }
   };
@@ -122,7 +142,55 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
     return position;
   };
 
-  const getSlideStyles = (position: number) => {
+  const getMobileSlideStyles = (position: number) => {
+    const baseStyles = 'absolute top-0 w-full h-full transition-all ease-out';
+    const duration = 'duration-400';
+    
+    switch (position) {
+      case 0:
+        // Current image - center, full scale, fully visible
+        return {
+          className: `${baseStyles} ${duration} z-20`,
+          style: {
+            left: '0%',
+            transform: 'translateX(0%) scale(1)',
+            opacity: 1
+          }
+        };
+      case -1:
+        // Previous image - slide out to left
+        return {
+          className: `${baseStyles} ${duration} z-10 pointer-events-none`,
+          style: {
+            left: '0%',
+            transform: 'translateX(-100%) scale(0.9)',
+            opacity: 0
+          }
+        };
+      case 1:
+        // Next image - slide out to right
+        return {
+          className: `${baseStyles} ${duration} z-10 pointer-events-none`,
+          style: {
+            left: '0%',
+            transform: 'translateX(100%) scale(0.9)',
+            opacity: 0
+          }
+        };
+      default:
+        // Hidden images - completely off screen
+        return {
+          className: `${baseStyles} ${duration} z-0 pointer-events-none`,
+          style: {
+            left: '0%',
+            transform: position < 0 ? 'translateX(-200%) scale(0.8)' : 'translateX(200%) scale(0.8)',
+            opacity: 0
+          }
+        };
+    }
+  };
+
+  const getDesktopSlideStyles = (position: number) => {
     const baseStyles = 'absolute top-0 h-full transition-all duration-600 ease-out cursor-pointer';
     
     switch (position) {
@@ -197,7 +265,9 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
 
   return (
     <div 
-      className={`relative w-screen h-[70vh] min-h-[500px] max-h-[800px] bg-white overflow-hidden shadow-2xl ${className}`}
+      className={`relative w-screen bg-white overflow-hidden shadow-2xl ${className} ${
+        isMobile ? 'h-[60vh] min-h-[400px] max-h-[600px]' : 'h-[70vh] min-h-[500px] max-h-[800px]'
+      }`}
       ref={galleryRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -211,53 +281,63 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
         {photos.map((photo, index) => {
           const position = getSlidePosition(index);
           const shouldLoad = loadedImages.has(index);
-          const isVisible = Math.abs(position) <= 2;
+          const isVisible = isMobile ? Math.abs(position) <= 1 : Math.abs(position) <= 2;
           
           if (!isVisible) return null;
           
-          const slideStyles = getSlideStyles(position);
+          const slideStyles = isMobile ? getMobileSlideStyles(position) : getDesktopSlideStyles(position);
           
           return (
             <div
               key={photo.id}
               className={slideStyles.className}
               style={slideStyles.style}
-              onClick={() => position !== 0 && goToSlide(index)}
+              onClick={() => !isMobile && position !== 0 && goToSlide(index)}
               role="button"
               tabIndex={position === 0 ? 0 : -1}
               aria-label={`Photo ${index + 1} of ${photos.length}: ${photo.alt}`}
             >
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 mx-2">
+              <div className={`relative w-full h-full overflow-hidden shadow-xl transition-all duration-300 ${
+                isMobile ? 'rounded-none' : 'rounded-2xl hover:shadow-2xl mx-2'
+              }`}>
                 {shouldLoad && (
                   <img
                     src={photo.url}
                     alt={photo.alt}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full ${
+                      isMobile ? 'object-cover' : 'object-cover'
+                    }`}
                     loading="lazy"
                   />
                 )}
                 
-                {/* Hover overlay for thumbnails */}
-                {position !== 0 && (
+                {/* Hover overlay for thumbnails (desktop only) */}
+                {!isMobile && position !== 0 && (
                   <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all duration-300" />
                 )}
                 
                 {/* Text Overlay with Dark Gradient - only for center image */}
                 {photo.title && position === 0 && (
-                  <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
+                  <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent ${
+                    isMobile ? 'h-32' : 'h-48'
+                  }`} />
                 )}
                 
                 {/* Image Title - only for center image with proper spacing from dots */}
                 {photo.title && position === 0 && (
-                  <div className="absolute bottom-24 left-8 right-8 z-10">
-                    <h3 className="text-white text-3xl font-bold drop-shadow-2xl leading-tight">
+                  <div className={`absolute left-4 right-4 z-10 ${
+                    isMobile ? 'bottom-16' : 'bottom-24 left-8 right-8'
+                  }`}>
+                    <h3 className={`text-white font-bold drop-shadow-2xl leading-tight ${
+                      isMobile ? 'text-xl' : 'text-3xl'
+                    }`}>
                       {photo.title}
                     </h3>
                   </div>
                 )}
 
-                {/* Thumbnail indicators */}
-                {position !== 0 && (
+                {/* Thumbnail indicators (desktop only) */}
+                {!isMobile && position !== 0 && (
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">
                     <span className="text-white text-sm font-medium">
                       {index + 1}
@@ -275,34 +355,50 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
         <>
           <button
             onClick={goToPrevious}
-            className="absolute left-8 top-1/2 -translate-y-1/2 z-30 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full p-4 transition-all duration-200 hover:scale-110 shadow-xl"
+            className={`absolute top-1/2 -translate-y-1/2 z-30 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full transition-all duration-200 hover:scale-110 shadow-xl ${
+              isMobile ? 'left-4 p-3' : 'left-8 p-4'
+            }`}
             aria-label="Previous image"
           >
-            <ChevronLeft className="w-8 h-8 text-white drop-shadow-lg" />
+            <ChevronLeft className={`text-white drop-shadow-lg ${
+              isMobile ? 'w-6 h-6' : 'w-8 h-8'
+            }`} />
           </button>
           
           <button
             onClick={goToNext}
-            className="absolute right-8 top-1/2 -translate-y-1/2 z-30 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full p-4 transition-all duration-200 hover:scale-110 shadow-xl"
+            className={`absolute top-1/2 -translate-y-1/2 z-30 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full transition-all duration-200 hover:scale-110 shadow-xl ${
+              isMobile ? 'right-4 p-3' : 'right-8 p-4'
+            }`}
             aria-label="Next image"
           >
-            <ChevronRight className="w-8 h-8 text-white drop-shadow-lg" />
+            <ChevronRight className={`text-white drop-shadow-lg ${
+              isMobile ? 'w-6 h-6' : 'w-8 h-8'
+            }`} />
           </button>
         </>
       )}
 
       {/* Enhanced Dots Indicator - positioned to avoid text overlap */}
       {showDots && (
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-4 bg-black/40 backdrop-blur-sm rounded-full px-8 py-4">
+        <div className={`absolute left-1/2 -translate-x-1/2 z-30 flex bg-black/40 backdrop-blur-sm rounded-full ${
+          isMobile 
+            ? 'bottom-4 space-x-2 px-4 py-2' 
+            : 'bottom-8 space-x-4 px-8 py-4'
+        }`}>
           {photos.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`relative transition-all duration-300 ${
+              className={`relative transition-all duration-300 rounded-full ${
                 index === currentIndex
-                  ? 'w-4 h-4 bg-white scale-125 shadow-lg'
-                  : 'w-3 h-3 bg-white/60 hover:bg-white/80 hover:scale-110'
-              } rounded-full`}
+                  ? isMobile 
+                    ? 'w-3 h-3 bg-white scale-125 shadow-lg'
+                    : 'w-4 h-4 bg-white scale-125 shadow-lg'
+                  : isMobile
+                    ? 'w-2 h-2 bg-white/60 hover:bg-white/80 hover:scale-110'
+                    : 'w-3 h-3 bg-white/60 hover:bg-white/80 hover:scale-110'
+              }`}
               aria-label={`Go to slide ${index + 1}`}
             >
               {index === currentIndex && (
@@ -313,12 +409,23 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
         </div>
       )}
 
-      {/* Mobile Touch Indicators */}
-      <div className="absolute bottom-4 left-4 z-30 md:hidden">
-        <div className="bg-black/40 backdrop-blur-sm rounded-full px-3 py-2 text-white text-sm">
-          {currentIndex + 1} / {photos.length}
+      {/* Mobile Photo Counter */}
+      {isMobile && (
+        <div className="absolute top-4 right-4 z-30">
+          <div className="bg-black/50 backdrop-blur-sm rounded-full px-3 py-1 text-white text-sm font-medium">
+            {currentIndex + 1} / {photos.length}
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* Mobile Swipe Hint (shows briefly on first load) */}
+      {isMobile && (
+        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
+          <div className="bg-black/30 backdrop-blur-sm rounded-full px-4 py-2 text-white text-xs animate-pulse">
+            Swipe to navigate
+          </div>
+        </div>
+      )}
     </div>
   );
 };

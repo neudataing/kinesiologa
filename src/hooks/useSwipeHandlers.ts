@@ -19,7 +19,7 @@ export const useSwipeHandlers = ({
   onSwipeRight,
   onSwipeUp,
   onSwipeDown,
-  threshold = 50
+  threshold = 30
 }: SwipeHandlers) => {
   const [touchStart, setTouchStart] = useState<TouchPosition | null>(null);
   const [touchMove, setTouchMove] = useState<TouchPosition | null>(null);
@@ -48,7 +48,8 @@ export const useSwipeHandlers = ({
       const deltaX = Math.abs(touch.clientX - touchStart.x);
       const deltaY = Math.abs(touch.clientY - touchStart.y);
       
-      if (deltaX > deltaY && deltaX > threshold / 2) {
+      // More sensitive for mobile devices
+      if (deltaX > deltaY && deltaX > threshold / 3) {
         preventScroll.current = true;
         e.preventDefault();
       }
