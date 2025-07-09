@@ -166,10 +166,10 @@ const Services: React.FC = () => {
           </div>
         )}
         <div className="mt-20">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Nuestro trabajo en imágenes
-          </h3>
            <div className="max-w-6xl mx-auto">
+            <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+              Nuestro trabajo en imágenes
+            </h3>
             <div className="mb-12">
             <PhotoGallery 
               photos={samplePhotos}
