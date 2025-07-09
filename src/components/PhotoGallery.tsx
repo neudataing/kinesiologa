@@ -313,21 +313,6 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
         </div>
       )}
 
-      {/* Progress Bar */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-black/20 z-30">
-        <div 
-          className="h-full bg-white/80 transition-all duration-600 ease-out"
-          style={{ width: `${((currentIndex + 1) / photos.length) * 100}%` }}
-        />
-      </div>
-
-      {/* Loading Indicator */}
-      {isTransitioning && (
-        <div className="absolute inset-0 bg-black/10 z-40 flex items-center justify-center backdrop-blur-sm">
-          <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin shadow-lg" />
-        </div>
-      )}
-
       {/* Mobile Touch Indicators */}
       <div className="absolute bottom-4 left-4 z-30 md:hidden">
         <div className="bg-black/40 backdrop-blur-sm rounded-full px-3 py-2 text-white text-sm">
