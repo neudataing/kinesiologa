@@ -31,11 +31,8 @@ const Header: React.FC = () => {
           <img
             src="/img/Logo-Completo-ES.png"
             alt="Logo"
-            className="h-12 object-contain"
+            className="h-16 lg:h-20 w-auto object-contain"
           />
-          <span className="text-xl lg:text-2xl font-bold text-gray-900">Eliana</span>
-          <span className="text-xl lg:text-2xl font-bold text-gray-900">Schenkel</span>
-        
         </div>
 
 
