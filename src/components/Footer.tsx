@@ -11,14 +11,14 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-0">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="grid lg:grid-cols-4 gap-8 items-start">
           {/* Logo + Redes */}
           <div className="lg:col-span-1 flex flex-col items-start">
             <img
               src="/img/Logo-Completo-ES-blanco.png"
               alt="Logo"
-              className="max-h-[130px] w-auto mb-6"
+              className="max-h-[300px] w-auto mb-6"
             />
             <div className="flex space-x-4">
               <a
