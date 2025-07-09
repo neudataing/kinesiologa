@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-300 via-white to-blue-300">
+    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-50 via-white to-blue-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div 
           ref={ref}

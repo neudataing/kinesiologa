@@ -13,11 +13,11 @@ export default {
            500 es el color exacto del logo; los demás son tonos aproximados
            generados para tener variaciones de hover, backgrounds, etc. */
         brand: {
-          0: '#0E5990',
-          100: '#0E5389',
-          200: '#0C487B',
-          300: '#0B3D6D',
-          400: '#09325F',
+           50: '#A4D4F6',
+          100: '#84C3F3',
+          200: '#439EEC',
+          300: '#1576D3',
+          400: '#0E4E92',
           500: '#082951',
           600: '#061E3E',
           700: '#04142C',

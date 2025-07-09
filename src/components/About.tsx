@@ -87,7 +87,7 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-16 bg-brand-300 rounded-3xl p-8 lg:p-12">
+          <div className="mt-16 bg-brand-50 rounded-3xl p-8 lg:p-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Educación y certificaciones</h3>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
