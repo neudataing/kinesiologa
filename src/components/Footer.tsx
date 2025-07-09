@@ -17,16 +17,13 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2">
               <img
-                src="/img/Logo-ES.png"
+                src="/img/Logo-Completo-ES-blanco.png"
                 alt="Logo"
-                className="h-8 w-8 object-contain"
+                //className="h-8 w-8 object-contain"
               />
-              <span className="text-xl lg:text-2xl font-bold text-gray-300">Eliana</span>
-              <span className="text-xl lg:text-2xl font-bold text-gray-300">Schenkel</span>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Transformando vidas a través de tratamientos expertos de kinesiología. Corrección postural profesional y terapia reductiva disponibles de forma virtual y presencial.
-            </p>
+          
+
             <div className="flex space-x-4">
               <a
                 href="https://www.facebook.com/profile.php?id=61573965166136"
