@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/profile.php?id=61573965166136&rdid=mhStVTW9dvuuJqne&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Ek7jvNP4w%2F#"
+                href="https://www.facebook.com/profile.php?id=61573965166136"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-brand-400 transition-colors"
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-6">Links</h3>
+            <h3 className="text-lg font-semibold mb-6">Enlaces</h3>
             <ul className="space-y-3">
               <li>
                 <button 
@@ -73,6 +73,8 @@ const Footer: React.FC = () => {
                   className="text-gray-300 hover:text-brand-400 transition-colors"
                 >
                   Servicios
+
+                {/** 
                 </button>
               </li>
               <li>
@@ -81,6 +83,8 @@ const Footer: React.FC = () => {
                   className="text-gray-300 hover:text-brand-400 transition-colors"
                 >
                   Testimonios
+                  
+
                 </button>
               </li>
               <li>
@@ -89,12 +93,16 @@ const Footer: React.FC = () => {
                   className="text-gray-300 hover:text-brand-400 transition-colors"
                 >
                   Agendar Consulta
+                  */}
+                
                 </button>
               </li>
             </ul>
+            
           </div>
 
-          {/* Services */}
+
+          {/** Services 
           <div>
             <h3 className="text-lg font-semibold mb-6">Servicios</h3>
             <ul className="space-y-3 text-gray-300">
@@ -106,6 +114,7 @@ const Footer: React.FC = () => {
               <li>Injury Prevention</li>
             </ul>
           </div>
+          */}
 
           {/* Contact Info */}
           <div>
@@ -114,7 +123,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-brand-400 mt-0.5 flex-shrink-0" />
                 <div>
-                  <a href="tel:+15551234567" className="text-gray-300 hover:text-brand-400 transition-colors">
+                  <a href="tel:+542993277906" className="text-gray-300 hover:text-brand-400 transition-colors">
                     (299) 327-7906
                   </a>
                 </div>
@@ -130,7 +139,7 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-brand-400 mt-0.5 flex-shrink-0" />
                 <div className="text-gray-300">
-                  Los Aromos N°1328<br />
+                  Los Aromos N° 1328<br />
                   General Fernández Oro<br />
                   Río Negro, Argentina
                 </div>
@@ -143,7 +152,10 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
               © 2025 Eliana Schenkel. Todos los derechos reservados.
+            
             </div>
+            
+            {/**
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-brand-400 transition-colors">
                 Política de privacidad
@@ -155,6 +167,8 @@ const Footer: React.FC = () => {
                 Accesibilidad
               </a>
             </div>
+          */}
+
           </div>
         </div>
       </div>
