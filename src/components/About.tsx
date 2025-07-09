@@ -73,7 +73,7 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/img/Eliana.jpeg"
+                  src="/img/Eliana.jpg"
                   alt="Eliana, kinesiologa profesional"
                   className="w-full h-[500px] object-cover object-top"
                 />
