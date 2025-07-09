@@ -46,41 +46,50 @@ const Header: React.FC = () => {
             >
               Inicio
             </button>
+
             <button 
               onClick={() => scrollToSection('about')}
               className="text-gray-700 hover:text-brand-600 transition-colors font-medium"
             >
               Acerca de
             </button>
+
             <button 
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-brand-600 transition-colors font-medium"
             >
               Servicios
+            
+
+            {/**
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
               className="text-gray-700 hover:text-brand-600 transition-colors font-medium"
             >
-            
-            {/** 
               Testimonios
+               */}
+
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-brand-600 transition-colors font-medium"
             >
-            */}
-            
               Contacto
+
+            {/**
             </button>
             <button 
               onClick={() => scrollToSection('booking')}
               className="bg-brand-300 text-white px-6 py-2 rounded-full hover:bg-brand-400 transition-colors font-medium"
             >
               Agendar Consulta
+            
+            */}
             </button>
+
           </div>
+               
 
           {/* Mobile menu button */}
           <button
@@ -112,24 +121,33 @@ const Header: React.FC = () => {
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md"
               >
                 Servicios
+
+              {/**
               </button>
               <button 
                 onClick={() => scrollToSection('testimonials')}
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md"
               >
+                
                 Testimonios
+               */}
+
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md"
               >
+                 
                 Contacto
+              {/**
               </button>
               <button 
                 onClick={() => scrollToSection('booking')}
                 className="block w-full text-left px-3 py-2 bg-brand-300 text-white hover:bg-brand-400 rounded-md font-medium"
               >
                 Agendar Consulta
+                 */}
+                 
               </button>
             </div>
           </div>
