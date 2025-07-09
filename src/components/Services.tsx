@@ -1,9 +1,22 @@
 import React from 'react';
-import { Monitor, MapPin, Zap, Heart, Users, Clock } from 'lucide-react';
+import {
+  Monitor, MapPin, Zap, Heart, Users, Clock,
+  AlignVerticalJustifyStart,
+  StretchVertical as ErgonomiaIcon,
+} from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
-import { AlignVerticalJustifyStart } from 'lucide-react';
-import { StretchVertical as ErgonomiaIcon } from 'lucide-react';
-//gfgfdasudhaushdaushduh
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+const gallery = [
+  { src: '/images/1.jpg',    alt: 'Corrección postural',       caption: 'Sesión de RPG en acción' },
+  { src: '/images/2.jpg',  alt: 'Ergonomía laboral',         caption: 'Evaluación ergonómica in-situ' },
+  { src: '/images/3.jpg',    alt: 'Tratamientos híbridos',     caption: 'Seguimiento virtual al paciente' },
+  { src: '/images/4.jpg',     alt: 'Capacitación empresarial',  caption: 'Workshop de higiene postural' },
+];
 
 const Services: React.FC = () => {
   const { ref, inView } = useInView({
@@ -81,9 +94,6 @@ const Services: React.FC = () => {
           
           </div>
 
-  
-
-          {/* Delivery Methods */}
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg">
             <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
               Tipos de sesiones
@@ -130,7 +140,38 @@ const Services: React.FC = () => {
                 </div>
               </div>
             </div>
-
+          </div>
+        <div className="mt-20">
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
+            Nuestro trabajo en imágenes
+          </h3>
+            <Swiper
+              modules={[Autoplay, Pagination]}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              loop
+              spaceBetween={24}
+              slidesPerView={1}
+              breakpoints={{
+                1024: { slidesPerView: 2 }, // 2 en pantallas grandes
+              }}
+              className="rounded-3xl shadow-lg"
+            >
+              {gallery.map(({ src, alt, caption }, idx) => (
+                <SwiperSlide key={idx}>
+                  <figure className="relative w-full h-72 lg:h-96 overflow-hidden rounded-3xl">
+                    <img
+                      src={src}
+                      alt={alt}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white text-lg">
+                      {caption}
+                    </figcaption>
+                  </figure>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
         </div>
       </div>
