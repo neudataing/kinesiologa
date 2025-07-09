@@ -13,16 +13,17 @@ export default {
            500 es el color exacto del logo; los demás son tonos aproximados
            generados para tener variaciones de hover, backgrounds, etc. */
         brand: {
-          50:  '#edf1f7',
-          100: '#d6deeb',
-          200: '#afbed7',
-          300: '#899ec3',
-          400: '#5f7aa8',
-          500: '#082951',   // azul del logo
-          600: '#062144',
-          700: '#041933',
-          800: '#031224',
-          900: '#020b16',
+          50: '#2790EA',
+          100: '#1785E6',
+          200: '#136CC0',
+          300: '#0F549B',
+          400: '#0C3E76',
+          500: '#082951', //azul original del logo
+          600: '#061E3E',
+          700: '#04152C',
+          800: '#020B19',
+          900: '#010307',
+          950: '#000000',
         },
 
         /* Gris corporativo de apoyo */
