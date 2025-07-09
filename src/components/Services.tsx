@@ -181,17 +181,6 @@ const Services: React.FC = () => {
           </h3>
            <div className="max-w-6xl mx-auto">
         {/* Header */}
-            <div className="text-center mb-12">
-              <div className="flex justify-center items-center gap-3 mb-4">
-                <Camera className="w-8 h-8 text-purple-400" />
-                <h1 className="text-4xl font-bold text-white">Photo Gallery</h1>
-                <Sparkles className="w-8 h-8 text-purple-400" />
-              </div>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-                A modern, responsive photo gallery with smooth animations, touch support, and infinite scrolling
-              </p>
-            </div>
-
             <div className="mb-12">
               <PhotoGallery 
                 photos={samplePhotos}
