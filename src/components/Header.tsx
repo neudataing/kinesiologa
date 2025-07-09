@@ -21,6 +21,8 @@ const Header: React.FC = () => {
     }
   };
 
+
+  //comentario
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'
@@ -34,7 +36,7 @@ const Header: React.FC = () => {
             className="h-16 lg:h-20 w-auto object-contain"
           />
         </div>
-
+        
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-12">
