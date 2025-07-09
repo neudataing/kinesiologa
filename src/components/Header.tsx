@@ -42,7 +42,7 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-12">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-black-800 hover:text-brand-600 transition-colors font-medium"
+              className="text-black-700 hover:text-brand-600 font-bold transition-colors font-medium"
             >
               Inicio
             </button>
