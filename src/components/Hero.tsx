@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-white">
+    <section id="home" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div 
           ref={ref}
@@ -27,10 +27,10 @@ const Hero: React.FC = () => {
           <div className="space-y-8">
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Transformá tu salud con <span className="text-brand-300 block">kinesiología de calidad</span>
+              Transformá tu salud con <span className="text-brand-300 inline">kinesiología de calidad</span>
             </h1>
             
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 leading-relaxed text-justify">
               Corrección postural profesional y tratamientos diseñados para ayudarte a mover mejor, sentir más fuerte y vivir sin dolor. Disponible tanto virtual como presencialmente.
             </p>
         
