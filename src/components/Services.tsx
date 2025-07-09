@@ -184,7 +184,7 @@ const Services: React.FC = () => {
             <PhotoGallery 
               photos={samplePhotos}
               autoPlay={true}
-              autoPlayInterval={4000}
+              autoPlayInterval={8000}
               showDots={true}
               showArrows={true}
             />
