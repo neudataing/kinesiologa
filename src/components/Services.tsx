@@ -3,7 +3,7 @@ import { Monitor, MapPin, Zap, Heart, Users, Clock } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import { AlignVerticalJustifyStart } from 'lucide-react';
 import { StretchVertical as ErgonomiaIcon } from 'lucide-react';
-
+//gfgfdasudhaushdaushduh
 
 const Services: React.FC = () => {
   const { ref, inView } = useInView({
