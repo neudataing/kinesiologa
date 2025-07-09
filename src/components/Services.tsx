@@ -180,17 +180,15 @@ const Services: React.FC = () => {
             Nuestro trabajo en imágenes
           </h3>
            <div className="max-w-6xl mx-auto">
-        {/* Header */}
-            <div className="mb-12">
-              <PhotoGallery 
-                photos={samplePhotos}
-                autoPlay={true}
-                autoPlayInterval={4000}
-                showDots={true}
-                showArrows={true}
-                className="max-w-4xl mx-auto"
-              />
-            </div>
+          <div className="mb-12">
+            <PhotoGallery 
+              photos={samplePhotos}
+              autoPlay={true}
+              autoPlayInterval={4000}
+              showDots={true}
+              showArrows={true}
+            />
+          </div>
           </div>
         </div>
       </div>

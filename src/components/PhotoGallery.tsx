@@ -37,21 +37,21 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prev) => (prev + 1) % photos.length);
-    setTimeout(() => setIsTransitioning(false), 300);
+    setTimeout(() => setIsTransitioning(false), 600);
   }, [photos.length, isTransitioning]);
 
   const goToPrevious = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length);
-    setTimeout(() => setIsTransitioning(false), 300);
+    setTimeout(() => setIsTransitioning(false), 600);
   }, [photos.length, isTransitioning]);
 
   const goToSlide = useCallback((index: number) => {
     if (isTransitioning || index === currentIndex) return;
     setIsTransitioning(true);
     setCurrentIndex(index);
-    setTimeout(() => setIsTransitioning(false), 300);
+    setTimeout(() => setIsTransitioning(false), 600);
   }, [currentIndex, isTransitioning]);
 
   // Swipe handlers
@@ -82,21 +82,21 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
     };
   }, [autoPlay, autoPlayInterval, goToNext]);
 
-  // Lazy loading
+  // Enhanced lazy loading - preload more images for smooth navigation
   useEffect(() => {
-    const preloadAdjacent = () => {
+    const preloadImages = () => {
       const toLoad = new Set(loadedImages);
-      const prev = (currentIndex - 1 + photos.length) % photos.length;
-      const next = (currentIndex + 1) % photos.length;
       
-      toLoad.add(currentIndex);
-      toLoad.add(prev);
-      toLoad.add(next);
+      // Load current and 2 images on each side for smooth transitions
+      for (let i = -2; i <= 2; i++) {
+        const index = (currentIndex + i + photos.length) % photos.length;
+        toLoad.add(index);
+      }
       
       setLoadedImages(toLoad);
     };
 
-    preloadAdjacent();
+    preloadImages();
   }, [currentIndex, photos.length, loadedImages]);
 
   // Pause auto-play on hover
@@ -114,54 +114,120 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
     const diff = index - currentIndex;
     const total = photos.length;
     
-    if (diff === 0) return 0;
-    if (diff === 1 || diff === -(total - 1)) return 1;
-    if (diff === -1 || diff === total - 1) return -1;
+    // Handle wrap-around for infinite scroll
+    let position = diff;
+    if (diff > total / 2) position = diff - total;
+    if (diff < -total / 2) position = diff + total;
     
-    return diff > 0 ? 2 : -2;
+    return position;
   };
 
-  const getSlideClasses = (position: number) => {
-    const baseClasses = 'absolute top-0 h-full transition-all duration-300 ease-in-out cursor-pointer';
+  const getSlideStyles = (position: number) => {
+    const baseStyles = 'absolute top-0 h-full transition-all duration-600 ease-out cursor-pointer';
     
     switch (position) {
+      case -2:
+        // Far left thumbnail
+        return {
+          className: `${baseStyles} z-5`,
+          style: {
+            left: '0%',
+            width: '15%',
+            transform: 'scale(0.6)',
+            opacity: 0.4
+          }
+        };
       case -1:
-        return `${baseClasses} left-4 w-1/3 opacity-70 scale-95 z-10`;
+        // Left thumbnail - more prominent
+        return {
+          className: `${baseStyles} z-10`,
+          style: {
+            left: '12%',
+            width: '20%',
+            transform: 'scale(0.75)',
+            opacity: 0.7
+          }
+        };
       case 0:
-        return `${baseClasses} left-1/2 w-3/5 -translate-x-1/2 opacity-100 scale-100 z-20 cursor-default`;
+        // Current image - center, full scale, fully visible
+        return {
+          className: `${baseStyles} z-20 cursor-default`,
+          style: {
+            left: '30%',
+            width: '40%',
+            transform: 'scale(1)',
+            opacity: 1
+          }
+        };
       case 1:
-        return `${baseClasses} right-4 w-1/3 opacity-70 scale-95 z-10`;
+        // Right thumbnail - more prominent
+        return {
+          className: `${baseStyles} z-10`,
+          style: {
+            right: '12%',
+            width: '20%',
+            transform: 'scale(0.75)',
+            opacity: 0.7
+          }
+        };
+      case 2:
+        // Far right thumbnail
+        return {
+          className: `${baseStyles} z-5`,
+          style: {
+            right: '0%',
+            width: '15%',
+            transform: 'scale(0.6)',
+            opacity: 0.4
+          }
+        };
       default:
-        return `${baseClasses} opacity-0 scale-75 z-0`;
+        // Hidden images - completely off screen
+        return {
+          className: `${baseStyles} z-0 pointer-events-none`,
+          style: {
+            left: position < 0 ? '-100%' : '100%',
+            width: '40%',
+            transform: 'scale(0.5)',
+            opacity: 0
+          }
+        };
     }
   };
 
   return (
     <div 
-      className={`relative w-full h-[500px] bg-white rounded-2xl overflow-hidden shadow-2xl ${className}`}
+      className={`relative w-screen h-[70vh] min-h-[500px] max-h-[800px] bg-white overflow-hidden shadow-2xl ${className}`}
       ref={galleryRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       {...swipeHandlers}
       role="region"
       aria-label="Photo gallery"
+      style={{ marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}
     >
       {/* Main Gallery Container */}
       <div className="relative w-full h-full">
         {photos.map((photo, index) => {
           const position = getSlidePosition(index);
           const shouldLoad = loadedImages.has(index);
+          const isVisible = Math.abs(position) <= 2;
+          
+          if (!isVisible) return null;
+          
+          const slideStyles = getSlideStyles(position);
           
           return (
             <div
               key={photo.id}
-              className={getSlideClasses(position)}
+              className={slideStyles.className}
+              style={slideStyles.style}
               onClick={() => position !== 0 && goToSlide(index)}
               role="button"
               tabIndex={position === 0 ? 0 : -1}
               aria-label={`Photo ${index + 1} of ${photos.length}: ${photo.alt}`}
             >
-              <div className="relative w-full h-full rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 mx-2">
                 {shouldLoad && (
                   <img
                     src={photo.url}
@@ -171,17 +237,31 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
                   />
                 )}
                 
-                {/* Text Overlay with Dark Gradient */}
-                {photo.title && position === 0 && (
-                  <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                {/* Hover overlay for thumbnails */}
+                {position !== 0 && (
+                  <div className="absolute inset-0 bg-black/20 hover:bg-black/10 transition-all duration-300" />
                 )}
                 
-                {/* Image Title */}
+                {/* Text Overlay with Dark Gradient - only for center image */}
                 {photo.title && position === 0 && (
-                  <div className="absolute bottom-16 left-6 right-6 z-10">
-                    <h3 className="text-white text-xl font-bold drop-shadow-2xl leading-tight">
+                  <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
+                )}
+                
+                {/* Image Title - only for center image with proper spacing from dots */}
+                {photo.title && position === 0 && (
+                  <div className="absolute bottom-24 left-8 right-8 z-10">
+                    <h3 className="text-white text-3xl font-bold drop-shadow-2xl leading-tight">
                       {photo.title}
                     </h3>
+                  </div>
+                )}
+
+                {/* Thumbnail indicators */}
+                {position !== 0 && (
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">
+                    <span className="text-white text-sm font-medium">
+                      {index + 1}
+                    </span>
                   </div>
                 )}
               </div>
@@ -195,46 +275,65 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
         <>
           <button
             onClick={goToPrevious}
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-30 bg-black/20 hover:bg-black/30 backdrop-blur-sm rounded-full p-3 transition-all duration-200 hover:scale-110 shadow-lg"
+            className="absolute left-8 top-1/2 -translate-y-1/2 z-30 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full p-4 transition-all duration-200 hover:scale-110 shadow-xl"
             aria-label="Previous image"
           >
-            <ChevronLeft className="w-6 h-6 text-white drop-shadow-lg" />
+            <ChevronLeft className="w-8 h-8 text-white drop-shadow-lg" />
           </button>
           
           <button
             onClick={goToNext}
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-30 bg-black/20 hover:bg-black/30 backdrop-blur-sm rounded-full p-3 transition-all duration-200 hover:scale-110 shadow-lg"
+            className="absolute right-8 top-1/2 -translate-y-1/2 z-30 bg-black/40 hover:bg-black/60 backdrop-blur-sm rounded-full p-4 transition-all duration-200 hover:scale-110 shadow-xl"
             aria-label="Next image"
           >
-            <ChevronRight className="w-6 h-6 text-white drop-shadow-lg" />
+            <ChevronRight className="w-8 h-8 text-white drop-shadow-lg" />
           </button>
         </>
       )}
 
-      {/* Dots Indicator */}
+      {/* Enhanced Dots Indicator - positioned to avoid text overlap */}
       {showDots && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex space-x-3 bg-black/20 backdrop-blur-sm rounded-full px-4 py-2">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-4 bg-black/40 backdrop-blur-sm rounded-full px-8 py-4">
           {photos.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+              className={`relative transition-all duration-300 ${
                 index === currentIndex
-                  ? 'bg-white scale-125 shadow-lg'
-                  : 'bg-white/60 hover:bg-white/80'
-              }`}
+                  ? 'w-4 h-4 bg-white scale-125 shadow-lg'
+                  : 'w-3 h-3 bg-white/60 hover:bg-white/80 hover:scale-110'
+              } rounded-full`}
               aria-label={`Go to slide ${index + 1}`}
-            />
+            >
+              {index === currentIndex && (
+                <div className="absolute inset-0 bg-white rounded-full animate-pulse" />
+              )}
+            </button>
           ))}
         </div>
       )}
 
+      {/* Progress Bar */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-black/20 z-30">
+        <div 
+          className="h-full bg-white/80 transition-all duration-600 ease-out"
+          style={{ width: `${((currentIndex + 1) / photos.length) * 100}%` }}
+        />
+      </div>
+
       {/* Loading Indicator */}
       {isTransitioning && (
-        <div className="absolute inset-0 bg-white/20 z-40 flex items-center justify-center backdrop-blur-sm">
-          <div className="w-8 h-8 border-2 border-gray-600 border-t-transparent rounded-full animate-spin" />
+        <div className="absolute inset-0 bg-black/10 z-40 flex items-center justify-center backdrop-blur-sm">
+          <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin shadow-lg" />
         </div>
       )}
+
+      {/* Mobile Touch Indicators */}
+      <div className="absolute bottom-4 left-4 z-30 md:hidden">
+        <div className="bg-black/40 backdrop-blur-sm rounded-full px-3 py-2 text-white text-sm">
+          {currentIndex + 1} / {photos.length}
+        </div>
+      </div>
     </div>
   );
 };
