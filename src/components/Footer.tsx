@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
             <img
               src="/img/Logo-Completo-ES-blanco.png"
               alt="Logo"
-              className="max-h-[400px] w-auto mb-8"
+              className="max-h-[500px] w-auto mb-8"
             />
             {/* Social Media Icons */}
             <div className="flex space-x-6">
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
               >
-                <Facebook className="h-8 w-8" />
+                <Facebook className="h-10 w-10" />
               </a>
               <a
                 href="https://www.instagram.com/ergonomia.schenkel"
@@ -36,12 +36,12 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-pink-400 transition-colors duration-300 transform hover:scale-110"
               >
-                <Instagram className="h-8 w-8" />
+                <Instagram className="h-10 w-10" />
               </a>
             </div>
           </div>
 
-          {/* Contact Information - Right Side */}
+        {/** 
           <div className="lg:pl-12">
             <h3 className="text-2xl font-semibold mb-8 text-center lg:text-left">Contacto</h3>
             <div className="space-y-6">
@@ -84,6 +84,9 @@ const Footer: React.FC = () => {
               </div>
             </div>
           </div>
+        */}
+
+
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8">
@@ -92,7 +95,7 @@ const Footer: React.FC = () => {
               © 2025 Eliana Schenkel. Todos los derechos reservados.
             </div>
             <div className="text-gray-400 text-sm">
-              Desarrollado por <a href="https://www.neudata.com.ar" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400 transition-colors duration-300">Neudata Ingeniería</a>
+            Desarrollado por <a href="https://www.neudata.com.ar" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400 transition-colors duration-300">Neudata Ingeniería</a>
             </div>
           </div>
         </div>
