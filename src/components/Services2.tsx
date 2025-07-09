@@ -139,24 +139,6 @@ const Services: React.FC = () => {
             </AnimatePresence>
           </main>
         </div>
-        <div className="text-center mt-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-            className="bg-white rounded-xl shadow-xl p-8 max-w-2xl mx-auto"
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Ready to Get Started?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Contact us today to discuss how we can help you achieve your goals
-            </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-              Get in Touch
-            </button>
-          </motion.div>
-        </div>
       </div>
       <div className="mt-20">
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">

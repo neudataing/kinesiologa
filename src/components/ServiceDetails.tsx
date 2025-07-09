@@ -112,29 +112,6 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
             ))}
           </div>
         </div>
-
-        {/* Call to Action */}
-        <div className="bg-gray-50 rounded-lg p-6 border border-gray-100">
-          <div className="flex items-center justify-between">
-            <div>
-              <h4 className="font-semibold text-gray-900 mb-1">
-                Ready to get started?
-              </h4>
-              <p className="text-sm text-gray-600">
-                Contact our specialists to learn more about this service
-              </p>
-            </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              style={{ backgroundColor: service.color }}
-            >
-              <span className="mr-2">Learn More</span>
-              <ArrowRight className="w-4 h-4" />
-            </motion.button>
-          </div>
-        </div>
       </div>
     </motion.div>
   );
