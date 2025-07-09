@@ -7,9 +7,10 @@ import {
 import { useInView } from 'react-intersection-observer';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const gallery = [
   { src: '/img/1.jpg',    alt: 'Corrección postural',       caption: 'Sesión de RPG en acción' },
@@ -146,26 +147,37 @@ const Services: React.FC = () => {
             Nuestro trabajo en imágenes
           </h3>
             <Swiper
-              modules={[Autoplay, Pagination]}
+              modules={[Autoplay, Pagination, Navigation]}
               autoplay={{ delay: 4000, disableOnInteraction: false }}
-              pagination={{ clickable: true }}
               loop
-              spaceBetween={24}
-              slidesPerView={1}
-              breakpoints={{
-                1024: { slidesPerView: 2 }, // 2 en pantallas grandes
-              }}
-              className="rounded-3xl shadow-lg"
+              centeredSlides          /* ✓ imagen principal en el centro */
+              slidesPerView={'auto'}  /* ✓ permite ver un trozo de las vecinas */
+              spaceBetween={32}
+              pagination={{ clickable: true }}
+              navigation              /* ✓ activa flechas */
+              className="relative select-none"
             >
               {gallery.map(({ src, alt, caption }, idx) => (
-                <SwiperSlide key={idx}>
-                  <figure className="relative w-full h-72 lg:h-96 overflow-hidden rounded-3xl">
+                <SwiperSlide
+                  key={idx}
+                  className="!w-[75%] lg:!w-[55%] xl:!w-[45%]" /* ancho relativo ⇒ vecinas asoman */
+                >
+                  <figure
+                    className="relative h-80 lg:h-[28rem] overflow-hidden"
+                    /* Gradiente que difumina bordes */
+                    style={{
+                      maskImage:
+                        'linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)',
+                      WebkitMaskImage:
+                        'linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)',
+                    }}
+                  >
                     <img
                       src={src}
                       alt={alt}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] scale-100 group-hover:scale-105"
                     />
-                    <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white text-lg">
+                    <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white text-lg backdrop-blur-sm">
                       {caption}
                     </figcaption>
                   </figure>
