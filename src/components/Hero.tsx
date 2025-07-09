@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-50 via-white to-blue-50">
+    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-300 via-white to-blue-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div 
           ref={ref}
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Transformá tu salud con 
-              <span className="text-brand-600 block">kinesiología de calidad</span>
+              <span className="text-brand-300 block">kinesiología de calidad</span>
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed">

@@ -91,7 +91,7 @@ const Services: React.FC = () => {
             
             <div className="grid lg:grid-cols-2 gap-12">
               <div className="text-center">
-                <div className="bg-brand-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="bg-brand-300 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Monitor className="h-10 w-10 text-brand-600" />
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">Sesiones virtuales</h4>
@@ -111,7 +111,7 @@ const Services: React.FC = () => {
               </div>
 
               <div className="text-center">
-                <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="bg-blue-300 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <MapPin className="h-10 w-10 text-blue-600" />
                 </div>
                 <h4 className="text-2xl font-bold text-gray-900 mb-4">Sesiones presenciales</h4>
