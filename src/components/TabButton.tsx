@@ -17,7 +17,7 @@ const TabButton: React.FC<TabButtonProps> = ({ isActive, onClick, label, ariaCon
       id={`${label.toLowerCase()}-tab`}
       onClick={onClick}
       className={`
-        relative px-8 py-3 font-semibold text-sm rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+        relative px-4 sm:px-6 lg:px-8 py-3 font-semibold text-sm rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 flex-1 sm:flex-none min-h-[48px] flex items-center justify-center
         ${isActive 
           ? 'text-white shadow-md' 
           : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'

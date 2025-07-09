@@ -16,7 +16,7 @@ const ServiceSelector: React.FC<ServiceSelectorProps> = ({
   tabType
 }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+    <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hidden lg:block">
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 py-4 border-b border-gray-100">
         <h3 className="text-lg font-semibold text-gray-900 capitalize">
@@ -55,6 +55,7 @@ const ServiceSelector: React.FC<ServiceSelectorProps> = ({
                   delay: index * 0.05,
                   ease: "easeOut"
                 }}
+                aria-label={`Select ${service.title} service`}
               >
                 {/* Connection Dot */}
                 <div className={`

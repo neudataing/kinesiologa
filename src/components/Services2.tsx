@@ -5,6 +5,7 @@ import ServiceDetails from './ServiceDetails';
 import TabButton from './TabButton';
 import { individualServices, businessServices } from '../data/servicesData';
 import { PhotoGallery } from './PhotoGallery';
+import MobileServiceCard from './MobileServiceCard';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -49,18 +50,28 @@ const samplePhotos = [
   }
 ];
 
-
 type TabType = 'individuals' | 'businesses';
 
 const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('individuals');
   const [selectedService, setSelectedService] = useState<string>('');
+  const [isMobileView, setIsMobileView] = useState(false);
 
   const handleTabChange = (tab: TabType) => {
     setActiveTab(tab);
     setSelectedService('');
   };
 
+  // Check for mobile view on mount and resize
+  React.useEffect(() => {
+    const checkMobileView = () => {
+      setIsMobileView(window.innerWidth < 1024);
+    };
+    
+    checkMobileView();
+    window.addEventListener('resize', checkMobileView);
+    return () => window.removeEventListener('resize', checkMobileView);
+  }, []);
   const currentServices = activeTab === 'individuals' ? individualServices : businessServices;
   
   React.useEffect(() => {
@@ -72,21 +83,21 @@ const Services: React.FC = () => {
   const selectedServiceData = currentServices.find(service => service.id === selectedService);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
+    <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
             Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Comprehensive solutions tailored to meet your unique needs
           </p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white rounded-lg p-1 shadow-lg border border-gray-200">
+        <div className="flex justify-center mb-8 sm:mb-10 lg:mb-12 px-4">
+          <div className="bg-white rounded-lg p-1 shadow-lg border border-gray-200 w-full max-w-md sm:w-auto">
             <div className="flex space-x-1" role="tablist" aria-label="Service categories">
               <TabButton
                 isActive={activeTab === 'individuals'}
@@ -104,43 +115,57 @@ const Services: React.FC = () => {
           </div>
         </div>
 
-        {/* Service Selector Layout */}
-        <div className="flex-1 flex gap-8 lg:gap-12">
-          <AnimatePresence mode="wait">
-            <motion.aside
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ 
-                duration: 0.3,
-                ease: "easeInOut"
-              }}
-              className="w-full lg:w-80 xl:w-96"
-            >
-              <ServiceSelector
-                services={currentServices}
-                selectedService={selectedService}
-                onServiceSelect={setSelectedService}
-                tabType={activeTab}
-              />
-            </motion.aside>
-          </AnimatePresence>
-          
-          {/* Service Details */}
-          <main className="flex-1 min-w-0">
+        {/* Mobile Grid Layout */}
+        {isMobileView ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8">
             <AnimatePresence mode="wait">
-              {selectedServiceData && (
-                <ServiceDetails
-                  key={selectedService}
-                  service={selectedServiceData}
+              {currentServices.map((service, index) => (
+                <MobileServiceCard
+                  key={`${activeTab}-${service.id}`}
+                  service={service}
+                  index={index}
                 />
-              )}
+              ))}
             </AnimatePresence>
-          </main>
-        </div>
-      </div>
-      <div className="mt-20">
+          </div>
+        ) : (
+          /* Desktop Service Selector Layout */
+          <div className="flex-1 flex gap-8 lg:gap-12">
+            <AnimatePresence mode="wait">
+              <motion.aside
+                key={activeTab}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ 
+                  duration: 0.3,
+                  ease: "easeInOut"
+                }}
+                className="w-full lg:w-80 xl:w-96"
+              >
+                <ServiceSelector
+                  services={currentServices}
+                  selectedService={selectedService}
+                  onServiceSelect={setSelectedService}
+                  tabType={activeTab}
+                />
+              </motion.aside>
+            </AnimatePresence>
+            
+            {/* Service Details */}
+            <main className="flex-1 min-w-0">
+              <AnimatePresence mode="wait">
+                {selectedServiceData && (
+                  <ServiceDetails
+                    key={selectedService}
+                    service={selectedServiceData}
+                  />
+                )}
+              </AnimatePresence>
+            </main>
+          </div>
+        )}
+        <div className="mt-20">
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Nuestro trabajo en imágenes
           </h3>
@@ -156,6 +181,7 @@ const Services: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
     </section>
   );
 };

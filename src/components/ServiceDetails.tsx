@@ -32,11 +32,11 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden h-fit"
+      className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden h-fit hidden lg:block"
     >
       {/* Header */}
       <div 
-        className="px-8 py-6 bg-gradient-to-r from-gray-50 to-blue-50 border-b border-gray-100"
+        className="px-6 lg:px-8 py-6 bg-gradient-to-r from-gray-50 to-blue-50 border-b border-gray-100"
         style={{ 
           background: `linear-gradient(135deg, ${service.color}08 0%, ${service.color}15 100%)`
         }}
@@ -68,7 +68,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
       </div>
 
       {/* Content */}
-      <div className="p-8">
+      <div className="p-6 lg:p-8">
         {/* Key Features */}
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
