@@ -86,7 +86,7 @@ const Services: React.FC = () => {
           {/* Delivery Methods */}
           <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg">
             <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-              Elige tu formato preferido
+              Tipos de sesiones
             </h3>
             
             <div className="grid lg:grid-cols-2 gap-12">
