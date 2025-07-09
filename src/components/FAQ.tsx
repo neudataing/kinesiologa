@@ -113,6 +113,7 @@ const FAQ: React.FC = () => {
             </div>
           </div>
 
+          {/** 
           <div className="mt-16 text-center">
             <p className="text-gray-600 mb-6">
               Still have questions? I'm here to help!
@@ -127,6 +128,8 @@ const FAQ: React.FC = () => {
               Get in Touch
             </button>
           </div>
+        */}
+
         </div>
       </div>
     </section>
