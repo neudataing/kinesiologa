@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-to-br from-brand-50 via-white to-blue-300">
+    <section id="home" className="relative min-h-screen flex items-center bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div 
           ref={ref}
@@ -27,8 +27,7 @@ const Hero: React.FC = () => {
           <div className="space-y-8">
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              Transformá tu salud con 
-              <span className="text-brand-300 block">kinesiología de calidad</span>
+              Transformá tu salud con <span className="text-brand-300 block">kinesiología de calidad</span>
             </h1>
             
             <p className="text-xl text-gray-600 leading-relaxed">
@@ -43,7 +42,7 @@ const Hero: React.FC = () => {
               <img
                 src="/img/Logo-ES.png"
                 alt="Logo"
-                className="w-72 h-72 object-contain mx-auto"
+                className="w-100 h-100 object-contain mx-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
