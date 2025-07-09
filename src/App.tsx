@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
-import Testimonials from './components/Testimonials';
+//import Testimonials from './components/Testimonials';
 import Booking from './components/Booking';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
@@ -19,7 +19,7 @@ function App() {
           <Hero />
           <About />
           <Services />
-          <Testimonials />
+          {/**<Testimonials />*/}
           <FAQ />
           <Booking />
           <Contact />
@@ -29,5 +29,7 @@ function App() {
     </Router>
   );
 }
+
+
 
 export default App;
