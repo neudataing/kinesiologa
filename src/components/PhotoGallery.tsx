@@ -30,7 +30,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set([0]));
   const galleryRef = useRef<HTMLDivElement>(null);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<number | null>(null);
 
   // Navigation functions
   const goToNext = useCallback(() => {

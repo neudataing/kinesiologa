@@ -5,24 +5,12 @@ import {
   StretchVertical as ErgonomiaIcon,
 } from 'lucide-react';
 import { PhotoGallery } from './PhotoGallery';
-import { Camera, Image as ImageIcon, Sparkles } from 'lucide-react';
+import { Camera, Sparkles } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-const gallery = [
-  { src: '/img/1.jpg',    alt: 'Corrección postural',       caption: 'Sesión de RPG en acción' },
-  { src: '/img/2.jpg',  alt: 'Ergonomía laboral',         caption: 'Evaluación ergonómica in-situ' },
-  { src: '/img/3.jpg',    alt: 'Tratamientos híbridos',     caption: 'Seguimiento virtual al paciente' },
-  { src: '/img/4.jpg',     alt: 'Capacitación empresarial',  caption: 'Workshop de higiene postural' },
-];
-
-import { PhotoGallery } from './PhotoGallery';
-import { Camera, Image as ImageIcon, Sparkles } from 'lucide-react';
 
 const samplePhotos = [
   {
