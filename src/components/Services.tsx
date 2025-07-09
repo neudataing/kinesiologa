@@ -4,6 +4,8 @@ import {
   AlignVerticalJustifyStart,
   StretchVertical as ErgonomiaIcon,
 } from 'lucide-react';
+import { PhotoGallery } from './PhotoGallery';
+import { Camera, Image as ImageIcon, Sparkles } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,6 +20,49 @@ const gallery = [
   { src: '/img/3.jpg',    alt: 'Tratamientos híbridos',     caption: 'Seguimiento virtual al paciente' },
   { src: '/img/4.jpg',     alt: 'Capacitación empresarial',  caption: 'Workshop de higiene postural' },
 ];
+
+import { PhotoGallery } from './PhotoGallery';
+import { Camera, Image as ImageIcon, Sparkles } from 'lucide-react';
+
+const samplePhotos = [
+  {
+    id: '1',
+    url: 'https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=800',
+    alt: 'Mountain landscape with snow-capped peaks',
+    title: 'Majestic Mountains'
+  },
+  {
+    id: '2',
+    url: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=800',
+    alt: 'Ocean waves crashing on rocky shore',
+    title: 'Ocean Waves'
+  },
+  {
+    id: '3',
+    url: 'https://images.pexels.com/photos/1440727/pexels-photo-1440727.jpeg?auto=compress&cs=tinysrgb&w=800',
+    alt: 'Forest path with sunlight filtering through trees',
+    title: 'Forest Path'
+  },
+  {
+    id: '4',
+    url: 'https://images.pexels.com/photos/1274260/pexels-photo-1274260.jpeg?auto=compress&cs=tinysrgb&w=800',
+    alt: 'Desert sand dunes at sunset',
+    title: 'Desert Sunset'
+  },
+  {
+    id: '5',
+    url: 'https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=800',
+    alt: 'City skyline with reflection in water',
+    title: 'City Lights'
+  },
+  {
+    id: '6',
+    url: 'https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=800',
+    alt: 'Lavender field in bloom',
+    title: 'Lavender Dreams'
+  }
+];
+
 
 const Services: React.FC = () => {
   const { ref, inView } = useInView({
@@ -146,44 +191,29 @@ const Services: React.FC = () => {
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Nuestro trabajo en imágenes
           </h3>
-            <Swiper
-              modules={[Autoplay, Pagination, Navigation]}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
-              loop
-              centeredSlides          /* ✓ imagen principal en el centro */
-              slidesPerView={'auto'}  /* ✓ permite ver un trozo de las vecinas */
-              spaceBetween={32}
-              pagination={{ clickable: true }}
-              navigation              /* ✓ activa flechas */
-              className="relative select-none"
-            >
-              {gallery.map(({ src, alt, caption }, idx) => (
-                <SwiperSlide
-                  key={idx}
-                  className="!w-[75%] lg:!w-[55%] xl:!w-[45%]" /* ancho relativo ⇒ vecinas asoman */
-                >
-                  <figure
-                    className="relative h-80 lg:h-[28rem] overflow-hidden"
-                    /* Gradiente que difumina bordes */
-                    style={{
-                      maskImage:
-                        'linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)',
-                      WebkitMaskImage:
-                        'linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%)',
-                    }}
-                  >
-                    <img
-                      src={src}
-                      alt={alt}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] scale-100 group-hover:scale-105"
-                    />
-                    <figcaption className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white text-lg backdrop-blur-sm">
-                      {caption}
-                    </figcaption>
-                  </figure>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+           <div className="max-w-6xl mx-auto">
+        {/* Header */}
+            <div className="text-center mb-12">
+              <div className="flex justify-center items-center gap-3 mb-4">
+                <Camera className="w-8 h-8 text-purple-400" />
+                <h1 className="text-4xl font-bold text-white">Photo Gallery</h1>
+                <Sparkles className="w-8 h-8 text-purple-400" />
+              </div>
+              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                A modern, responsive photo gallery with smooth animations, touch support, and infinite scrolling
+              </p>
+            </div>
+
+            <div className="mb-12">
+              <PhotoGallery 
+                photos={samplePhotos}
+                autoPlay={true}
+                autoPlayInterval={4000}
+                showDots={true}
+                showArrows={true}
+                className="max-w-4xl mx-auto"
+              />
+            </div>
           </div>
         </div>
       </div>
