@@ -40,28 +40,28 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-12">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-black text-lg font-bold hover:text-brand-200 hover:underline underline-offset-4 transition-all duration-200"
+              className="text-black text-lg font-bold hover:text-brand-500 hover:underline underline-offset-4 transition-all duration-200"
             >
               Inicio
             </button>
 
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-black text-lg font-bold hover:text-brand-200 hover:underline underline-offset-4 transition-all duration-200"
+              className="text-black text-lg font-bold hover:text-brand-500 hover:underline underline-offset-4 transition-all duration-200"
             >
               Acerca de
             </button>
 
             <button 
               onClick={() => scrollToSection('services2')}
-              className="text-black text-lg font-bold hover:text-brand-200 hover:underline underline-offset-4 transition-all duration-200"
+              className="text-black text-lg font-bold hover:text-brand-500 hover:underline underline-offset-4 transition-all duration-200"
             >
               Servicios
             </button>
 
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-black text-lg font-bold hover:text-brand-200 hover:underline underline-offset-4 transition-all duration-200"
+              className="text-black text-lg font-bold hover:text-brand-500 hover:underline underline-offset-4 transition-all duration-200"
             >
               Contacto
              </button>

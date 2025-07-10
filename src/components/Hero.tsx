@@ -38,13 +38,13 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-white relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative">
               <img
                 src="/img/Logo-ES.png"
                 alt="Logo"
                 className="w-4/5 h-4/5 object-contain mx-auto"
               />
-              <div className="absolute inset-0 bg-white"></div>
+              <div className="absolute inset-0"></div>
             </div>
             
             
