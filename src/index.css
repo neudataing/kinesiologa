@@ -44,6 +44,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-padding-top: 5rem;
 }
 
 * {
@@ -52,6 +53,24 @@ html {
 
 body {
   overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Improved section spacing */
+section {
+  position: relative;
+}
+
+/* Smooth transitions between sections */
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.05), transparent);
+  z-index: 1;
 }
 
 /* Mobile-first responsive typography */

@@ -279,7 +279,14 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
       {...swipeHandlers}
       role="region"
       aria-label="Photo gallery"
-      style={{ marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)',  marginTop: '5px', paddingTop: '10px', paddingBottom: '10px' }}
+      style={{ 
+        marginLeft: 'calc(-50vw + 50%)', 
+        marginRight: 'calc(-50vw + 50%)',  
+        marginTop: '2rem', 
+        paddingTop: '2rem', 
+        paddingBottom: '2rem',
+        borderRadius: '1.5rem'
+      }}
     >
       {/* Main Gallery Container */}
       <div className="relative w-full h-full">

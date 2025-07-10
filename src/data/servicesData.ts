@@ -23,44 +23,44 @@ export interface Service {
 
 export const individualServices: Service[] = [
   {
-    id: 'personal-banking',
-    title: 'Personal Banking',
-    description: 'Comprehensive banking solutions including checking accounts, savings accounts, and personal loans tailored to your financial goals.',
+    id: 'rpg-treatment',
+    title: 'RPG (Reeducación Postural Global)',
+    description: 'Sesiones personalizadas de terapia manual que brindan diagnóstico y tratamiento, con el objetivo de mejorar la postura y aliviar la sintomatología que ésta puede ocasionar.',
     icon: User,
     color: '#007bff'
   },
   {
-    id: 'investment-planning',
-    title: 'Investment Planning',
-    description: 'Professional investment advisory services to help you build wealth through diversified portfolios and strategic financial planning.',
+    id: 'virtual-sessions',
+    title: 'Sesiones Virtuales',
+    description: 'Consultas en línea desde la comodidad de tu hogar. Ideal para evaluaciones posturales, orientación sobre ejercicios y seguimiento continuo.',
     icon: TrendingUp,
     color: '#28a745'
   },
   {
-    id: 'insurance-protection',
-    title: 'Insurance Protection',
-    description: 'Protect what matters most with our comprehensive insurance solutions including life, health, auto, and home insurance.',
+    id: 'postural-correction',
+    title: 'Corrección Postural',
+    description: 'Tratamientos especializados para corregir problemas posturales y aliviar dolores relacionados con malas posturas en el trabajo y vida diaria.',
     icon: Shield,
     color: '#6f42c1'
   },
   {
-    id: 'credit-solutions',
-    title: 'Credit Solutions',
-    description: 'Access to personal loans, credit cards, and mortgage solutions with competitive rates and flexible terms.',
+    id: 'movement-therapy',
+    title: 'Terapia del Movimiento',
+    description: 'Técnicas especializadas para mejorar patrones de movimiento, flexibilidad y fuerza muscular adaptadas a cada paciente.',
     icon: CreditCard,
     color: '#fd7e14'
   },
   {
-    id: 'retirement-planning',
-    title: 'Retirement Planning',
-    description: 'Secure your future with our retirement planning services including 401(k) management, IRA accounts, and pension strategies.',
+    id: 'hybrid-treatment',
+    title: 'Tratamientos Híbridos',
+    description: 'Combinación de sesiones presenciales y virtuales para dar continuidad y adherencia a las propuestas terapéuticas desde la comodidad del hogar.',
     icon: PiggyBank,
     color: '#20c997'
   },
   {
-    id: 'financial-consulting',
-    title: 'Financial Consulting',
-    description: 'One-on-one financial consulting to help you make informed decisions about budgeting, debt management, and financial goals.',
+    id: 'pain-management',
+    title: 'Manejo del Dolor',
+    description: 'Tratamientos especializados para el manejo y reducción del dolor crónico a través de técnicas kinesiológicas avanzadas.',
     icon: Calculator,
     color: '#dc3545'
   }
@@ -68,58 +68,58 @@ export const individualServices: Service[] = [
 
 export const businessServices: Service[] = [
   {
-    id: 'business-banking',
-    title: 'Business Banking',
-    description: 'Complete business banking solutions including commercial accounts, business loans, and cash management services.',
+    id: 'occupational-ergonomics',
+    title: 'Ergonomía Ocupacional',
+    description: 'Análisis de puestos de trabajo para evaluar factores de riesgo disergonómicos y brindar recomendaciones personalizadas para empresas.',
     icon: Building,
     color: '#007bff'
   },
   {
-    id: 'corporate-finance',
-    title: 'Corporate Finance',
-    description: 'Strategic financial planning and capital structuring to support your business growth and operational efficiency.',
+    id: 'corporate-consulting',
+    title: 'Asesoramiento Empresarial',
+    description: 'Charlas y formaciones para empleados y empleadores sobre higiene postural y estrategias para mejorar el bienestar laboral.',
     icon: Briefcase,
     color: '#28a745'
   },
   {
-    id: 'merchant-services',
-    title: 'Merchant Services',
-    description: 'Streamlined payment processing solutions including point-of-sale systems, online payments, and mobile transactions.',
+    id: 'workplace-wellness',
+    title: 'Bienestar Laboral',
+    description: 'Programas integrales de bienestar para empresas enfocados en reducir ausentismo y mejorar la productividad del equipo.',
     icon: CreditCard,
     color: '#6f42c1'
   },
   {
-    id: 'payroll-services',
-    title: 'Payroll Services',
-    description: 'Comprehensive payroll management including tax compliance, direct deposit, and employee benefits administration.',
+    id: 'team-training',
+    title: 'Capacitación de Equipos',
+    description: 'Formación especializada para equipos de trabajo sobre prevención de lesiones y técnicas de autocuidado postural.',
     icon: Users,
     color: '#fd7e14'
   },
   {
-    id: 'international-trade',
-    title: 'International Trade',
-    description: 'Global trade finance solutions including letters of credit, foreign exchange, and international wire transfers.',
+    id: 'risk-assessment',
+    title: 'Evaluación de Riesgos',
+    description: 'Evaluación integral de riesgos ergonómicos en el ambiente laboral con planes de acción para la prevención de lesiones.',
     icon: Globe,
     color: '#20c997'
   },
   {
-    id: 'treasury-management',
-    title: 'Treasury Management',
-    description: 'Advanced treasury solutions for cash flow optimization, risk management, and automated financial operations.',
+    id: 'productivity-optimization',
+    title: 'Optimización de Productividad',
+    description: 'Estrategias para mejorar la productividad laboral a través del bienestar físico y la correcta ergonomía del puesto de trabajo.',
     icon: Zap,
     color: '#dc3545'
   },
   {
-    id: 'business-consulting',
-    title: 'Business Consulting',
-    description: 'Strategic business consulting services to help you optimize operations, improve efficiency, and drive growth.',
+    id: 'prevention-programs',
+    title: 'Programas de Prevención',
+    description: 'Desarrollo e implementación de programas preventivos personalizados para reducir lesiones laborales y mejorar la salud ocupacional.',
     icon: Target,
     color: '#6610f2'
   },
   {
-    id: 'equipment-financing',
-    title: 'Equipment Financing',
-    description: 'Flexible financing options for business equipment, machinery, and technology to support your operational needs.',
+    id: 'ergonomic-solutions',
+    title: 'Soluciones Ergonómicas',
+    description: 'Implementación de soluciones ergonómicas integrales para mejorar las condiciones de trabajo y el bienestar de los empleados.',
     icon: TrendingUp,
     color: '#e83e8c'
   }

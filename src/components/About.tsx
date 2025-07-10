@@ -9,45 +9,45 @@ const About: React.FC = () => {
   });
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-8 lg:py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div 
           ref={ref}
           className={`transition-all duration-1000 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Conocé a <span className="text-brand-300">Eliana</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Soy Eliana Schenkel, kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. Trabajo en sesiones individuales y también acompaño a empresas en el cuidado postural de sus equipos.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+            <div className="space-y-8 lg:space-y-10">
               <div className="prose prose-lg text-gray-600">
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg lg:text-xl leading-relaxed">
                   Con más de 10 años de experiencia en kinesiología y terapia del movimiento, he dedicado mi carrera a ayudar a personas a superar limitaciones físicas y alcanzar sus objetivos de bienestar. Mi enfoque combina técnicas basadas en la evidencia con atención personalizada para abordar las necesidades únicas de cada cliente.
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
                 <div className="flex items-start space-x-3">
                   <Award className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Profesional certificada</h3>
-                    <p className="text-sm text-gray-600">Licenciada en kinesiología con múltiples certificaciones.</p>
+                    <h3 className="font-semibold text-gray-900 text-base lg:text-lg">Profesional certificada</h3>
+                    <p className="text-sm lg:text-base text-gray-600">Licenciada en kinesiología con múltiples certificaciones.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-3">
                   <BookOpen className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Capacitación continua</h3>
-                    <p className="text-sm text-gray-600">Actualizaciones constantes en las últimas técnicas.
+                    <h3 className="font-semibold text-gray-900 text-base lg:text-lg">Capacitación continua</h3>
+                    <p className="text-sm lg:text-base text-gray-600">Actualizaciones constantes en las últimas técnicas.
                     </p>
                   </div>
                 </div>
@@ -55,33 +55,33 @@ const About: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Users className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Centrada en el cliente</h3>
-                    <p className="text-sm text-gray-600">Tratamientos y planes personalizados para cada individuo.</p>
+                    <h3 className="font-semibold text-gray-900 text-base lg:text-lg">Centrada en el cliente</h3>
+                    <p className="text-sm lg:text-base text-gray-600">Tratamientos y planes personalizados para cada individuo.</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start space-x-3">
                   <Target className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900">Orientada a resultados</h3>
-                    <p className="text-sm text-gray-600">Enfocada en lograr mejoras mensurables</p>
+                    <h3 className="font-semibold text-gray-900 text-base lg:text-lg">Orientada a resultados</h3>
+                    <p className="text-sm lg:text-base text-gray-600">Enfocada en lograr mejoras mensurables</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative flex justify-center lg:justify-end">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="/img/Eliana.jpg"
                   alt="Eliana, kinesiologa profesional"
-                  className="w-full h-[500px] object-cover object-top"
+                  className="w-full max-w-md lg:max-w-lg h-[400px] lg:h-[500px] object-cover object-top"
                 />
               </div>
               
-              <div className="absolute -bottom-8 -left-8 bg-brand-600 text-white p-6 rounded-2xl shadow-xl">
-                <div className="text-3xl font-bold">+10</div>
-                <div className="text-sm opacity-90">Años de experiencia</div>
+              <div className="absolute -bottom-6 -left-6 lg:-bottom-8 lg:-left-8 bg-brand-600 text-white p-4 lg:p-6 rounded-2xl shadow-xl">
+                <div className="text-2xl lg:text-3xl font-bold">+10</div>
+                <div className="text-xs lg:text-sm opacity-90">Años de experiencia</div>
               </div>
             
             </div>

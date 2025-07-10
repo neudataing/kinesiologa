@@ -83,32 +83,32 @@ const Services: React.FC = () => {
   const selectedServiceData = currentServices.find(service => service.id === selectedService);
 
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
+    <section id="services2" className="py-8 lg:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 lg:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
-            Our Services
+            Nuestros Servicios
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            Comprehensive solutions tailored to meet your unique needs
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto px-4 leading-relaxed">
+            Soluciones integrales adaptadas para satisfacer tus necesidades únicas de salud y bienestar
           </p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center mb-8 sm:mb-10 lg:mb-12 px-4">
+        <div className="flex justify-center mb-8 sm:mb-10 lg:mb-16 px-4">
           <div className="bg-white rounded-lg p-1 shadow-lg border border-gray-200 w-full max-w-md sm:w-auto">
             <div className="flex space-x-1" role="tablist" aria-label="Service categories">
               <TabButton
                 isActive={activeTab === 'individuals'}
                 onClick={() => handleTabChange('individuals')}
-                label="Individuals"
+                label="Individuales"
                 ariaControls="individuals-panel"
               />
               <TabButton
                 isActive={activeTab === 'businesses'}
                 onClick={() => handleTabChange('businesses')}
-                label="Businesses"
+                label="Empresas"
                 ariaControls="businesses-panel"
               />
             </div>
@@ -117,7 +117,7 @@ const Services: React.FC = () => {
 
         {/* Mobile Grid Layout */}
         {isMobileView ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-12 lg:mb-16">
             <AnimatePresence mode="wait">
               {currentServices.map((service, index) => (
                 <MobileServiceCard
@@ -130,7 +130,7 @@ const Services: React.FC = () => {
           </div>
         ) : (
           /* Desktop Service Selector Layout */
-          <div className="flex-1 flex gap-8 lg:gap-12">
+          <div className="flex-1 flex gap-8 lg:gap-12 mb-12 lg:mb-16">
             <AnimatePresence mode="wait">
               <motion.aside
                 key={activeTab}
@@ -165,12 +165,11 @@ const Services: React.FC = () => {
             </main>
           </div>
         )}
-        <div className="mt-20">
+        
+        {/* Photo Gallery Section */}
+        <div className="mt-8 lg:mt-12">
            <div className="max-w-6xl mx-auto">
-            <div className="mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-      Nuestro trabajo en imágenes
-            </h3>
+            <div className="mb-8 lg:mb-12">
             <PhotoGallery 
               photos={samplePhotos}
               autoPlay={true}
