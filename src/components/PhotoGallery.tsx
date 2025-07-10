@@ -264,6 +264,11 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
   };
 
   return (
+    
+    <div style = {{ background: 'white'}}> 
+      <h3 className="text-3xl font-bold text-gray-900 text-center mb-12" style ={{paddingBottom: '10px'}}>
+        Nuestro trabajo en imágenes
+      </h3>
     <div 
       className={`relative w-screen bg-white overflow-hidden shadow-2xl ${className} ${
         isMobile ? 'h-[60vh] min-h-[400px] max-h-[600px]' : 'h-[70vh] min-h-[500px] max-h-[800px]'
@@ -277,9 +282,6 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
       style={{ marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)',  marginTop: '5px', paddingTop: '10px', paddingBottom: '10px' }}
     >
       {/* Main Gallery Container */}
-      <div><h3 className="text-3xl font-bold text-gray-900 text-center mb-12" style ={{paddingBottom: '10px'}}>
-      Nuestro trabajo en imágenes
-            </h3> </div>
       <div className="relative w-full h-full">
         {photos.map((photo, index) => {
           const position = getSlidePosition(index);
@@ -429,6 +431,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 };
