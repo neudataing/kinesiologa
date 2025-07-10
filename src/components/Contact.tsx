@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
           }`}
         >
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               <span className="text-brand-600">Contáctame</span>
             </h2>
           </div>

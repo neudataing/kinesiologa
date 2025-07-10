@@ -10,26 +10,26 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-white">
         <Header />
         <main className="relative">
           {/* Hero Section - Full viewport height */}
-          <section className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+          <section className="min-h-screen bg-gradient-to-br from-white via-blue-50/20 to-gray-50/30">
             <Hero />
           </section>
           
           {/* About Section */}
-          <section className="relative bg-gradient-to-br from-white via-gray-50/30 to-blue-50/20 py-16 lg:py-20">
+          <section className="relative bg-gradient-to-br from-gray-50/30 via-white to-blue-50/15 py-20 lg:py-24">
             <About />
           </section>
           
           {/* Services Section */}
-          <section className="relative bg-gradient-to-br from-blue-50/20 via-gray-50/40 to-white py-16 lg:py-20">
+          <section className="relative bg-gradient-to-br from-blue-50/15 via-gray-50/25 to-white py-20 lg:py-24">
             <Services2 />
           </section>
           
           {/* Contact Section */}
-          <section className="relative bg-gradient-to-br from-white via-gray-50/30 to-blue-50/20 py-16 lg:py-20">
+          <section className="relative bg-gradient-to-br from-white via-blue-50/10 to-gray-50/20 py-20 lg:py-24">
             <Contact />
           </section>
         </main>

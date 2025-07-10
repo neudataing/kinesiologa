@@ -26,23 +26,23 @@ const Hero: React.FC = () => {
         >
           <div className="space-y-8 lg:space-y-10">
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight max-w-4xl">
               Transformá tu salud con <span className="text-brand-300 inline">kinesiología de calidad</span>
             </h1>
             
-            <p className="text-xl lg:text-2xl text-gray-900 leading-relaxed text-justify max-w-2xl">
+            <p className="text-lg lg:text-xl text-gray-700 leading-relaxed max-w-2xl">
               Corrección postural profesional y tratamientos diseñados para ayudarte a mover mejor, sentir más fuerte y vivir sin dolor. Disponible tanto virtual como presencialmente.
             </p>
         
            
           </div>
           
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
             <div className="relative">
               <img
                 src="/img/Logo-ES.png"
                 alt="Logo"
-                className="w-full max-w-md lg:max-w-lg xl:max-w-xl h-auto object-contain"
+                className="w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg h-auto object-contain"
               />
             </div>
           </div>

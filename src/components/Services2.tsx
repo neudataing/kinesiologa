@@ -87,10 +87,10 @@ const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 lg:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
+          <h2 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
             Nuestros Servicios
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto px-4 leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-lg text-gray-600 max-w-4xl mx-auto px-4 leading-relaxed">
             Soluciones integrales adaptadas para satisfacer tus necesidades únicas de salud y bienestar
           </p>
         </div>

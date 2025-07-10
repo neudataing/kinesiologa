@@ -266,7 +266,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
   return (
     
     <div style = {{ background: 'white'}}> 
-      <h3 className="text-3xl font-bold text-gray-900 text-center mb-12" style ={{paddingBottom: '10px'}}>
+      <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-8 lg:mb-12" style ={{paddingBottom: '10px'}}>
         Nuestro trabajo en imágenes
       </h3>
     <div 

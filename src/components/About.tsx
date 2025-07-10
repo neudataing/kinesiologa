@@ -18,10 +18,10 @@ const About: React.FC = () => {
           }`}
         >
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Conocé a <span className="text-brand-300">Eliana</span>
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Soy Eliana Schenkel, kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. Trabajo en sesiones individuales y también acompaño a empresas en el cuidado postural de sus equipos.
             </p>
           </div>
@@ -29,7 +29,7 @@ const About: React.FC = () => {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
             <div className="space-y-8 lg:space-y-10">
               <div className="prose prose-lg text-gray-600">
-                <p className="text-lg lg:text-xl leading-relaxed">
+                <p className="text-base lg:text-lg leading-relaxed text-gray-600">
                   Con más de 10 años de experiencia en kinesiología y terapia del movimiento, he dedicado mi carrera a ayudar a personas a superar limitaciones físicas y alcanzar sus objetivos de bienestar. Mi enfoque combina técnicas basadas en la evidencia con atención personalizada para abordar las necesidades únicas de cada cliente.
                 </p>
               </div>
