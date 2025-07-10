@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="container mx-auto px-12 sm:px-6 lg:px-8 py-8">
         <div className="grid lg:grid-cols-2 items-center">
           
           {/* Logo */}
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Redes sociales alineadas a la derecha */}
-          <div className="w-full flex justify-end px-4 space-x-6">
+          <div className="w-full flex justify-end px-12 space-x-6">
             <a
               href="https://www.facebook.com/profile.php?id=61573965166136"
               target="_blank"
@@ -49,6 +49,7 @@ const Footer: React.FC = () => {
             <div className="text-gray-400 text-sm">
               © 2025 Eliana Schenkel. Todos los derechos reservados.
             </div>
+
             <div className="text-gray-400 text-sm">
             Desarrollado por <a href="https://www.neudata.com.ar" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-400 transition-colors duration-300">Neudata Ingeniería</a>
             </div>
