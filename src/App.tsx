@@ -40,20 +40,3 @@ function App() {
 }
 
 export default App;
-          <Hero />
-          <About />
-          <Services2 />
-          {/**<Testimonials />*/}
-          {/**<FAQ />*/}
-          {/** <Booking /> */}
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-}
-
-
-
-export default App;
