@@ -83,7 +83,7 @@ const Services: React.FC = () => {
   const selectedServiceData = currentServices.find(service => service.id === selectedService);
 
   return (
-    <section id="services2" className="py-8 lg:py-12">
+    <section id="services2" className="py-4 lg:py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-10 lg:mb-12">

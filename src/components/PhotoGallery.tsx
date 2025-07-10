@@ -282,9 +282,9 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
       style={{ 
         marginLeft: 'calc(-50vw + 50%)', 
         marginRight: 'calc(-50vw + 50%)',  
-        marginTop: '2rem', 
-        paddingTop: '2rem', 
-        paddingBottom: '2rem',
+        marginTop: '1rem', 
+        paddingTop: '1rem', 
+        paddingBottom: '1rem',
         borderRadius: '1.5rem'
       }}
     >
