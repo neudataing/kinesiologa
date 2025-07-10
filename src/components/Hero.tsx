@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
               Transformá tu salud con <span className="text-brand-300 inline">kinesiología de calidad</span>
             </h1>
             
-            <p className="text-xl text-gray-600 leading-relaxed text-justify">
+            <p className="text-xl text-gray-900 leading-relaxed text-justify">
               Corrección postural profesional y tratamientos diseñados para ayudarte a mover mejor, sentir más fuerte y vivir sin dolor. Disponible tanto virtual como presencialmente.
             </p>
         
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
                 alt="Logo"
                 className="w-4/5 h-4/5 object-contain mx-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-white"></div>
             </div>
             
             
