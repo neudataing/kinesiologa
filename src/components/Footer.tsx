@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-12 sm:px-6 lg:px-8 py-8">
+      <div className="container mx-auto px-32 sm:px-6 lg:px-8 py-8">
         <div className="grid lg:grid-cols-2 items-center">
           
           {/* Logo */}
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Redes sociales alineadas a la derecha */}
-          <div className="w-full flex justify-end px-12 space-x-6">
+          <div className="w-full flex justify-end px-32 space-x-6">
             <a
               href="https://www.facebook.com/profile.php?id=61573965166136"
               target="_blank"
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+          <div className="flex flex-col justify-center items-center space-y-2">
             <div className="text-gray-400 text-sm">
               © 2025 Eliana Schenkel. Todos los derechos reservados.
             </div>
