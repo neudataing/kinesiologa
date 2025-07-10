@@ -11,11 +11,11 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-32 sm:px-6 lg:px-8 py-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid lg:grid-cols-2 items-center">
           
           {/* Logo */}
-          <div className="w-full flex justify-start px-4">
+          <div className="w-full flex justify-start px-64">
             <img
               src="/img/Logo-Completo-ES-blanco.png"
               alt="Logo"
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Redes sociales alineadas a la derecha */}
-          <div className="w-full flex justify-end px-32 space-x-6">
+          <div className="w-full flex justify-end px-64 space-x-6">
             <a
               href="https://www.facebook.com/profile.php?id=61573965166136"
               target="_blank"
