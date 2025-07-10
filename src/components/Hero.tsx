@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
           </div>
           
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="bg-white relative rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src="/img/Logo-ES.png"
                 alt="Logo"
