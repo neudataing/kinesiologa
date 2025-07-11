@@ -267,7 +267,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
     
     <div> 
     <div 
-      className={`relative w-screen bg-white overflow-hidden shadow-2xl ${className} ${
+      className={`relative w-screen bg-transparent overflow-hidden shadow-2xl ${className} ${
         isMobile ? 'h-[60vh] min-h-[400px] max-h-[600px]' : 'h-[70vh] min-h-[500px] max-h-[800px]'
       }`}
       ref={galleryRef}

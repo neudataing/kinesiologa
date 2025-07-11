@@ -16,17 +16,17 @@ function App() {
           {/* Hero Section - Full viewport height */}
             <Hero />
           {/* About Section */}
-          <section className="relative bg-gradient-to-br from-gray-50/40 via-gray-50/20 to-white py-8 lg:py-12">
+          <section className="bg-white py-8 lg:py-12">
             <About />
           </section>
           
           {/* Services Section */}
-          <section className="relative bg-gradient-to-br from-blue-50/20 via-blue-50/10 to-gray-50/15 py-8 lg:py-12">
+          <section className="bg-white py-8 lg:py-12">
             <Services2 />
           </section>
           
           {/* Contact Section */}
-          <section className="relative bg-gradient-to-br from-gray-50/25 via-white to-blue-50/20 py-8 lg:py-12">
+          <section className="bg-white py-8 lg:py-12">
             <Contact />
           </section>
         </main>
