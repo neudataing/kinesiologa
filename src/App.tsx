@@ -14,9 +14,7 @@ function App() {
         <Header />
         <main className="relative">
           {/* Hero Section - Full viewport height */}
-          <section className="min-h-screen py-8 bg-gradient-to-br from-blue-100 via-white to-gray-100">
             <Hero />
-          </section>
           
           {/* About Section */}
           <section className="relative bg-gradient-to-br from-gray-50/40 via-gray-50/20 to-white py-8 lg:py-12">
