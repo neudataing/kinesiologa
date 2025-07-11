@@ -15,7 +15,6 @@ function App() {
         <main className="relative">
           {/* Hero Section - Full viewport height */}
             <Hero />
-          
           {/* About Section */}
           <section className="relative bg-gradient-to-br from-gray-50/40 via-gray-50/20 to-white py-8 lg:py-12">
             <About />
