@@ -3,11 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
-import Services from './components/Services';
 import Services2 from './components/Services2';
-//import Testimonials from './components/Testimonials';
-//import Booking from './components/Booking';
-import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -16,21 +12,31 @@ function App() {
     <Router>
       <div className="min-h-screen bg-white">
         <Header />
-        <main>
-          <Hero />
-          <About />
-          <Services2 />
-          {/**<Testimonials />*/}
-          {/**<FAQ />*/}
-          {/** <Booking /> */}
-          <Contact />
+        <main className="relative">
+          {/* Hero Section - Full viewport height */}
+          <section className="min-h-screen bg-gradient-to-br from-white via-blue-50/15 to-blue-50/25 pb-4">
+            <Hero />
+          </section>
+          
+          {/* About Section */}
+          <section className="relative bg-gradient-to-br from-gray-50/40 via-gray-50/20 to-white py-8 lg:py-12">
+            <About />
+          </section>
+          
+          {/* Services Section */}
+          <section className="relative bg-gradient-to-br from-blue-50/20 via-blue-50/10 to-gray-50/15 py-8 lg:py-12">
+            <Services2 />
+          </section>
+          
+          {/* Contact Section */}
+          <section className="relative bg-gradient-to-br from-gray-50/25 via-white to-blue-50/20 py-8 lg:py-12">
+            <Contact />
+          </section>
         </main>
         <Footer />
       </div>
     </Router>
   );
 }
-
-
 
 export default App;
