@@ -167,12 +167,11 @@ const Services: React.FC = () => {
         )}
         
         {/* Photo Gallery Section */}
-        <div className="mt-8 lg:mt-12">
+        <div className="mt-8 lg:mt-12 bg-white rounded-3xl p-6 lg:p-8 shadow-lg">
           <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-6 lg:mb-8">
             Nuestro trabajo en imágenes
           </h3>
-           <div className="max-w-6xl mx-auto">
-            <div className="mb-8 lg:mb-12">
+          <div className="max-w-6xl mx-auto">
             <PhotoGallery 
               photos={samplePhotos}
               autoPlay={true}
@@ -180,9 +179,7 @@ const Services: React.FC = () => {
               showDots={true}
               showArrows={true}
             />
-            </div>
           </div>
-        </div>
       </div>
     </section>
   );
