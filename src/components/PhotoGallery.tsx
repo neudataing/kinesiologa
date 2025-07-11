@@ -285,13 +285,6 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
         borderRadius: '1.5rem'
       }}
     >
-      {/* Gallery Title */}
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-40">
-        <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
-          Nuestro trabajo en imágenes
-        </h3>
-      </div>
-
       {/* Main Gallery Container */}
       <div className="relative w-full h-full">
         {photos.map((photo, index) => {
