@@ -181,7 +181,7 @@ const Services: React.FC = () => {
             />
           </div>
         </div>
-      </div> {/* 🔹 Este cierre de la sección también faltaba */}
+      </div>
     </section>
   );
 };
