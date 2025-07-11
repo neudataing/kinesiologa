@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           }`}
         >
           <div className="space-y-8 lg:space-y-10">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight max-w-4xl">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight max-w-xl">
               Transformá tu salud con <span className="text-brand-300 inline">kinesiología de calidad</span>
             </h1>
 
