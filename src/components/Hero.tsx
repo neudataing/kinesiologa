@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="py-8 bg-gradient-to-br from-blue-100 via-white to-gray-100">
+    <section id="home" className="py-8 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div 
           ref={ref}
