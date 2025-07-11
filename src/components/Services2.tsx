@@ -166,7 +166,7 @@ const Services: React.FC = () => {
           </div>
         )}
         
-        {/* Photo Gallery Section */}
+                {/* Photo Gallery Section */}
         <div className="mt-8 lg:mt-12 bg-white rounded-3xl p-6 lg:p-8 shadow-lg">
           <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-6 lg:mb-8">
             Nuestro trabajo en imágenes
@@ -180,7 +180,8 @@ const Services: React.FC = () => {
               showArrows={true}
             />
           </div>
-      </div>
+        </div>
+      </div> {/* 🔹 Este cierre de la sección también faltaba */}
     </section>
   );
 };
