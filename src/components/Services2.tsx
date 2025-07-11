@@ -170,7 +170,7 @@ const Services: React.FC = () => {
   </div>
 
   {/* Fondo azul claro para galería de imágenes */}
-  <div className="bg-blue-50 w-full">
+  <div className="bg-white w-full">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mt-8 lg:mt-12 bg-transparent">
         <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-6 lg:mb-8">
