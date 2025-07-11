@@ -22,7 +22,7 @@ const About: React.FC = () => {
               Conocé a <span className="text-brand-300">Eliana</span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Soy Eliana Schenkel, kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. Trabajo en sesiones individuales y también acompaño a empresas en el cuidado postural de sus equipos.
+              Soy Eliana Schenkel, kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. Trabajo en sesiones individuales y también asesoro a empresas en el cuidado postural de sus equipos.
             </p>
           </div>
 
@@ -64,13 +64,13 @@ const About: React.FC = () => {
                   <Target className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900 text-base lg:text-lg">Orientada a resultados</h3>
-                    <p className="text-sm lg:text-base text-gray-600">Enfocada en lograr mejoras mensurables</p>
+                    <p className="text-sm lg:text-base text-gray-600">Enfocada en lograr mejoras mensurables.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative flex justify-center lg:justify-end">
+            <div className="relative flex justify-center lg:justify-center">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="/img/Eliana.jpg"
@@ -83,6 +83,13 @@ const About: React.FC = () => {
                 <div className="text-2xl lg:text-3xl font-bold">+10</div>
                 <div className="text-xs lg:text-sm opacity-90">Años de experiencia</div>
               </div>
+
+            {/**
+              <div className="absolute -top-6 -right-6 lg:-top-6 lg:-right-6 bg-brand-600 text-white p-4 lg:p-6 bg-white rounded-2xl shadow-xl">
+                <div className="text-3xl font-bold text-emerald-600">+100</div>
+                <div className="text-sm text-gray-600">Clientes</div>
+              </div>
+               */}
             
             </div>
           </div>
