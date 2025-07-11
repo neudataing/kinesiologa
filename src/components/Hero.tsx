@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
 
   return (
         <section id="home" className="min-h-screen py-8 bg-gradient-to-br from-blue-100 via-white to-gray-100">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div 
           ref={ref}
           className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center transition-all duration-1000 ${
