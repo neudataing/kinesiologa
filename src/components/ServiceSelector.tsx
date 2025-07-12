@@ -23,7 +23,7 @@ const ServiceSelector: React.FC<ServiceSelectorProps> = ({
           {tabType} Services
         </h3>
         <p className="text-sm text-gray-600 mt-1">
-          Select a service to learn more
+          Selecciona un servicio para saber más
         </p>
       </div>
 

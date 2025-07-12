@@ -22,7 +22,7 @@ const About: React.FC = () => {
               Conocé a <span className="text-brand-300">Eliana</span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Soy Eliana Schenkel, kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. Trabajo en sesiones individuales y también asesoro a empresas en el cuidado postural de sus equipos.
+              Soy Eliana Schenkel (MPRN 1002), kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. Trabajo en sesiones individuales y también asesoro a empresas en el cuidado postural de sus equipos.
             </p>
           </div>
 

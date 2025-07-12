@@ -10,7 +10,6 @@ interface ServiceDetailsProps {
 const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
   const Icon = service.icon;
 
-  // Mock features for demonstration
   const features = [
     'Professional consultation and planning',
     '24/7 customer support and assistance',
@@ -55,10 +54,14 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
             <h2 className="text-2xl font-bold text-gray-900 mb-2">
               {service.title}
             </h2>
+            
+            {/**
             <div className="flex items-center text-sm text-gray-600">
               <Star className="w-4 h-4 text-yellow-500 mr-1" />
               <span>Premium Service</span>
             </div>
+            */}
+
           </div>
         </div>
         
