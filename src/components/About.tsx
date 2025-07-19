@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, BookOpen, Users, Target } from 'lucide-react';
+import { Award, BookOpen, Users, Target, Crosshair, Eye, HeartHandshake } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 
 const About: React.FC = () => {
@@ -22,7 +22,8 @@ const About: React.FC = () => {
               Conocé a <span className="text-brand-300">Eliana</span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Soy Eliana Schenkel (MPRN 1002), kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. Trabajo en sesiones individuales y también asesoro a empresas en el cuidado postural de sus equipos.
+              Soy Eliana Schenkel (MPRN 1002), kinesióloga especializada en reeducación postural (RPG) y ergonomía ocupacional. 
+              Trabajo en sesiones individuales y también asesoro a empresas en el cuidado postural de sus equipos.
             </p>
           </div>
 
@@ -30,7 +31,10 @@ const About: React.FC = () => {
             <div className="space-y-8 lg:space-y-10">
               <div className="prose prose-lg text-gray-600">
                 <p className="text-base lg:text-lg leading-relaxed text-gray-600">
-                  Con más de 10 años de experiencia en kinesiología y terapia del movimiento, he dedicado mi carrera a ayudar a personas a superar limitaciones físicas y alcanzar sus objetivos de bienestar. Mi enfoque combina técnicas basadas en la evidencia con atención personalizada para abordar las necesidades únicas de cada cliente.
+                  Con más de 10 años de experiencia en kinesiología y terapia del movimiento, he dedicado mi carrera 
+                  a ayudar a personas a superar limitaciones físicas y alcanzar sus objetivos de bienestar. 
+                  Mi enfoque combina técnicas basadas en la evidencia con atención personalizada para abordar 
+                  las necesidades únicas de cada cliente.
                 </p>
               </div>
 
@@ -47,8 +51,7 @@ const About: React.FC = () => {
                   <BookOpen className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900 text-base lg:text-lg">Capacitación continua</h3>
-                    <p className="text-sm lg:text-base text-gray-600">Actualizaciones constantes en las últimas técnicas.
-                    </p>
+                    <p className="text-sm lg:text-base text-gray-600">Actualizaciones constantes en las últimas técnicas.</p>
                   </div>
                 </div>
                 
@@ -83,45 +86,123 @@ const About: React.FC = () => {
                 <div className="text-2xl lg:text-3xl font-bold">+10</div>
                 <div className="text-xs lg:text-sm opacity-90">Años de experiencia</div>
               </div>
-
-            {/**  borrar
-              <div className="absolute -top-6 -right-6 lg:-top-6 lg:-right-6 bg-brand-600 text-white p-4 lg:p-6 bg-white rounded-2xl shadow-xl">
-                <div className="text-3xl font-bold text-emerald-600">+100</div>
-                <div className="text-sm text-gray-600">Clientes</div>
-              </div>
-               */}
-            
             </div>
           </div>
 
+          {/* Sección de Educación y Certificaciones con efecto hover */}
           <div className="mt-16 bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-8 lg:p-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Educación y certificaciones</h3>
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-2">Licenciada en kinesiología y fisiatría</h4>
-                  <p className="text-sm text-gray-600">Universidad Adventista del Plata</p>
-                  <p className="text-xs text-emerald-600 mt-1">2012</p>
+            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8 lg:mb-12 text-center">
+              Educación y certificaciones
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div 
+                className="bg-white rounded-2xl p-6 shadow-sm transition-all duration-300 
+                          transform hover:scale-105 hover:shadow-lg border border-gray-100 cursor-pointer"
+              >
+                <div className="bg-brand-50/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <BookOpen className="h-6 w-6 text-brand-600" />
                 </div>
+                <h4 className="font-bold text-lg text-gray-900 mb-2">Licenciada en kinesiología y fisiatría</h4>
+                <p className="text-sm text-gray-600 mb-2">Universidad Adventista del Plata</p>
+                <p className="text-xs text-brand-600 font-medium mt-3">2012</p>
               </div>
-              <div>
-                <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-2">Reeducación Postural Global - Método Souchard</h4>
-                  <p className="text-sm text-gray-600">Universidad de Terapia Manual, Saint-Mont</p>
-                  <p className="text-xs text-emerald-600 mt-1">2013</p>
+              
+              <div 
+                className="bg-white rounded-2xl p-6 shadow-sm transition-all duration-300 
+                          transform hover:scale-105 hover:shadow-lg border border-gray-100 cursor-pointer"
+              >
+                <div className="bg-brand-50/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Award className="h-6 w-6 text-brand-600" />
                 </div>
+                <h4 className="font-bold text-lg text-gray-900 mb-2">Reeducación Postural Global - Método Souchard</h4>
+                <p className="text-sm text-gray-600 mb-2">Universidad de Terapia Manual, Saint-Mont</p>
+                <p className="text-xs text-brand-600 font-medium mt-3">2013</p>
               </div>
-              <div>
-                <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-2">Posgrado en ergonomía ocupacional</h4>
-                  <p className="text-sm text-gray-600">Universidad Nacional del Comahue</p>
-                  <p className="text-xs text-emerald-600 mt-1">2024</p>
+              
+              <div 
+                className="bg-white rounded-2xl p-6 shadow-sm transition-all duration-300 
+                          transform hover:scale-105 hover:shadow-lg border border-gray-100 cursor-pointer"
+              >
+                <div className="bg-brand-50/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Users className="h-6 w-6 text-brand-600" />
                 </div>
+                <h4 className="font-bold text-lg text-gray-900 mb-2">Posgrado en ergonomía ocupacional</h4>
+                <p className="text-sm text-gray-600 mb-2">Universidad Nacional del Comahue</p>
+                <p className="text-xs text-brand-600 font-medium mt-3">2024</p>
               </div>
             </div>
           </div>
-  
 
+          
+          <div className="mt-20 bg-gradient-to-r from-brand-50 to-blue-50 rounded-3xl p-8 lg:p-12">
+            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">
+              Nuestros principios fundamentales
+            </h3>
+            
+            <div className="grid md:grid-cols-3 gap-10">
+              {/* Misión */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex justify-center mb-6">
+                  <div className="bg-brand-100 w-16 h-16 rounded-full flex items-center justify-center">
+                    <Crosshair className="h-8 w-8 text-brand-600" />
+                  </div>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Misión</h4>
+                <p className="text-gray-600 text-center">
+                  Brindar atención kinesiológica integral que combine reeducación postural y ergonomía para 
+                  mejorar la calidad de vida de mis pacientes, ayudándolos a moverse mejor, vivir sin dolor 
+                  y alcanzar su máximo potencial físico en entornos personales y laborales.
+                </p>
+              </div>
+              
+              {/* Visión */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex justify-center mb-6">
+                  <div className="bg-brand-100 w-16 h-16 rounded-full flex items-center justify-center">
+                    <Eye className="h-8 w-8 text-brand-600" />
+                  </div>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Visión</h4>
+                <p className="text-gray-600 text-center">
+                  Ser referente en kinesiología avanzada y ergonomía ocupacional, transformando la 
+                  relación de las personas con su cuerpo y promoviendo entornos laborales saludables 
+                  donde la prevención y el bienestar postural sean pilares fundamentales.
+                </p>
+              </div>
+              
+              {/* Valores */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex justify-center mb-6">
+                  <div className="bg-brand-100 w-16 h-16 rounded-full flex items-center justify-center">
+                    <HeartHandshake className="h-8 w-8 text-brand-600" />
+                  </div>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Valores</h4>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start">
+                    <span className="text-brand-600 font-bold mr-2">•</span>
+                    <span>Excelencia profesional basada en evidencia científica</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-600 font-bold mr-2">•</span>
+                    <span>Empatía y atención personalizada</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-600 font-bold mr-2">•</span>
+                    <span>Compromiso con resultados tangibles</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-600 font-bold mr-2">•</span>
+                    <span>Innovación en técnicas terapéuticas</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-600 font-bold mr-2">•</span>
+                    <span>Ética y responsabilidad profesional</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
