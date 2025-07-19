@@ -123,12 +123,12 @@ const Header: React.FC = () => {
                 Servicios
               </button>
               
-              {/* Nuevo botón de Preguntas Frecuentes para móvil */}
+              
               <button 
-                onClick={() => scrollToSection('faq')}
+                onClick={() => scrollToSection('FAQ')}
                 className="block w-full text-left px-4 py-3 text-gray-700 hover:text-brand-600 hover:bg-brand-50/50 rounded-lg transition-all duration-200"
               >
-                Preguntas Frecuentes
+                Preguntas frecuentes
               </button>
               
               <button 
