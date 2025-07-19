@@ -62,12 +62,12 @@ const Header: React.FC = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
             </button>
             
-            {/* Nuevo botón de Preguntas Frecuentes */}
+          
             <button 
-              onClick={() => scrollToSection('faq')}
+              onClick={() => scrollToSection('FAQ')}
               className="text-gray-800 text-base font-semibold hover:text-brand-500 transition-all duration-300 relative group"
             >
-              Preguntas Frecuentes
+              Preguntas frecuentes
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
             </button>
 
