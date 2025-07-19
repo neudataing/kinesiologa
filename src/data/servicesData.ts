@@ -1,16 +1,18 @@
 import { 
-  User, 
+  Bone, 
+  Smartphone, 
+  UserCheck, 
+  Move, 
+  Home, 
+  HeartPulse,
   Building, 
-  Shield, 
-  CreditCard, 
-  PiggyBank, 
-  TrendingUp,
-  Users,
-  Briefcase,
-  Calculator,
-  Globe,
-  Zap,
-  Target
+  Briefcase, 
+  Users, 
+  UserCog, 
+  ShieldCheck, 
+  Zap, 
+  Target,
+  Activity
 } from 'lucide-react';
 
 export interface Service {
@@ -25,43 +27,43 @@ export const individualServices: Service[] = [
   {
     id: 'rpg-treatment',
     title: 'RPG (Reeducación Postural Global)',
-    description: 'Sesiones personalizadas de terapia manual que brindan diagnóstico y tratamiento, con el objetivo de mejorar la postura y aliviar la sintomatología que ésta puede ocasionar.',
-    icon: User,
+    description: 'Sesiones personalizadas de terapia manual enfocadas en mejorar la postura y aliviar dolores relacionados con desequilibrios musculares.',
+    icon: Bone,
     color: '#007bff'
   },
   {
     id: 'virtual-sessions',
     title: 'Sesiones Virtuales',
-    description: 'Consultas en línea desde la comodidad de tu hogar. Ideal para evaluaciones posturales, orientación sobre ejercicios y seguimiento continuo.',
-    icon: TrendingUp,
+    description: 'Consultas en línea desde tu hogar para evaluaciones posturales, guía de ejercicios y seguimiento continuo de tu tratamiento.',
+    icon: Smartphone,
     color: '#28a745'
   },
   {
     id: 'postural-correction',
     title: 'Corrección Postural',
-    description: 'Tratamientos especializados para corregir problemas posturales y aliviar dolores relacionados con malas posturas en el trabajo y vida diaria.',
-    icon: Shield,
+    description: 'Tratamientos especializados para corregir problemas posturales y aliviar dolores relacionados con malas posturas cotidianas.',
+    icon: UserCheck,
     color: '#6f42c1'
   },
   {
     id: 'movement-therapy',
     title: 'Terapia del Movimiento',
-    description: 'Técnicas especializadas para mejorar patrones de movimiento, flexibilidad y fuerza muscular adaptadas a cada paciente.',
-    icon: CreditCard,
+    description: 'Técnicas avanzadas para mejorar patrones de movimiento, aumentar flexibilidad y fortalecer grupos musculares clave.',
+    icon: Move,
     color: '#fd7e14'
   },
   {
     id: 'hybrid-treatment',
     title: 'Tratamientos Híbridos',
-    description: 'Combinación de sesiones presenciales y virtuales para dar continuidad y adherencia a las propuestas terapéuticas desde la comodidad del hogar.',
-    icon: PiggyBank,
+    description: 'Combinación de sesiones presenciales y virtuales para dar continuidad terapéutica con flexibilidad horaria y geográfica.',
+    icon: Home,
     color: '#20c997'
   },
   {
     id: 'pain-management',
     title: 'Manejo del Dolor',
-    description: 'Tratamientos especializados para el manejo y reducción del dolor crónico a través de técnicas kinesiológicas avanzadas.',
-    icon: Calculator,
+    description: 'Enfoque integral para el manejo del dolor crónico mediante técnicas kinesiológicas avanzadas y planes personalizados.',
+    icon: HeartPulse,
     color: '#dc3545'
   }
 ];
@@ -70,57 +72,57 @@ export const businessServices: Service[] = [
   {
     id: 'occupational-ergonomics',
     title: 'Ergonomía Ocupacional',
-    description: 'Análisis de puestos de trabajo para evaluar factores de riesgo disergonómicos y brindar recomendaciones personalizadas para empresas.',
+    description: 'Análisis de puestos de trabajo para identificar riesgos disergonómicos y proponer soluciones adaptadas a cada empresa.',
     icon: Building,
     color: '#007bff'
   },
   {
     id: 'corporate-consulting',
     title: 'Asesoramiento Empresarial',
-    description: 'Charlas y formaciones para empleados y empleadores sobre higiene postural y estrategias para mejorar el bienestar laboral.',
+    description: 'Charlas y capacitaciones sobre higiene postural y estrategias para mejorar el bienestar laboral de empleados.',
     icon: Briefcase,
     color: '#28a745'
   },
   {
     id: 'workplace-wellness',
     title: 'Bienestar Laboral',
-    description: 'Programas integrales de bienestar para empresas enfocados en reducir ausentismo y mejorar la productividad del equipo.',
-    icon: CreditCard,
+    description: 'Programas integrales para reducir ausentismo y mejorar productividad mediante el cuidado físico de los empleados.',
+    icon: Users,
     color: '#6f42c1'
   },
   {
     id: 'team-training',
     title: 'Capacitación de Equipos',
-    description: 'Formación especializada para equipos de trabajo sobre prevención de lesiones y técnicas de autocuidado postural.',
-    icon: Users,
+    description: 'Formación especializada en prevención de lesiones y técnicas de autocuidado postural para equipos de trabajo.',
+    icon: UserCog,
     color: '#fd7e14'
   },
   {
     id: 'risk-assessment',
     title: 'Evaluación de Riesgos',
-    description: 'Evaluación integral de riesgos ergonómicos en el ambiente laboral con planes de acción para la prevención de lesiones.',
-    icon: Globe,
+    description: 'Diagnóstico integral de riesgos ergonómicos con planes de acción para prevenir lesiones laborales.',
+    icon: ShieldCheck,
     color: '#20c997'
   },
   {
     id: 'productivity-optimization',
     title: 'Optimización de Productividad',
-    description: 'Estrategias para mejorar la productividad laboral a través del bienestar físico y la correcta ergonomía del puesto de trabajo.',
+    description: 'Estrategias para mejorar rendimiento laboral mediante bienestar físico y adaptación ergonómica de puestos.',
     icon: Zap,
     color: '#dc3545'
   },
   {
     id: 'prevention-programs',
     title: 'Programas de Prevención',
-    description: 'Desarrollo e implementación de programas preventivos personalizados para reducir lesiones laborales y mejorar la salud ocupacional.',
+    description: 'Diseño e implementación de planes preventivos personalizados para reducir lesiones ocupacionales.',
     icon: Target,
     color: '#6610f2'
   },
   {
     id: 'ergonomic-solutions',
     title: 'Soluciones Ergonómicas',
-    description: 'Implementación de soluciones ergonómicas integrales para mejorar las condiciones de trabajo y el bienestar de los empleados.',
-    icon: TrendingUp,
+    description: 'Implementación de mejoras ergonómicas integrales para optimizar condiciones laborales y bienestar.',
+    icon: Activity,
     color: '#e83e8c'
   }
 ];
