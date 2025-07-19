@@ -99,7 +99,7 @@ const About: React.FC = () => {
                 className="bg-white rounded-2xl p-6 shadow-sm transition-all duration-300 
                           transform hover:scale-105 hover:shadow-lg border border-gray-100 cursor-pointer"
               >
-                <div className="bg-brand-50/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-white w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-gray-300">
                   <BookOpen className="h-6 w-6 text-brand-600" />
                 </div>
                 <h4 className="font-bold text-lg text-gray-900 mb-2">Licenciada en kinesiología y fisiatría</h4>
@@ -111,7 +111,7 @@ const About: React.FC = () => {
                 className="bg-white rounded-2xl p-6 shadow-sm transition-all duration-300 
                           transform hover:scale-105 hover:shadow-lg border border-gray-100 cursor-pointer"
               >
-                <div className="bg-brand-50/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-white w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-gray-300">
                   <Award className="h-6 w-6 text-brand-600" />
                 </div>
                 <h4 className="font-bold text-lg text-gray-900 mb-2">Reeducación Postural Global - Método Souchard</h4>
@@ -123,7 +123,7 @@ const About: React.FC = () => {
                 className="bg-white rounded-2xl p-6 shadow-sm transition-all duration-300 
                           transform hover:scale-105 hover:shadow-lg border border-gray-100 cursor-pointer"
               >
-                <div className="bg-brand-50/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                <div className="bg-white w-12 h-12 rounded-lg flex items-center justify-center mb-4 border border-gray-300">
                   <Users className="h-6 w-6 text-brand-600" />
                 </div>
                 <h4 className="font-bold text-lg text-gray-900 mb-2">Posgrado en ergonomía ocupacional</h4>
@@ -133,32 +133,38 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          
-          <div className="mt-20 bg-gradient-to-r from-brand-50 to-blue-50 rounded-3xl p-8 lg:p-12">
+          {/* Nueva sección: Misión, Visión y Valores */}
+          <div className="mt-20 bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-8 lg:p-12">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">
               Nuestros principios fundamentales
             </h3>
             
             <div className="grid md:grid-cols-3 gap-10">
               {/* Misión */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div 
+                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
+                          transition-all duration-300 transform hover:scale-[1.02]"
+              >
                 <div className="flex justify-center mb-6">
-                  <div className="bg-brand-100 w-16 h-16 rounded-full flex items-center justify-center">
+                  <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center border border-gray-300">
                     <Crosshair className="h-8 w-8 text-brand-600" />
                   </div>
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Misión</h4>
                 <p className="text-gray-600 text-center">
                   Brindar atención kinesiológica integral que combine reeducación postural y ergonomía para 
-                  mejorar la calidad de vida de mis pacientes, ayudándolos a moverse mejor, vivir sin dolor 
+                  mejorar la calidad de vida de mis pacientes, ayudándoles a moverse mejor, vivir sin dolor 
                   y alcanzar su máximo potencial físico en entornos personales y laborales.
                 </p>
               </div>
               
               {/* Visión */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div 
+                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
+                          transition-all duration-300 transform hover:scale-[1.02]"
+              >
                 <div className="flex justify-center mb-6">
-                  <div className="bg-brand-100 w-16 h-16 rounded-full flex items-center justify-center">
+                  <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center border border-gray-300">
                     <Eye className="h-8 w-8 text-brand-600" />
                   </div>
                 </div>
@@ -171,9 +177,12 @@ const About: React.FC = () => {
               </div>
               
               {/* Valores */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+              <div 
+                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
+                          transition-all duration-300 transform hover:scale-[1.02]"
+              >
                 <div className="flex justify-center mb-6">
-                  <div className="bg-brand-100 w-16 h-16 rounded-full flex items-center justify-center">
+                  <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center border border-gray-300">
                     <HeartHandshake className="h-8 w-8 text-brand-600" />
                   </div>
                 </div>
