@@ -57,7 +57,7 @@ const MobileServiceCard: React.FC<MobileServiceCardProps> = ({ service, index })
           whileTap={{ scale: 0.98 }}
           className="flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md p-2 -m-2 min-h-[44px]"
         >
-          <span className="mr-2">Learn More</span>
+          <span className="mr-2">Ver detalles</span> {/* Cambiado de "Learn More" a "Ver detalles" */}
           <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
         </motion.button>
         

@@ -4,6 +4,7 @@ import ServiceDetails from './ServiceDetails';
 import TabButton from './TabButton';
 import { individualServices, businessServices } from '../data/servicesData';
 import { PhotoGallery } from './PhotoGallery';
+import MobileServiceCard from './MobileServiceCard';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -109,29 +110,49 @@ const Services: React.FC = () => {
             {/* Mostrar servicios - Diseño adaptable */}
             <div className="mb-12 lg:mb-16">
               <AnimatePresence mode="wait">
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
-                >
-                  {currentServices.map((service) => (
-                    <motion.div
-                      key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      whileHover={{ scale: isMobileView ? 1 : 1.03 }}
-                      transition={{
-                        duration: 0.3,
-                        ease: 'easeInOut'
-                      }}
-                      className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
-                    >
-                      <ServiceDetails service={service} />
-                    </motion.div>
-                  ))}
-                </motion.div>
+                {isMobileView ? (
+                  // Vista móvil - Usamos MobileServiceCard
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="space-y-6"
+                  >
+                    {currentServices.map((service, index) => (
+                      <MobileServiceCard 
+                        key={service.id} 
+                        service={service} 
+                        index={index} 
+                      />
+                    ))}
+                  </motion.div>
+                ) : (
+                  // Vista escritorio - Usamos ServiceDetails con efecto hover
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+                  >
+                    {currentServices.map((service) => (
+                      <motion.div
+                        key={service.id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        whileHover={{ scale: 1.03 }}
+                        transition={{
+                          duration: 0.3,
+                          ease: 'easeInOut'
+                        }}
+                        className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                      >
+                        <ServiceDetails service={service} />
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
               </AnimatePresence>
             </div>
           </div>
