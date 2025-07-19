@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Service } from '../data/servicesData';
-import { ArrowRight } from 'lucide-react';
 
 interface MobileServiceCardProps {
   service: Service;
@@ -25,7 +24,7 @@ const MobileServiceCard: React.FC<MobileServiceCardProps> = ({ service, index })
         transition: { duration: 0.2, ease: "easeOut" }
       }}
       whileTap={{ scale: 0.98 }}
-      className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group cursor-pointer"
+      className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group"
     >
       {/* Header */}
       <div className="flex items-start mb-4">
@@ -46,27 +45,9 @@ const MobileServiceCard: React.FC<MobileServiceCardProps> = ({ service, index })
       </div>
       
       {/* Description */}
-      <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-5 line-clamp-3">
+      <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
         {service.description}
       </p>
-      
-      {/* Action Button */}
-      <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          className="flex items-center text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md p-2 -m-2 min-h-[44px]"
-        >
-          <span className="mr-2">Ver detalles</span> {/* Cambiado de "Learn More" a "Ver detalles" */}
-          <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
-        </motion.button>
-        
-        {/* Visual indicator */}
-        <div 
-          className="w-3 h-3 rounded-full opacity-60"
-          style={{ backgroundColor: service.color }}
-        />
-      </div>
     </motion.div>
   );
 };
