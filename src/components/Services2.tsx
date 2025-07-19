@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import ServiceSelector from './ServiceSelector';
 import ServiceDetails from './ServiceDetails';
 import TabButton from './TabButton';
 import { individualServices, businessServices } from '../data/servicesData';
 import { PhotoGallery } from './PhotoGallery';
-import MobileServiceCard from './MobileServiceCard';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -54,16 +51,14 @@ type TabType = 'individuals' | 'businesses';
 
 const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('individuals');
-  const [selectedService, setSelectedService] = useState<string>('');
   const [isMobileView, setIsMobileView] = useState(false);
 
   const handleTabChange = (tab: TabType) => {
     setActiveTab(tab);
-    setSelectedService('');
   };
 
   // Check for mobile view on mount and resize
-  React.useEffect(() => {
+  useEffect(() => {
     const checkMobileView = () => {
       setIsMobileView(window.innerWidth < 1024);
     };
@@ -74,14 +69,6 @@ const Services: React.FC = () => {
   }, []);
 
   const currentServices = activeTab === 'individuals' ? individualServices : businessServices;
-
-  React.useEffect(() => {
-    if (currentServices.length > 0 && !selectedService) {
-      setSelectedService(currentServices[0].id);
-    }
-  }, [currentServices, selectedService]);
-
-  const selectedServiceData = currentServices.find(service => service.id === selectedService);
 
   return (
     <section id="services2" className="py-4 lg:py-6">
@@ -119,7 +106,7 @@ const Services: React.FC = () => {
               </div>
             </div>
 
-            {/* Mostrar servicios en dos columnas */}
+            {/* Mostrar servicios - Diseño adaptable */}
             <div className="mb-12 lg:mb-16">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -127,17 +114,19 @@ const Services: React.FC = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                  className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
                 >
                   {currentServices.map((service) => (
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
+                      whileHover={{ scale: isMobileView ? 1 : 1.03 }}
                       transition={{
                         duration: 0.3,
                         ease: 'easeInOut'
                       }}
+                      className="overflow-hidden rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
                     >
                       <ServiceDetails service={service} />
                     </motion.div>
