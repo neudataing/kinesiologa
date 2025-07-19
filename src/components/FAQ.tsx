@@ -18,47 +18,44 @@ const FAQ: React.FC = () => {
   };
 
   const faqs = [
-    {
-      question: "What is kinesiology and how can it help me?",
-      answer: "Kinesiology is the scientific study of human movement. As a kinesiologist, I analyze your movement patterns, posture, and muscle function to identify imbalances and dysfunction. This helps address pain, improve performance, prevent injuries, and optimize your overall physical health through targeted exercises and treatments."
-    },
-    {
-      question: "What's the difference between postural and reductive treatments?",
-      answer: "Postural treatments focus on correcting alignment issues, improving spinal posture, and addressing muscle imbalances that affect your daily posture. Reductive treatments are more targeted interventions that reduce specific dysfunctions, restore optimal movement patterns, and address particular problem areas or injuries."
-    },
-    {
-      question: "How effective are virtual sessions compared to in-person visits?",
-      answer: "Virtual sessions are highly effective for postural assessments, movement analysis, exercise instruction, and ongoing support. I can observe your posture, guide you through exercises, and provide real-time feedback. In-person sessions allow for hands-on techniques and more detailed physical assessments. Many clients successfully combine both formats."
-    },
-    {
-      question: "What should I expect during my first consultation?",
-      answer: "Your first session includes a comprehensive health history review, postural and movement assessment, discussion of your goals and concerns, and development of a personalized treatment plan. I'll also provide initial exercises or recommendations you can start immediately. Sessions typically last 60-90 minutes for in-person or 45-60 minutes for virtual."
-    },
-    {
-      question: "How many sessions will I need to see results?",
-      answer: "Results vary based on your condition, goals, and compliance with recommendations. Many clients notice improvements within 2-3 sessions, with significant changes typically seen within 6-8 sessions. Chronic conditions may require longer treatment periods. I'll provide a realistic timeline during your initial assessment."
-    },
-    {
-      question: "Do you work with specific conditions or injuries?",
-      answer: "Yes, I work with a wide range of conditions including chronic pain, postural dysfunction, sports injuries, work-related strain, movement disorders, and injury prevention. I also help athletes optimize performance and individuals preparing for physical activities or recovery from surgery."
-    },
-    {
-      question: "What equipment do I need for virtual sessions?",
-      answer: "For virtual sessions, you'll need a computer or tablet with a good camera and internet connection, enough space to move around (about 6x6 feet), and comfortable workout clothes. I may recommend basic props like resistance bands or small weights, but I'll work with whatever you have available."
-    },
-    {
-      question: "Are your services covered by insurance?",
-      answer: "Coverage varies by insurance provider and plan. Many health savings accounts (HSAs) and flexible spending accounts (FSAs) cover kinesiology services. I can provide receipts and documentation needed for insurance reimbursement. Please check with your provider about coverage for preventive care and rehabilitation services."
-    },
-    {
-      question: "How do I prepare for my appointment?",
-      answer: "Wear comfortable, form-fitting clothes that allow me to observe your movement. Bring any relevant medical records or imaging results. For virtual sessions, test your technology beforehand and ensure good lighting. Come prepared to discuss your health history, current symptoms, and goals."
-    },
-    {
-      question: "What makes your approach different from other practitioners?",
-      answer: "I combine evidence-based kinesiology principles with personalized care, offering both virtual and in-person options for maximum flexibility. My approach focuses on education, empowering you with knowledge about your body, and providing practical solutions you can implement in daily life. I also emphasize long-term wellness rather than just symptom management."
-    }
-  ];
+  {
+    question: "¿Qué es la Reeducación Postural Global (RPG)?",
+    answer: "RPG es un método terapéutico suave y personalizado que busca corregir desequilibrios posturales y aliviar dolores crónicos. A través de posturas guiadas y trabajo respiratorio, se mejora la alineación corporal y se reduce la tensión muscular. Es un método de terapia manual aplicado por kinesiólogos especializados que evalúa, diagnostica y trata."
+  },
+  {
+    question: "¿En qué casos está indicada la RPG?",
+    answer: "RPG es útil para tratar dolores de espalda (cervicalgias, lumbalgias), hernias de disco, escoliosis, problemas posturales y sobrecargas por malas posturas laborales. También se recomienda de forma preventiva, especialmente en personas que trabajan muchas horas sentadas o con esfuerzos repetitivos."
+  },
+  {
+    question: "¿Qué diferencia RPG de otros métodos de kinesiología?",
+    answer: "La RPG trata al cuerpo como una unidad. En lugar de centrarse solo en el síntoma, busca la causa postural del problema, permitiendo un tratamiento más profundo y duradero. No es invasiva y se adapta a cada persona según su condición física y dolencias."
+  },
+  {
+    question: "¿Qué es una evaluación ergonómica en empresas?",
+    answer: "Es un análisis de los puestos de trabajo para identificar riesgos posturales y proponer mejoras que cuiden la salud del trabajador. Se evalúan mobiliarios, herramientas, organización de tareas y factores psicosociales. Se sugieren ajustes para prevenir lesiones musculoesqueléticas y garantizar el bienestar laboral."
+  },
+  {
+    question: "¿Cómo pueden ayudar tus servicios de ergonomía a mi empresa?",
+    answer: "Ayudan a reducir el ausentismo laboral por dolores o lesiones, mejorar el bienestar y la productividad de los empleados, cumplir normativas de salud y seguridad, y fomentar una cultura preventiva en la organización."
+  },
+  {
+    question: "¿Realizás capacitaciones o talleres?",
+    answer: "Sí. Brindo talleres personalizados sobre pausas activas, higiene postural, ergonomía y cuidado corporal en entornos laborales. Están dirigidos a empleados, supervisores o responsables de salud y seguridad."
+  },
+  {
+    question: "¿Dónde atendés o brindás servicios?",
+    answer: "Atiendo de forma presencial en Gral. Fernández Oro, y también ofrezco asesoramientos, talleres y capacitaciones en empresas de todo el país. Algunos servicios también pueden realizarse de forma virtual."
+  },
+  {
+    question: "¿Cómo puedo solicitar un turno o una propuesta para mi empresa?",
+    answer: "Podés contactarme por WhatsApp, mail o a través del formulario de esta web. En el caso de empresas, armo propuestas personalizadas según la necesidad, tipo de trabajo y cantidad de personas."
+  },
+  {
+    question: "¿Trabajás con obras sociales o solo de forma particular?",
+    answer: "Trabajo de forma particular y con las obras sociales que tengan la práctica convenida. Para tratamientos individuales, puedo entregarte la documentación necesaria para que solicites reintegros si tu obra social lo permite."
+  }
+];
+
 
   return (
     <section className="py-20 bg-gray-50">
@@ -74,7 +71,7 @@ const FAQ: React.FC = () => {
               Preguntas <span className="text-brand-600">Frecuentes</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Everything you need to know about kinesiology treatments, virtual sessions, and how I can help you achieve your health goals.
+              Revisa las preguntas frecuentes y encuentra las respuestas a tus consultas.
             </p>
           </div>
 
