@@ -123,7 +123,6 @@ const Header: React.FC = () => {
                 Servicios
               </button>
               
-              
               <button 
                 onClick={() => scrollToSection('FAQ')}
                 className="block w-full text-left px-4 py-3 text-gray-700 hover:text-brand-600 hover:bg-brand-50/50 rounded-lg transition-all duration-200"
