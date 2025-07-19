@@ -17,6 +17,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
     'Secure and reliable service delivery',
     'Personalized solutions for your needs'
   ];
+   
 
   const benefits = [
     'Save time with streamlined processes',
@@ -70,9 +71,11 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
         </p>
       </div>
 
-      {/* Content */}
+
+
+      {/** Content 
       <div className="p-6 lg:p-8">
-        {/* Key Features */}
+       
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
             <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
@@ -94,7 +97,7 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
           </div>
         </div>
 
-        {/* Benefits */}
+        
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
             <Star className="w-5 h-5 text-yellow-500 mr-2" />
@@ -116,6 +119,8 @@ const ServiceDetails: React.FC<ServiceDetailsProps> = ({ service }) => {
           </div>
         </div>
       </div>
+    */}
+
     </motion.div>
   );
 };
