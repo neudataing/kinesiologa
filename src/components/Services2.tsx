@@ -75,7 +75,6 @@ const Services: React.FC = () => {
 
   const currentServices = activeTab === 'individuals' ? individualServices : businessServices;
 
-  // 👇 Esto lo dejamos como pediste, aunque ya no se usa
   React.useEffect(() => {
     if (currentServices.length > 0 && !selectedService) {
       setSelectedService(currentServices[0].id);
@@ -120,23 +119,30 @@ const Services: React.FC = () => {
               </div>
             </div>
 
-            {/* Mostrar todos los servicios uno abajo del otro */}
-            <div className="mb-12 lg:mb-16 space-y-8">
+            {/* Mostrar servicios en dos columnas */}
+            <div className="mb-12 lg:mb-16">
               <AnimatePresence mode="wait">
-                {currentServices.map((service) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{
-                      duration: 0.3,
-                      ease: 'easeInOut'
-                    }}
-                  >
-                    <ServiceDetails service={service} />
-                  </motion.div>
-                ))}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                >
+                  {currentServices.map((service) => (
+                    <motion.div
+                      key={service.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{
+                        duration: 0.3,
+                        ease: 'easeInOut'
+                      }}
+                    >
+                      <ServiceDetails service={service} />
+                    </motion.div>
+                  ))}
+                </motion.div>
               </AnimatePresence>
             </div>
           </div>
