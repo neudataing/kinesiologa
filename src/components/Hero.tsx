@@ -16,16 +16,17 @@ const Hero: React.FC = () => {
   };
 
   return (
-        <section id="home" className="min-h-screen py-8 bg-gradient-to-br from-blue-100 via-white to-gray-100 flex items-center">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="home" className="min-h-screen py-8 bg-gradient-to-br from-blue-100 via-white to-gray-100 flex items-center">
+      {/* Contenedor con márgenes laterales aumentados */}
+      <div className="container mx-auto px-8 sm:px-10 lg:px-14 py-20 max-w-7xl">
         <div 
           ref={ref}
-          className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center transition-all duration-1000 ${
+          className={`grid lg:grid-cols-2 gap-10 lg:gap-12 items-center transition-all duration-1000 ${
             inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="space-y-8 lg:space-y-10">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight max-w-xl">
+          <div className="space-y-7 lg:space-y-8">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-6.5xl font-bold text-gray-900 leading-tight max-w-xl">
               Transformá tu salud con <span className="text-brand-300 inline">kinesiología de calidad</span>
             </h1>
 
@@ -34,7 +35,7 @@ const Hero: React.FC = () => {
             </p>
           </div>
 
-          <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+          <div className="relative flex justify-center mt-8 lg:mt-0">
             <div className="relative">
               <img
                 src="/img/Logo-ES.png"
