@@ -18,7 +18,7 @@ const About: React.FC = () => {
           }`}
         >
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Conocé a <span className="text-brand-300">Eliana</span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -94,34 +94,34 @@ const About: React.FC = () => {
             </div>
           </div>
           
-          {/** 
+          
           <div className="mt-16 bg-brand-50 rounded-3xl p-8 lg:p-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Educación y certificaciones</h3>
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
                 <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-2">Master's in Kinesiology</h4>
-                  <p className="text-sm text-gray-600">University of Health Sciences</p>
-                  <p className="text-xs text-brand-600 mt-1">2018</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">Licenciada en kinesiología y fisiatría</h4>
+                  <p className="text-sm text-gray-600">Universidad Adventista del Plata</p>
+                  <p className="text-xs text-brand-600 mt-1">2012</p>
                 </div>
               </div>
               <div>
                 <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-2">Postural Restoration Certified</h4>
-                  <p className="text-sm text-gray-600">Postural Restoration Institute</p>
-                  <p className="text-xs text-brand-600 mt-1">2019</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">Reeducación Postural Global - Método Souchard</h4>
+                  <p className="text-sm text-gray-600">Universidad de Terapia Manual, Saint-Mont, Francia</p>
+                  <p className="text-xs text-brand-600 mt-1">2013</p>
                 </div>
               </div>
               <div>
                 <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <h4 className="font-semibold text-gray-900 mb-2">Movement Specialist</h4>
-                  <p className="text-sm text-gray-600">International Movement Institute</p>
-                  <p className="text-xs text-brand-600 mt-1">2020</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">Posgrado en ergonomía ocupacional.</h4>
+                  <p className="text-sm text-gray-600">Universidad Nacional del Comahue</p>
+                  <p className="text-xs text-brand-600 mt-1">2024</p>
                 </div>
               </div>
             </div>
           </div>
-          */}
+  
 
         </div>
       </div>
