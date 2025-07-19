@@ -59,16 +59,15 @@ const Header: React.FC = () => {
               className="text-gray-800 text-base font-semibold hover:text-brand-500 transition-all duration-300 relative group"
             >
               Servicios
-
-              <button 
-              onClick={() => scrollToSection('FAQ')}
-              className="text-gray-800 text-base font-semibold hover:text-brand-500 transition-all duration-300 relative group"
-            >
-              Preguntas frecuentes
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
             </button>
-
-
+            
+            {/* Nuevo botón de Preguntas Frecuentes */}
+            <button 
+              onClick={() => scrollToSection('faq')}
+              className="text-gray-800 text-base font-semibold hover:text-brand-500 transition-all duration-300 relative group"
+            >
+              Preguntas Frecuentes
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
             </button>
 
@@ -118,37 +117,25 @@ const Header: React.FC = () => {
                 Acerca de
               </button>
               <button 
-                onClick={() => scrollToSection('services')}
+                onClick={() => scrollToSection('services2')}
                 className="block w-full text-left px-4 py-3 text-gray-700 hover:text-brand-600 hover:bg-brand-50/50 rounded-lg transition-all duration-200"
               >
                 Servicios
-
-              {/**
               </button>
+              
+              {/* Nuevo botón de Preguntas Frecuentes para móvil */}
               <button 
-                onClick={() => scrollToSection('testimonials')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md"
+                onClick={() => scrollToSection('faq')}
+                className="block w-full text-left px-4 py-3 text-gray-700 hover:text-brand-600 hover:bg-brand-50/50 rounded-lg transition-all duration-200"
               >
-                
-                Testimonios
-               */}
-
+                Preguntas Frecuentes
               </button>
+              
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="block w-full text-left px-4 py-3 text-gray-700 hover:text-brand-600 hover:bg-brand-50/50 rounded-lg transition-all duration-200"
               >
-                 
                 Contacto
-              {/**
-              </button>
-              <button 
-                onClick={() => scrollToSection('booking')}
-                className="block w-full text-left px-3 py-2 bg-brand-300 text-white hover:bg-brand-400 rounded-md font-medium"
-              >
-                Agendar Consulta
-                 */}
-                 
               </button>
             </div>
           </div>
