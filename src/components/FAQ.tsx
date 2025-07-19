@@ -44,11 +44,20 @@ const FAQ: React.FC = () => {
   },
   {
     question: "¿Dónde atendés o brindás servicios?",
-    answer: "Atiendo de forma presencial en Gral. Fernández Oro, y también ofrezco asesoramientos, talleres y capacitaciones en empresas de todo el país. Algunos servicios también pueden realizarse de forma virtual."
+    answer: "Atiendo de forma presencial en General Fernández Oro, Río Negro y también ofrezco asesoramientos, talleres y capacitaciones en empresas de todo el país. Algunos servicios también pueden realizarse de forma virtual."
   },
   {
     question: "¿Cómo puedo solicitar un turno o una propuesta para mi empresa?",
-    answer: "Podés contactarme por WhatsApp, mail o a través del formulario de esta web. En el caso de empresas, armo propuestas personalizadas según la necesidad, tipo de trabajo y cantidad de personas."
+    //answer: "Podés contactarme por WhatsApp o correo electrónico haciendo click aquí. En el caso de empresas, armo propuestas personalizadas según la necesidad, tipo de trabajo y cantidad de personas."
+    answer: (
+      <>
+        Podés contactarme por WhatsApp o correo electrónico{" "}
+        <a href="#contact" className="text-brand-600 underline hover:text-brand-700">
+          haciendo click aquí
+        </a>
+        . En el caso de empresas, armo propuestas personalizadas según la necesidad, tipo de trabajo y cantidad de personas.
+      </>
+    )
   },
   {
     question: "¿Trabajás con obras sociales o solo de forma particular?",
