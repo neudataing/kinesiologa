@@ -36,7 +36,6 @@ const Header: React.FC = () => {
         </div>
         
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-12">
             <button 
               onClick={() => scrollToSection('home')}
@@ -91,7 +90,6 @@ const Header: React.FC = () => {
           </div>
                
 
-          {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-gray-700 hover:text-brand-600"
@@ -100,7 +98,6 @@ const Header: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden bg-white/98 backdrop-blur-md border-t border-gray-100/50 shadow-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">

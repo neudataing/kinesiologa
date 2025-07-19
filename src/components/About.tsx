@@ -89,7 +89,7 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Sección de Educación y Certificaciones con efecto hover */}
+
           <div className="mt-16 bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-8 lg:p-12">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8 lg:mb-12 text-center">
               Educación y certificaciones
@@ -133,14 +133,13 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Nueva sección: Misión, Visión y Valores */}
           <div className="mt-20 bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-8 lg:p-12">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">
               Nuestros principios fundamentales
             </h3>
             
             <div className="grid md:grid-cols-3 gap-10">
-              {/* Misión */}
+
               <div 
                 className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
                           transition-all duration-300 transform hover:scale-[1.02]"
@@ -158,7 +157,7 @@ const About: React.FC = () => {
                 </p>
               </div>
               
-              {/* Visión */}
+
               <div 
                 className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
                           transition-all duration-300 transform hover:scale-[1.02]"
@@ -176,7 +175,6 @@ const About: React.FC = () => {
                 </p>
               </div>
               
-              {/* Valores */}
               <div 
                 className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
                           transition-all duration-300 transform hover:scale-[1.02]"

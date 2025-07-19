@@ -1,20 +1,13 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Instagram } from 'lucide-react';
+import {Facebook, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         <div className="grid lg:grid-cols-2 items-center">
           
-          {/* Logo */}
           <div className="w-full flex justify-center lg:justify-start px-4 lg:px-16 mb-8 lg:mb-0">
             <img
               src="/img/Logo-Completo-ES-blanco.png"
@@ -23,7 +16,6 @@ const Footer: React.FC = () => {
             />
           </div>
 
-          {/* Redes sociales alineadas a la derecha */}
           <div className="w-full flex justify-center lg:justify-end px-4 lg:px-16 space-x-6">
             <a
               href="https://www.facebook.com/profile.php?id=61573965166136"

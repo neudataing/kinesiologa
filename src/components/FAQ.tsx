@@ -48,7 +48,6 @@ const FAQ: React.FC = () => {
   },
   {
     question: "¿Cómo puedo solicitar un turno o una propuesta para mi empresa?",
-    //answer: "Podés contactarme por WhatsApp o correo electrónico haciendo click aquí. En el caso de empresas, armo propuestas personalizadas según la necesidad, tipo de trabajo y cantidad de personas."
     answer: (
       <>
         Podés contactarme por WhatsApp o correo electrónico{" "}
@@ -118,23 +117,6 @@ const FAQ: React.FC = () => {
               ))}
             </div>
           </div>
-
-          {/** 
-          <div className="mt-16 text-center">
-            <p className="text-gray-600 mb-6">
-              Still have questions? I'm here to help!
-            </p>
-            <button 
-              onClick={() => {
-                const element = document.getElementById('contact');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="inline-flex items-center px-8 py-4 bg-brand-600 text-white text-lg font-semibold rounded-full hover:bg-brand-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
-            >
-              Get in Touch
-            </button>
-          </div>
-        */}
 
         </div>
       </div>

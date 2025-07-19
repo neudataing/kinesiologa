@@ -74,7 +74,7 @@ const Services: React.FC = () => {
   return (
     <section id="services2" className="py-4 lg:py-6">
       <div className="flex flex-col">
-        {/* Fondo gris claro para toda la sección de servicios (excepto galería) */}
+
         <div className="bg-gray-50 w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
@@ -87,7 +87,7 @@ const Services: React.FC = () => {
               </p>
             </div>
 
-            {/* Tab Navigation */}
+
             <div className="flex justify-center mb-8 sm:mb-10 lg:mb-16 px-4">
               <div className="bg-white rounded-lg p-1 shadow-lg border border-gray-200 w-full max-w-md sm:w-auto">
                 <div className="flex space-x-1" role="tablist" aria-label="Service categories">
@@ -107,11 +107,11 @@ const Services: React.FC = () => {
               </div>
             </div>
 
-            {/* Mostrar servicios - Diseño adaptable */}
+           
             <div className="mb-12 lg:mb-16">
               <AnimatePresence mode="wait">
                 {isMobileView ? (
-                  // Vista móvil - Usamos MobileServiceCard
+                  
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -128,7 +128,7 @@ const Services: React.FC = () => {
                     ))}
                   </motion.div>
                 ) : (
-                  // Vista escritorio - Usamos ServiceDetails con efecto hover
+               
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -158,7 +158,7 @@ const Services: React.FC = () => {
           </div>
         </div>
 
-        {/* Fondo azul claro para galería de imágenes */}
+  
         <div className="bg-white w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mt-8 lg:mt-12 bg-transparent">

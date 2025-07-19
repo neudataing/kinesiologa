@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, PlayCircle, Star } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 
 const Hero: React.FC = () => {
@@ -8,16 +7,9 @@ const Hero: React.FC = () => {
     threshold: 0.1,
   });
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="home" className="min-h-screen py-8 bg-gradient-to-br from-blue-100 via-white to-gray-100 flex items-center">
-      {/* Contenedor con márgenes laterales aumentados */}
+
       <div className="container mx-auto px-8 sm:px-10 lg:px-14 py-20 max-w-7xl">
         <div 
           ref={ref}

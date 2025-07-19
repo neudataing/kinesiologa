@@ -26,7 +26,7 @@ const MobileServiceCard: React.FC<MobileServiceCardProps> = ({ service, index })
       whileTap={{ scale: 0.98 }}
       className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group"
     >
-      {/* Header */}
+
       <div className="flex items-start mb-4">
         <div 
           className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-200 flex-shrink-0"
@@ -44,7 +44,6 @@ const MobileServiceCard: React.FC<MobileServiceCardProps> = ({ service, index })
         </div>
       </div>
       
-      {/* Description */}
       <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
         {service.description}
       </p>

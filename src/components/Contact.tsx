@@ -25,7 +25,6 @@ const Contact: React.FC = () => {
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-stretch">
 
-            {/* Contact Information */}
             <div className="flex justify-center">
               <div className="py-12 lg:py-16 bg-white rounded-3xl shadow-xl p-6 lg:p-8 w-full max-w-md text-left">
                 <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6 lg:mb-8">Información de contacto</h3>
