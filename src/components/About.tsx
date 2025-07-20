@@ -9,7 +9,7 @@ const About: React.FC = () => {
   });
 
   return (
-    <section id="about" className="py-4 lg:py-6">
+    <section id="about" className="pb-4 lg:pb-6 pt-0">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div 
           ref={ref}
@@ -18,7 +18,7 @@ const About: React.FC = () => {
           }`}
         >
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="pt-12 text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Conocé a <span className="text-brand-300">Eliana</span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
