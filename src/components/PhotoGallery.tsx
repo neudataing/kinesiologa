@@ -392,8 +392,8 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
       {showDots && (
       <div className={`absolute left-1/2 -translate-x-1/2 z-30 flex bg-black/40 backdrop-blur-sm rounded-full ${
         isMobile 
-          ? 'bottom-2 space-x-1 px-1.5 py-1'
-          : 'bottom-8 space-x-4 px-8 py-4'
+          ? 'bottom-2 mb-[15px] space-x-1 px-1.5 py-1'
+          : 'bottom-8 mb-[15px] space-x-4 px-8 py-4'
       }`}>
         {photos.map((_, index) => (
           <button
