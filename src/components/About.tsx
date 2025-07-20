@@ -90,7 +90,7 @@ const About: React.FC = () => {
           </div>
 
 
-          <div className="mt-16 bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-8 lg:p-12">
+          <div className="mt-16 bg-white rounded-3xl p-8 lg:p-12">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-8 lg:mb-12 text-center">
               Educación y certificaciones
             </h3>
@@ -133,7 +133,7 @@ const About: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-20 bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-8 lg:p-12">
+          <div className="mt-12 bg-white rounded-3xl p-8 lg:p-12">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">
               Nuestros principios fundamentales
             </h3>
