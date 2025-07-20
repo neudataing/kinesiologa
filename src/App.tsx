@@ -7,6 +7,7 @@ import Services2 from './components/Services2';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FloatingSocialButtons from './components/FloatingSocialButtons';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Services2 />
             <FAQ />
             <Contact />
+            <FloatingSocialButtons />
         </main>
         <Footer />
       </div>
