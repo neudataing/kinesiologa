@@ -15,7 +15,7 @@ const FloatingSocialButtons: React.FC = () => {
         className="bg-green-500 text-white p-3 rounded-full shadow-lg"
         aria-label="WhatsApp"
       >
-        <FaWhatsapp size={24} />
+        <FaWhatsapp size={50} />
       </motion.a>
 
       {/* Instagram */}
@@ -28,7 +28,7 @@ const FloatingSocialButtons: React.FC = () => {
         className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white p-3 rounded-full shadow-lg"
         aria-label="Instagram"
       >
-        <Instagram size={24} />
+        <Instagram size={50} />
       </motion.a>
 
       {/* Facebook */}
@@ -41,7 +41,7 @@ const FloatingSocialButtons: React.FC = () => {
         className="bg-blue-600 text-white p-3 rounded-full shadow-lg"
         aria-label="Facebook"
       >
-        <Facebook size={24} />
+        <Facebook size={50} />
       </motion.a>
     </div>
   );
