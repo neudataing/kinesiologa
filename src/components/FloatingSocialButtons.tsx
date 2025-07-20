@@ -4,7 +4,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const FloatingSocialButtons: React.FC = () => {
   return (
-    <div className="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-6">
+    <div className="fixed right-4 bottom-6 z-50 flex flex-col gap-4 items-end">
       {/* WhatsApp */}
       <motion.a
         href="https://wa.me/542993277906"
