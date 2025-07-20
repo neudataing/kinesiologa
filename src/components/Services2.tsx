@@ -162,9 +162,9 @@ const Services: React.FC = () => {
         <div className="bg-white w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mt-8 lg:mt-12 bg-transparent">
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 text-center mb-6 lg:mb-8">
-                Nuestro trabajo en imágenes
-              </h3>
+            <h2 className="pt-12 text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Mi trabajo en <span className="text-brand-300">imágenes</span>
+            </h2>
               <div className="max-w-6xl mx-auto">
                 <PhotoGallery
                   photos={samplePhotos}
