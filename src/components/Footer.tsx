@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 lg:mt-12 pt-6 lg:pt-8">
+        <div className="border-t border-gray-800 mt-8 lg:mt-0 pt-6 lg:pt-4">
           <div className="flex flex-col justify-center items-center space-y-2">
             <div className="text-gray-400 text-sm">
               © 2025 Eliana Schenkel. Todos los derechos reservados.

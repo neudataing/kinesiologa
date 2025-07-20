@@ -12,10 +12,11 @@ const FloatingSocialButtons: React.FC = () => {
         rel="noopener noreferrer"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="bg-green-500 text-white p-3 rounded-full shadow-lg"
+        className="bg-green-500 text-white p-3 rounded-full shadow-lg
+                  p-[12px] md:p-3" // Ajuste de padding responsive
         aria-label="WhatsApp"
       >
-        <FaWhatsapp size={50} />
+        <FaWhatsapp className="w-[25px] h-[25px] md:w-[50px] md:h-[50px]" />
       </motion.a>
 
       {/* Instagram */}
@@ -25,10 +26,11 @@ const FloatingSocialButtons: React.FC = () => {
         rel="noopener noreferrer"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white p-3 rounded-full shadow-lg"
+        className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white p-3 rounded-full shadow-lg
+                  p-[12px] md:p-3" // Ajuste de padding responsive
         aria-label="Instagram"
       >
-        <Instagram size={50} />
+        <Instagram className="w-[25px] h-[25px] md:w-[50px] md:h-[50px]" />
       </motion.a>
 
       {/* Facebook */}
@@ -38,10 +40,11 @@ const FloatingSocialButtons: React.FC = () => {
         rel="noopener noreferrer"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="bg-blue-600 text-white p-3 rounded-full shadow-lg"
+        className="bg-blue-600 text-white p-3 rounded-full shadow-lg
+                  p-[12px] md:p-3" // Ajuste de padding responsive
         aria-label="Facebook"
       >
-        <Facebook size={50} />
+        <Facebook className="w-[25px] h-[25px] md:w-[50px] md:h-[50px]" />
       </motion.a>
     </div>
   );
