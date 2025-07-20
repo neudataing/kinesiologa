@@ -403,10 +403,10 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
             className={`relative transition-all duration-300 rounded-full ${
               index === currentIndex
                 ? isMobile 
-                  ? 'w-[6px] h-[6px] bg-white scale-100 shadow-md'
+                  ? 'w-[18px] h-[18px] bg-white scale-100 shadow-md'
                   : 'w-4 h-4 bg-white scale-125 shadow-lg'
                 : isMobile
-                  ? 'w-[4px] h-[4px] bg-white/60 hover:bg-white/80 hover:scale-105'
+                  ? 'w-[24px] h-[24px] bg-white/60 hover:bg-white/80 hover:scale-105'
                   : 'w-3 h-3 bg-white/60 hover:bg-white/80 hover:scale-110'
             }`}
             aria-label={`Go to slide ${index + 1}`}
