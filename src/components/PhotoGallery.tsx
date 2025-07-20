@@ -392,7 +392,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
       {showDots && (
         <div className={`absolute left-1/2 -translate-x-1/2 z-30 flex bg-black/40 backdrop-blur-sm rounded-full ${
           isMobile 
-            ? 'bottom-2 space-x-1 px-2 py-1' // ← más chico en mobile
+            ? 'bottom-2 space-x-1 px-2 py-1'
             : 'bottom-8 space-x-4 px-8 py-4'
         }`}>
           {photos.map((_, index) => (
@@ -402,7 +402,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
               className={`relative transition-all duration-300 rounded-full ${
               index === currentIndex
                 ? isMobile 
-                  ? 'w-2.5 h-2.5 bg-white scale-110 shadow-md' // ← más chico
+                  ? 'w-2.5 h-2.5 bg-white scale-110 shadow-md'
                   : 'w-4 h-4 bg-white scale-125 shadow-lg'
                 : isMobile
                   ? 'w-1.5 h-1.5 bg-white/60 hover:bg-white/80 hover:scale-105'
