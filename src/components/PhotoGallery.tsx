@@ -392,7 +392,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
       {showDots && (
         <div className={`absolute left-1/2 -translate-x-1/2 z-30 flex bg-black/40 backdrop-blur-sm rounded-full ${
           isMobile 
-            ? 'bottom-4 space-x-2 px-4 py-2' 
+            ? 'bottom-2 space-x-1 px-2 py-1' // ← más chico en mobile
             : 'bottom-8 space-x-4 px-8 py-4'
         }`}>
           {photos.map((_, index) => (
@@ -400,14 +400,14 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
               key={index}
               onClick={() => goToSlide(index)}
               className={`relative transition-all duration-300 rounded-full ${
-                index === currentIndex
-                  ? isMobile 
-                    ? 'w-3 h-3 bg-white scale-125 shadow-lg'
-                    : 'w-4 h-4 bg-white scale-125 shadow-lg'
-                  : isMobile
-                    ? 'w-2 h-2 bg-white/60 hover:bg-white/80 hover:scale-110'
-                    : 'w-3 h-3 bg-white/60 hover:bg-white/80 hover:scale-110'
-              }`}
+              index === currentIndex
+                ? isMobile 
+                  ? 'w-2.5 h-2.5 bg-white scale-110 shadow-md' // ← más chico
+                  : 'w-4 h-4 bg-white scale-125 shadow-lg'
+                : isMobile
+                  ? 'w-1.5 h-1.5 bg-white/60 hover:bg-white/80 hover:scale-105'
+                  : 'w-3 h-3 bg-white/60 hover:bg-white/80 hover:scale-110'
+               }`}
               aria-label={`Go to slide ${index + 1}`}
             >
               {index === currentIndex && (
