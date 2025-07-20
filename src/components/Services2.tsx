@@ -80,7 +80,7 @@ const Services: React.FC = () => {
             {/* Header */}
             <div className="text-center mb-8 sm:mb-10 lg:mb-12">
               <h2 className="pt-12 text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Nuestros <span className="text-brand-300">servicios</span>
+              Mis <span className="text-brand-300">servicios</span>
               </h2>
               <p className="text-base sm:text-lg lg:text-lg text-gray-600 max-w-4xl mx-auto px-4 leading-relaxed">
                 El equilibrio y el bienestar postural son los pilares sobre los que construyo la calidad del servicio que ofrezco, brindando soluciones integrales adaptadas a tus necesidades.
