@@ -399,6 +399,7 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
           <button
             key={index}
             onClick={() => goToSlide(index)}
+            style={{ minWidth: 0, minHeight: 0 }} // 👈 fuerza a que no tenga mínimo
             className={`relative transition-all duration-300 rounded-full ${
               index === currentIndex
                 ? isMobile 
