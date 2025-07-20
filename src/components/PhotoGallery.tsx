@@ -390,33 +390,34 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
 
       {/* Enhanced Dots Indicator - positioned to avoid text overlap */}
       {showDots && (
-        <div className={`absolute left-1/2 -translate-x-1/2 z-30 flex bg-black/40 backdrop-blur-sm rounded-full ${
-          isMobile 
-            ? 'bottom-2 space-x-1 px-2 py-1'
-            : 'bottom-8 space-x-4 px-8 py-4'
-        }`}>
-          {photos.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`relative transition-all duration-300 rounded-full ${
+      <div className={`absolute left-1/2 -translate-x-1/2 z-30 flex bg-black/40 backdrop-blur-sm rounded-full ${
+        isMobile 
+          ? 'bottom-2 space-x-1 px-1.5 py-1'
+          : 'bottom-8 space-x-4 px-8 py-4'
+      }`}>
+        {photos.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`relative transition-all duration-300 rounded-full ${
               index === currentIndex
                 ? isMobile 
-                  ? 'w-2.5 h-2.5 bg-white scale-110 shadow-md'
+                  ? 'w-[6px] h-[6px] bg-white scale-100 shadow-md'
                   : 'w-4 h-4 bg-white scale-125 shadow-lg'
                 : isMobile
-                  ? 'w-1.5 h-1.5 bg-white/60 hover:bg-white/80 hover:scale-105'
+                  ? 'w-[4px] h-[4px] bg-white/60 hover:bg-white/80 hover:scale-105'
                   : 'w-3 h-3 bg-white/60 hover:bg-white/80 hover:scale-110'
-               }`}
-              aria-label={`Go to slide ${index + 1}`}
-            >
-              {index === currentIndex && (
-                <div className="absolute inset-0 bg-white rounded-full animate-pulse" />
-              )}
-            </button>
-          ))}
-        </div>
-      )}
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          >
+            {index === currentIndex && (
+              <div className="absolute inset-0 bg-white rounded-full animate-pulse" />
+            )}
+          </button>
+        ))}
+      </div>
+    )}
+
 
       {/* Mobile Photo Counter */}
       {isMobile && (
