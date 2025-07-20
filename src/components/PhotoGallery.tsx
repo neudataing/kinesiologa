@@ -428,15 +428,6 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = ({
           </div>
         </div>
       )}
-
-      {/* Mobile Swipe Hint (shows briefly on first load) */}
-      {isMobile && (
-        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30 pointer-events-none">
-          <div className="bg-black/30 backdrop-blur-sm rounded-full px-4 py-2 text-white text-xs animate-pulse">
-            Swipe to navigate
-          </div>
-        </div>
-      )}
     </div>
     </div>
   );
