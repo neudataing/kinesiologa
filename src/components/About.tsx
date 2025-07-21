@@ -134,78 +134,81 @@ const About: React.FC = () => {
           </div>
 
           <div className="pt-0 pr-8 pb-8 pl-8 lg:pr-12 lg:pb-12 lg:pl-12 bg-white rounded-3xl">
-            <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">
-              Mis principios fundamentales
-            </h3>
-            
-            <div className="grid md:grid-cols-3 gap-10">
+  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">
+    Mis principios fundamentales
+  </h3>
+  
+  {/* Cambiamos a una sola columna */}
+  <div className="grid grid-cols-1 gap-10 max-w-4xl mx-auto">
+    {/* Misión */}
+    <div 
+      className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
+                transition-all duration-300 transform hover:scale-[1.02]"
+    >
+      <div className="flex justify-center mb-6">
+        <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center border border-gray-300">
+          <Crosshair className="h-8 w-8 text-brand-600" />
+        </div>
+      </div>
+      <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Misión</h4>
+      <p className="text-gray-600">
+        Acompañar a las personas y equipos de trabajo a mejorar su bienestar a través del movimiento, la conciencia corporal y el diseño saludable del entorno, como así también promover hábitos sostenibles que impacten positivamente en la salud y la calidad de vida, mejorando el rendimiento y la productividad. 
+      </p>
+    </div>
+    
+    {/* Visión */}
+    <div 
+      className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
+                transition-all duration-300 transform hover:scale-[1.02]"
+    >
+      <div className="flex justify-center mb-6">
+        <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center border border-gray-300">
+          <Eye className="h-8 w-8 text-brand-600" />
+        </div>
+      </div>
+      <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Visión</h4>
+      <p className="text-gray-600">
+        Ser referente en la promoción de una cultura de bienestar físico y prevención, donde se comprenda el valor del cuerpo en equilibrio, el movimiento saludable y los espacios de trabajo pensados para cuidar la salud. Además, construir un futuro donde el cuidado del cuerpo y la postura sea parte esencial de la vida cotidiana y laboral.
+      </p>
+    </div>
+    
+    {/* Valores */}
+    <div 
+      className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
+                transition-all duration-300 transform hover:scale-[1.02]"
+    >
+      <div className="flex justify-center mb-6">
+        <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center border border-gray-300">
+          <HeartHandshake className="h-8 w-8 text-brand-600" />
+        </div>
+      </div>
+      <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Valores</h4>
+      <ul className="space-y-3 text-gray-600">
+        <li className="flex items-start">
+          <span className="text-brand-600 font-bold mr-2">•</span>
+          <span>Cercanía profesional: escucho, comprendo y acompaño desde la empatía y la experiencia clínica.</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-brand-600 font-bold mr-2">•</span>
+          <span>Prevención inteligente: anticiparse al dolor y al desgaste físico, mejora la vida y la productividad.</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-brand-600 font-bold mr-2">•</span>
+          <span>Conciencia y educación: enseñar a habitar el cuerpo con responsabilidad y conexión.</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-brand-600 font-bold mr-2">•</span>
+          <span>Calidad técnica y humana: formación constante, ética de trabajo y compromiso con cada intervención.</span>
+        </li>
+        <li className="flex items-start">
+          <span className="text-brand-600 font-bold mr-2">•</span>
+          <span>Impacto sostenible: diseñar espacios y hábitos saludables para cuidar a quienes sostienen cada organización.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-              <div 
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
-                          transition-all duration-300 transform hover:scale-[1.02]"
-              >
-                <div className="flex justify-center mb-6">
-                  <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center border border-gray-300">
-                    <Crosshair className="h-8 w-8 text-brand-600" />
-                  </div>
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Misión</h4>
-                <p className="text-gray-600 text-center">
-                  Acompañar a las personas y equipos de trabajo a mejorar su bienestar a través del movimiento, la conciencia corporal y el diseño saludable del entorno, como así también promover hábitos sostenibles que impacten positivamente en la salud y la calidad de vida, mejorando el rendimiento y la productividad. 
-                </p>
-              </div>
-              
-
-              <div 
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
-                          transition-all duration-300 transform hover:scale-[1.02]"
-              >
-                <div className="flex justify-center mb-6">
-                  <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center border border-gray-300">
-                    <Eye className="h-8 w-8 text-brand-600" />
-                  </div>
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Visión</h4>
-                <p className="text-gray-600 text-center">
-                  Ser referente en la promoción de una cultura de bienestar físico y prevención, donde se comprenda el valor del cuerpo en equilibrio, el movimiento saludable y los espacios de trabajo pensados para cuidar la salud. Además, construir un futuro donde el cuidado del cuerpo y la postura sea parte esencial de la vida cotidiana y laboral.
-                </p>
-              </div>
-              
-              <div 
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
-                          transition-all duration-300 transform hover:scale-[1.02]"
-              >
-                <div className="flex justify-center mb-6">
-                  <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center border border-gray-300">
-                    <HeartHandshake className="h-8 w-8 text-brand-600" />
-                  </div>
-                </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Valores</h4>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Cercanía profesional: escucho, comprendo y acompaño desde la empatía y la experiencia clínica.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Prevención inteligente: anticiparse al dolor y al desgaste físico, mejora la vida y la productividad.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Conciencia y educación: enseñar a habitar el cuerpo con responsabilidad y conexión.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Calidad técnica y humana: formación constante, ética de trabajo y compromiso con cada intervención.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Impacto sostenible: diseñar espacios y hábitos saludables para cuidar a quienes sostienen cada organización.</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
