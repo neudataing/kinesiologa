@@ -151,9 +151,7 @@ const About: React.FC = () => {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Misión</h4>
                 <p className="text-gray-600 text-center">
-                  Brindar atención kinesiológica integral que combine reeducación postural y ergonomía para 
-                  mejorar la calidad de vida de mis pacientes, ayudándoles a moverse mejor, vivir sin dolor 
-                  y alcanzar su máximo potencial físico en entornos personales y laborales.
+                  Acompañar a las personas y equipos de trabajo a mejorar su bienestar a través del movimiento, la conciencia corporal y el diseño saludable del entorno, como así también promover hábitos sostenibles que impacten positivamente en la salud y la calidad de vida, mejorando el rendimiento y la productividad. 
                 </p>
               </div>
               
@@ -169,9 +167,7 @@ const About: React.FC = () => {
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Visión</h4>
                 <p className="text-gray-600 text-center">
-                  Ser referente en kinesiología avanzada y ergonomía ocupacional, transformando la 
-                  relación de las personas con su cuerpo y promoviendo entornos laborales saludables 
-                  donde la prevención y el bienestar postural sean pilares fundamentales.
+                  Ser referente en la promoción de una cultura de bienestar físico y prevención, donde se comprenda el valor del cuerpo en equilibrio, el movimiento saludable y los espacios de trabajo pensados para cuidar la salud. Además, construir un futuro donde el cuidado del cuerpo y la postura sea parte esencial de la vida cotidiana y laboral.
                 </p>
               </div>
               
@@ -188,23 +184,23 @@ const About: React.FC = () => {
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start">
                     <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Excelencia profesional basada en evidencia científica</span>
+                    <span>Cercanía profesional: escucho, comprendo y acompaño desde la empatía y la experiencia clínica.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Empatía y atención personalizada</span>
+                    <span>Prevención inteligente: anticiparse al dolor y al desgaste físico, mejora la vida y la productividad.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Compromiso con resultados tangibles</span>
+                    <span>Conciencia y educación: enseñar a habitar el cuerpo con responsabilidad y conexión.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Innovación en técnicas terapéuticas</span>
+                    <span>Calidad técnica y humana: formación constante, ética de trabajo y compromiso con cada intervención.</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Ética y responsabilidad profesional</span>
+                    <span>Impacto sostenible: diseñar espacios y hábitos saludables para cuidar a quienes sostienen cada organización.</span>
                   </li>
                 </ul>
               </div>
