@@ -54,6 +54,7 @@ const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('individuals');
   const [isMobileView, setIsMobileView] = useState(false);
 
+
   const handleTabChange = (tab: TabType) => {
     setActiveTab(tab);
   };
@@ -74,7 +75,7 @@ const Services: React.FC = () => {
   return (
     <section id="services2" className="py-4 lg:py-6">
       <div className="flex flex-col">
-
+        
         <div className="bg-gray-50 w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
