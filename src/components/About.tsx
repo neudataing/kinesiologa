@@ -173,11 +173,12 @@ const About: React.FC = () => {
               {/* Misión */}
               <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-lg border border-white/50 hover:shadow-2xl hover:bg-white transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
                 <div className="flex items-center justify-center mb-6">
-                  <div className="p-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300">
-                    <Target className="w-8 h-8 text-white" />
+                  <div className="flex items-center justify-center mb-6">
+                    <div className="p-3 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300 mr-3">
+                      <Target className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Misión</h3>
                   </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Misión</h3>
-                </div>
                 <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
                   Acompañar a las personas y equipos de trabajo a mejorar su bienestar a través del movimiento, 
                   la conciencia corporal y el diseño saludable del entorno, como así también promover hábitos 
