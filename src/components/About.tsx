@@ -176,8 +176,8 @@ const About: React.FC = () => {
                   <div className="p-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300">
                     <Target className="w-8 h-8 text-white" />
                   </div>
-                </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Misión</h3>
+                </div>
                 <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
                   Acompañar a las personas y equipos de trabajo a mejorar su bienestar a través del movimiento, 
                   la conciencia corporal y el diseño saludable del entorno, como así también promover hábitos 
@@ -192,8 +192,8 @@ const About: React.FC = () => {
                   <div className="p-4 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl shadow-lg group-hover:shadow-indigo-500/25 transition-all duration-300">
                     <Eye className="w-8 h-8 text-white" />
                   </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Visión</h3>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Visión</h3>
                 <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
                   Ser referente en la promoción de una cultura de bienestar físico y prevención, donde se comprenda 
                   el valor del cuerpo en equilibrio, el movimiento saludable y los espacios de trabajo pensados para 
@@ -209,9 +209,8 @@ const About: React.FC = () => {
                 <div className="p-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-lg group-hover:shadow-purple-500/25 transition-all duration-300">
                   <Users className="w-8 h-8 text-white" />
                 </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-10 text-center">Valores</h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-10 text-center">Valores</h3>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {valores.map((valor, index) => {
                   const IconComponent = valor.icon;
