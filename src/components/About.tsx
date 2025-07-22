@@ -1,12 +1,41 @@
 import React from 'react';
 import { Award, BookOpen, Users, Target, Crosshair, Eye, HeartHandshake } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
+import {Heart, Shield, Lightbulb, Leaf } from 'lucide-react';
 
 const About: React.FC = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const valores = [
+    {
+      icon: Heart,
+      title: "Cercanía profesional",
+      description: "escucho, comprendo y acompaño desde la empatía y la experiencia clínica."
+    },
+    {
+      icon: Shield,
+      title: "Prevención inteligente",
+      description: "anticiparse al dolor y al desgaste físico, mejora la vida y la productividad."
+    },
+    {
+      icon: Lightbulb,
+      title: "Conciencia y educación",
+      description: "enseñar a habitar el cuerpo con responsabilidad y conexión."
+    },
+    {
+      icon: Award,
+      title: "Calidad técnica y humana",
+      description: "formación constante, ética de trabajo y compromiso con cada intervención."
+    },
+    {
+      icon: Leaf,
+      title: "Impacto sostenible",
+      description: "diseñar espacios y hábitos saludables para cuidar a quienes sostienen cada organización."
+    }
+  ];
 
   return (
     <section id="about" className="pb-4 lg:pb-6 pt-0">
@@ -137,64 +166,74 @@ const About: React.FC = () => {
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">
               Misión, Visión y Valores
             </h3>
-            
-            <div className="grid grid-cols-1 gap-10 max-w-4xl mx-auto">
+
+                        {/* Cards Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto mb-12">
+              
               {/* Misión */}
-              <div 
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
-                          transition-all duration-300 transform hover:scale-[1.02]"
-              >
-                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Misión</h4>
-                <p className="text-gray-600">
+              <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-lg border border-white/50 hover:shadow-2xl hover:bg-white transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="p-4 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg group-hover:shadow-blue-500/25 transition-all duration-300">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center">Misión</h3>
+                <p className="text-gray-700 leading-relaxed text-lg">
                   Acompañar a las personas y equipos de trabajo a mejorar su bienestar a través del movimiento, 
                   la conciencia corporal y el diseño saludable del entorno, como así también promover hábitos 
                   sostenibles que impacten positivamente en la salud y la calidad de vida, mejorando el rendimiento 
-                  y la productividad. 
+                  y la productividad.
                 </p>
               </div>
-              
+
               {/* Visión */}
-              <div 
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
-                          transition-all duration-300 transform hover:scale-[1.02]"
-              >
-                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Visión</h4>
-                <p className="text-gray-600">
+              <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-lg border border-white/50 hover:shadow-2xl hover:bg-white transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
+                <div className="flex items-center justify-center mb-6">
+                  <div className="p-4 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl shadow-lg group-hover:shadow-indigo-500/25 transition-all duration-300">
+                    <Eye className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center">Visión</h3>
+                <p className="text-gray-700 leading-relaxed text-lg">
                   Ser referente en la promoción de una cultura de bienestar físico y prevención, donde se comprenda 
                   el valor del cuerpo en equilibrio, el movimiento saludable y los espacios de trabajo pensados para 
                   cuidar la salud. Además, construir un futuro donde el cuidado del cuerpo y la postura sea parte 
                   esencial de la vida cotidiana y laboral.
                 </p>
               </div>
+            </div>
+
+            {/* Valores */}
+            <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-lg border border-white/50 hover:shadow-2xl hover:bg-white transition-all duration-500 max-w-7xl mx-auto">
+              <div className="flex items-center justify-center mb-8">
+                <div className="p-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-lg group-hover:shadow-purple-500/25 transition-all duration-300">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-10 text-center">Valores</h3>
               
-              {/* Valores */}
-              <div 
-                className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl 
-                          transition-all duration-300 transform hover:scale-[1.02]"
-              >
-                <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Valores</h4>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start">
-                    <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Cercanía profesional: escucho, comprendo y acompaño desde la empatía y la experiencia clínica.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Prevención inteligente: anticiparse al dolor y al desgaste físico, mejora la vida y la productividad.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Conciencia y educación: enseñar a habitar el cuerpo con responsabilidad y conexión.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Calidad técnica y humana: formación constante, ética de trabajo y compromiso con cada intervención.</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-600 font-bold mr-2">•</span>
-                    <span>Impacto sostenible: diseñar espacios y hábitos saludables para cuidar a quienes sostienen cada organización.</span>
-                  </li>
-                </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {valores.map((valor, index) => {
+                  const IconComponent = valor.icon;
+                  return (
+                    <div 
+                      key={index}
+                      className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
+                    >
+                      <div className="flex-shrink-0 p-3 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl shadow-sm">
+                        <IconComponent className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-bold text-gray-900 text-lg mb-2 capitalize">
+                          {valor.title}:
+                        </h4>
+                        <p className="text-gray-700 leading-relaxed">
+                          {valor.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
