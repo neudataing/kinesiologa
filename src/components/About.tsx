@@ -164,7 +164,7 @@ const About: React.FC = () => {
 
           <div className="pt-0 pr-8 pb-8 pl-8 lg:pr-12 lg:pb-12 lg:pl-12 bg-white rounded-3xl">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">
-              Misión, Visión y Valores
+              Mis principios
             </h3>
 
                         {/* Cards Grid */}
