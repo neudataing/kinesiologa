@@ -189,10 +189,10 @@ const About: React.FC = () => {
               {/* Visión */}
               <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-lg border border-white/50 hover:shadow-2xl hover:bg-white transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.02]">
                 <div className="flex items-center justify-center mb-6">
-                  <div className="p-4 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl shadow-lg group-hover:shadow-indigo-500/25 transition-all duration-300">
-                    <Eye className="w-8 h-8 text-white" />
+                  <div className="p-3 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl shadow-lg group-hover:shadow-indigo-500/25 transition-all duration-300 mr-3">
+                    <Eye className="w-6 h-6 text-white" />
                   </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Visión</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Visión</h3>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
                   Ser referente en la promoción de una cultura de bienestar físico y prevención, donde se comprenda 
@@ -206,10 +206,10 @@ const About: React.FC = () => {
             {/* Valores */}
             <div className="group bg-white/80 backdrop-blur-sm rounded-3xl p-10 shadow-lg border border-white/50 hover:shadow-2xl hover:bg-white transition-all duration-500 max-w-7xl mx-auto">
               <div className="flex items-center justify-center mb-8">
-                <div className="p-4 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl shadow-lg group-hover:shadow-purple-500/25 transition-all duration-300">
-                  <Users className="w-8 h-8 text-white" />
+                <div className="p-3 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl shadow-lg group-hover:shadow-purple-500/25 transition-all duration-300 mr-3">
+                  <Users className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-10 text-center">Valores</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Valores</h3>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {valores.map((valor, index) => {
