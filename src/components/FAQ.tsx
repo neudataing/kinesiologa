@@ -66,7 +66,7 @@ const FAQ: React.FC = () => {
 
 
   return (
-    <section id="FAQ" className="pt-12 bg-gray-50">
+    <section id="FAQ" className="pt-12 bg-gray-50 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div 
           ref={ref}
