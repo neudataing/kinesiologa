@@ -14,37 +14,37 @@ const samplePhotos = [
     id: '1',
     url: 'https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Mountain landscape with snow-capped peaks',
-    title: 'Majestic Mountains'
+    title: 'Imagen 1'
   },
   {
     id: '2',
     url: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Ocean waves crashing on rocky shore',
-    title: 'Ocean Waves'
+    title: 'Imagen 2'
   },
   {
     id: '3',
     url: 'https://images.pexels.com/photos/1440727/pexels-photo-1440727.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Forest path with sunlight filtering through trees',
-    title: 'Forest Path'
+    title: 'Imagen 3'
   },
   {
     id: '4',
     url: 'https://images.pexels.com/photos/1274260/pexels-photo-1274260.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Desert sand dunes at sunset',
-    title: 'Desert Sunset'
+    title: 'Imagen 4'
   },
   {
     id: '5',
     url: 'https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'City skyline with reflection in water',
-    title: 'City Lights'
+    title: 'Imagen 5'
   },
   {
     id: '6',
     url: 'https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=800',
     alt: 'Lavender field in bloom',
-    title: 'Lavender Dreams'
+    title: 'Imagen 6'
   }
 ];
 
@@ -166,7 +166,7 @@ const Services: React.FC = () => {
             <h2 className="text-center text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Mi trabajo en <span className="text-brand-300">imágenes</span>
             </h2>
-              <div className="max-w-6xl mx-auto">
+              <div className="max-w-5xl mx-auto">
                 <PhotoGallery
                   photos={samplePhotos}
                   autoPlay={true}
