@@ -82,7 +82,7 @@ const About: React.FC = () => {
                 />
               </div>
 
-              <div className="absolute -bottom-4 -left-0 sm:-bottom-0 sm:-left-0 bg-brand-600 text-white p-4 lg:p-6 rounded-2xl shadow-xl">
+              <div className="absolute -bottom-4 sm:-bottom-6 bg-brand-600 text-white p-4 lg:p-6 rounded-2xl shadow-xl">
                 <div className="text-2xl lg:text-3xl font-bold">+10</div>
                 <div className="text-xs lg:text-sm opacity-90">Años de experiencia</div>
               </div>
