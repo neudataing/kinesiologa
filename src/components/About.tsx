@@ -178,7 +178,7 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Misión</h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
                   Acompañar a las personas y equipos de trabajo a mejorar su bienestar a través del movimiento, 
                   la conciencia corporal y el diseño saludable del entorno, como así también promover hábitos 
                   sostenibles que impacten positivamente en la salud y la calidad de vida, mejorando el rendimiento 
@@ -194,7 +194,7 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Visión</h3>
-                <p className="text-gray-700 leading-relaxed text-lg">
+                <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
                   Ser referente en la promoción de una cultura de bienestar físico y prevención, donde se comprenda 
                   el valor del cuerpo en equilibrio, el movimiento saludable y los espacios de trabajo pensados para 
                   cuidar la salud. Además, construir un futuro donde el cuidado del cuerpo y la postura sea parte 
@@ -227,7 +227,7 @@ const About: React.FC = () => {
                         <h4 className="font-bold text-gray-900 text-lg mb-2 capitalize">
                           {valor.title}
                         </h4>
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
                           {valor.description}
                         </p>
                       </div>
