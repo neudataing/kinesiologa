@@ -13,27 +13,27 @@ const About: React.FC = () => {
     {
       icon: Heart,
       title: "Cercanía profesional",
-      description: "escucho, comprendo y acompaño desde la empatía y la experiencia clínica."
+      description: "Escucho, comprendo y acompaño desde la empatía y la experiencia clínica."
     },
     {
       icon: Shield,
       title: "Prevención inteligente",
-      description: "anticiparse al dolor y al desgaste físico, mejora la vida y la productividad."
+      description: "Anticiparse al dolor y al desgaste físico, mejora la vida y la productividad."
     },
     {
       icon: Lightbulb,
       title: "Conciencia y educación",
-      description: "enseñar a habitar el cuerpo con responsabilidad y conexión."
+      description: "Enseñar a habitar el cuerpo con responsabilidad y conexión."
     },
     {
       icon: Award,
       title: "Calidad técnica y humana",
-      description: "formación constante, ética de trabajo y compromiso con cada intervención."
+      description: "Formación constante, ética de trabajo y compromiso con cada intervención."
     },
     {
       icon: Leaf,
       title: "Impacto sostenible",
-      description: "diseñar espacios y hábitos saludables para cuidar a quienes sostienen cada organización."
+      description: "Diseñar espacios y hábitos saludables para cuidar a quienes sostienen cada organización."
     }
   ];
 
@@ -177,7 +177,7 @@ const About: React.FC = () => {
                     <Target className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center">Misión</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Misión</h3>
                 <p className="text-gray-700 leading-relaxed text-lg">
                   Acompañar a las personas y equipos de trabajo a mejorar su bienestar a través del movimiento, 
                   la conciencia corporal y el diseño saludable del entorno, como así también promover hábitos 
@@ -193,7 +193,7 @@ const About: React.FC = () => {
                     <Eye className="w-8 h-8 text-white" />
                   </div>
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center">Visión</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Visión</h3>
                 <p className="text-gray-700 leading-relaxed text-lg">
                   Ser referente en la promoción de una cultura de bienestar físico y prevención, donde se comprenda 
                   el valor del cuerpo en equilibrio, el movimiento saludable y los espacios de trabajo pensados para 
@@ -210,7 +210,7 @@ const About: React.FC = () => {
                   <Users className="w-8 h-8 text-white" />
                 </div>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-10 text-center">Valores</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-10 text-center">Valores</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {valores.map((valor, index) => {
@@ -225,7 +225,7 @@ const About: React.FC = () => {
                       </div>
                       <div className="flex-1">
                         <h4 className="font-bold text-gray-900 text-lg mb-2 capitalize">
-                          {valor.title}:
+                          {valor.title}
                         </h4>
                         <p className="text-gray-700 leading-relaxed">
                           {valor.description}
