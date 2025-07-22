@@ -135,7 +135,7 @@ const About: React.FC = () => {
 
           <div className="pt-0 pr-8 pb-8 pl-8 lg:pr-12 lg:pb-12 lg:pl-12 bg-white rounded-3xl">
             <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-12 text-center">
-              Mis principios fundamentales
+              Misión, Visión y Valores
             </h3>
             
             <div className="grid grid-cols-1 gap-10 max-w-4xl mx-auto">
@@ -198,7 +198,6 @@ const About: React.FC = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
