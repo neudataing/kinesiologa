@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="text-lg lg:text-2xl text-gray-700 leading-relaxed max-w-2xl">
-              Corrección postural profesional y tratamientos diseñados para ayudarte a mover mejor, sentir más fuerte y vivir sin dolor. Disponible tanto virtual como presencialmente.
+              Corrección postural profesional y tratamientos diseñados para ayudarte a moverte mejor, sentirte más fuerte y vivir sin dolor.
             </p>
           </div>
 
