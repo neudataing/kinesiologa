@@ -80,11 +80,12 @@ const About: React.FC = () => {
                   alt="Eliana, kinesiologa profesional"
                   className="w-full max-w-md lg:max-w-lg h-[500px] lg:h-[600px] object-cover object-top"
                 />
-                
-                <div className="absolute left-[-10px] bottom-[-10px] sm:left-[-14px] sm:bottom-[-14px] bg-brand-600 text-white p-4 lg:p-6 rounded-2xl shadow-xl">
-                  <div className="text-2xl lg:text-3xl font-bold">+10</div>
-                  <div className="text-xs lg:text-sm opacity-90">Años de experiencia</div>
-                </div>
+              </div>
+
+              {/* Este cartel está fuera de la imagen, pero posicionado respecto al contenedor de la imagen */}
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-brand-600 text-white p-4 lg:p-6 rounded-2xl shadow-xl">
+                <div className="text-2xl lg:text-3xl font-bold">+10</div>
+                <div className="text-xs lg:text-sm opacity-90">Años de experiencia</div>
               </div>
             </div>
           </div>
