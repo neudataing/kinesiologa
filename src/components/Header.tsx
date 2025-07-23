@@ -1,15 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X} from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [logoVersion, setLogoVersion] = useState<'light' | 'dark'>('dark');
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      // Detectar scroll para el fondo del header
+      const scrolled = window.scrollY > 20;
+      setIsScrolled(scrolled);
+
+      // Cambiar logo según la posición en el Hero
+      const heroSection = document.getElementById('home');
+      if (heroSection) {
+        const heroHeight = heroSection.offsetHeight;
+        const heroTop = heroSection.offsetTop;
+        const scrollPosition = window.scrollY;
+        
+        // Calculamos el punto en el que el scroll ha pasado el 40% de la sección Hero
+        const triggerPoint = heroTop + heroHeight * 0.4;
+        setLogoVersion(scrollPosition > triggerPoint ? 'light' : 'dark');
+      }
     };
+
     window.addEventListener('scroll', handleScroll);
+    // Ejecutar una vez al montar para establecer el estado inicial
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -27,14 +46,16 @@ const Header: React.FC = () => {
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-        <div className="flex items-center space-x-2">
-          <img
-            src="/img/Logo-Completo-ES.png"
-            alt="Logo"
-            className="h-16 lg:h-20 w-auto object-contain"
-          />
-        </div>
-        
+          <div className="flex items-center space-x-2">
+            <img
+              src={logoVersion === 'dark' 
+                ? "/img/Logo-Completo-ES-Invertido.png" 
+                : "/img/Logo-Completo-ES.png"}
+              alt="Logo"
+              className="h-16 lg:h-20 w-auto object-contain transition-all duration-500"
+            />
+          </div>
+          
 
           <div className="hidden md:flex items-center space-x-12">
             <button 
