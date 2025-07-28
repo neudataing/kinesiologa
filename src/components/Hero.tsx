@@ -20,11 +20,11 @@ const Hero: React.FC = () => {
           }`}
         >
           <div className="space-y-7 lg:space-y-8">
-            <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-6.5xl font-bold text-gray-900 leading-tight max-w-xl">
-              Transformá tu salud con <span className="text-brand-500 inline">kinesiología de calidad</span>
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl xl:text-6.5xl font-bold text-gray-100 leading-tight max-w-xl">
+              Transformá tu salud con <span className="text-brand-300 inline">kinesiología de calidad</span>
             </h1>
 
-            <p className="text-lg lg:text-2xl text-gray-700 leading-relaxed max-w-2xl">
+            <p className="text-lg lg:text-2xl text-gray-800 leading-relaxed max-w-2xl">
               Corrección postural profesional y tratamientos diseñados para ayudarte a moverte mejor, sentirte más fuerte y vivir sin dolor.
             </p>
           </div>
