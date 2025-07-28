@@ -40,12 +40,12 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-500 ${
+    <header className={`mt-2.5 fixed w-full z-50 transition-all duration-500 ${
       isScrolled ? 'bg-white/98 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          <div className={`relative h-16 lg:h-20 ${logoVersion === 'dark' ? 'mt-2.5' : 'mt-0'}`}>
+          <div className={"relative h-16 lg:h-20"}>
             <img
               src="/img/Logo-Completo-ES-Invertido.png"
               alt="Logo Dark"
