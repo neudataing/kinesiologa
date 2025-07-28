@@ -45,16 +45,17 @@ const Header: React.FC = () => {
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          <div className="relative mt-2.5 h-16 lg:h-20 w-auto">
-            {/* Logo oscuro */}
+          <div className="relative mt-2.5 h-16 lg:h-20">
+            {/* 1) Logo “dark” en flujo, para que el <div> tenga ancho */}
             <img
               src="/img/Logo-Completo-ES-Invertido.png"
               alt="Logo Dark"
-              className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${
+              className={`h-full w-auto object-contain transition-opacity duration-500 ${
                 logoVersion === 'dark' ? 'opacity-100' : 'opacity-0'
               }`}
             />
-            {/* Logo claro */}
+
+            {/* 2) Logo “light” superpuesto con absolute */}
             <img
               src="/img/Logo-Completo-ES.png"
               alt="Logo Light"
@@ -63,7 +64,7 @@ const Header: React.FC = () => {
               }`}
             />
           </div>
-
+          
           {/* Links de escritorio */}
           <div className="hidden md:flex items-center space-x-12">
             {['home','about','services2','FAQ','contact'].map((id, idx) => {
