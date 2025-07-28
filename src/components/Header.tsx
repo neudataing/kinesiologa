@@ -28,8 +28,8 @@ const Header: React.FC = () => {
 
   // Define un texto que cambie según el estado del logo
   const navTextColor = logoVersion === 'dark'
-    ? 'text-white hover:text-brand-300'
-    : 'text-gray-800 hover:text-brand-500';
+    ? 'text-white hover:text-brand-100'
+    : 'text-gray-800 hover:text-brand-300';
 
   const scrollToSection = (sectionId: string) => {
     const el = document.getElementById(sectionId);
@@ -45,13 +45,24 @@ const Header: React.FC = () => {
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          <img
-            src={logoVersion === 'dark'
-              ? "/img/Logo-Completo-ES-Invertido.png"
-              : "/img/Logo-Completo-ES.png"}
-            alt="Logo"
-            className="h-16 lg:h-20 w-auto object-contain transition-all duration-500"
-          />
+          <div className="relative mt-2.5 h-16 lg:h-20 w-auto">
+            {/* Logo oscuro */}
+            <img
+              src="/img/Logo-Completo-ES-Invertido.png"
+              alt="Logo Dark"
+              className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${
+                logoVersion === 'dark' ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+            {/* Logo claro */}
+            <img
+              src="/img/Logo-Completo-ES.png"
+              alt="Logo Light"
+              className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ${
+                logoVersion === 'light' ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+          </div>
 
           {/* Links de escritorio */}
           <div className="hidden md:flex items-center space-x-12">
