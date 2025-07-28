@@ -40,7 +40,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`mt-2.5 fixed w-full z-50 transition-all duration-500 ${
+    <header className={`pt-2.5 fixed w-full z-50 transition-all duration-500 ${
       isScrolled ? 'bg-white/98 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
