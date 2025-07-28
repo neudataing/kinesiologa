@@ -7,22 +7,6 @@ const Hero: React.FC = () => {
     threshold: 0.1,
   });
 
-  const [logoVersion, setLogoVersion] = useState<'light' | 'dark'>('dark');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const heroHeight = document.getElementById('home')?.offsetHeight || 0;
-      const scrollPercentage = Math.min(scrollPosition / (heroHeight * 0.7), 1);
-      
-      // Cambiar logo al pasar el 50% del Hero
-      setLogoVersion(scrollPercentage > 0.5 ? 'light' : 'dark');
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <section
       id="home"
@@ -48,9 +32,7 @@ const Hero: React.FC = () => {
           <div className="relative flex justify-center mt-8 lg:mt-0">
             <div className="relative transition-all duration-500">
               <img
-                src={logoVersion === 'dark' 
-                  ? "/img/Logo-ES-Invertido.png" 
-                  : "/img/Logo-ES.png"}
+                src={"/img/Logo-ES.png"}
                 alt="Logo"
                 className="w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg h-auto object-contain transition-opacity duration-500"
               />
