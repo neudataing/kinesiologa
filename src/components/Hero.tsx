@@ -32,7 +32,7 @@ const Hero: React.FC = () => {
           <div className="relative flex justify-center mt-8 lg:mt-0">
             <div className="relative transition-all duration-500">
               <img
-                src={"/img/logo-ES-Invertido.png"}
+                src={"/img/Logo-ES-Invertido.png"}
                 alt="Logo"
                 className="w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg h-auto object-contain transition-opacity duration-500"
               />
