@@ -98,7 +98,7 @@ const Header: React.FC = () => {
                   <button
                     key={id}
                     onClick={() => scrollToSection(id)}
-                    className="block w-full text-left px-4 py-3 text-gray-700 hover:text-brand-600 hover:bg-brand-50/50 rounded-lg transition-all duration-200"
+                    className={`block w-full text-left px-4 py-3 ${navTextColor} hover:bg-brand-50/50 rounded-lg transition-all duration-200`}
                   >
                     {label}
                   </button>
