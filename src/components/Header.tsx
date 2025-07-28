@@ -45,7 +45,7 @@ const Header: React.FC = () => {
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
-          <div className={`relative h-16 lg:h-20 ${logoVersion === 'dark' ? 'mt-0' : 'mt-2.5'}`}>
+          <div className={`relative h-16 lg:h-20 ${logoVersion === 'dark' ? 'mt-2.5' : 'mt-0'}`}>
             <img
               src="/img/Logo-Completo-ES-Invertido.png"
               alt="Logo Dark"
