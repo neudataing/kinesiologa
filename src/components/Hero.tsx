@@ -25,14 +25,14 @@ const Hero: React.FC = () => {
             </h1>
 
             <p className="text-lg lg:text-2xl text-gray-800 leading-relaxed max-w-2xl">
-              Corrección postural profesional y tratamientos diseñados para ayudarte a moverte mejor, sentirte más fuerte y vivir sin dolor.
+              Reeducación postural y tratamientos funcionales para moverte mejor, sentirte más fuerte, aliviar el dolor y prevenir molestias futuras.
             </p>
           </div>
 
           <div className="relative flex justify-center mt-8 lg:mt-0">
             <div className="relative transition-all duration-500">
               <img
-                src={"/img/logo-invertido-new.PNG"}
+                src={"/img/Logo-ES.png"}
                 alt="Logo"
                 className="w-full max-w-xs sm:max-w-sm lg:max-w-md xl:max-w-lg h-auto object-contain transition-opacity duration-500"
               />
