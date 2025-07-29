@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="min-h-screen py-8 bg-gradient-to-b from-brand-600 via-brand-200 to-white flex items-center"
+      className="min-h-screen  py-8 bg-gradient-to-b from-brand-600 via-brand-200 to-white flex items-center"
     >
       <div className="container mx-auto px-8 sm:px-10 lg:px-14 py-20 max-w-10xl">
         <div 
