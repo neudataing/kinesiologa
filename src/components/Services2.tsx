@@ -14,38 +14,32 @@ const samplePhotos = [
   {
     id: '1',
     url: 'img/Eli1.jpg',
-    alt: 'Mountain landscape with snow-capped peaks',
+    alt: 'Imagen 1',
     title: 'Imagen 1'
   },
   {
     id: '2',
-    url: 'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Ocean waves crashing on rocky shore',
+    url: 'img/Eli2.jpg',
+    alt: 'Imagen 2',
     title: 'Imagen 2'
   },
   {
     id: '3',
-    url: 'https://images.pexels.com/photos/1440727/pexels-photo-1440727.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Forest path with sunlight filtering through trees',
+    url: 'img/Eli3.jpg',
+    alt: 'Imagen 3',
     title: 'Imagen 3'
   },
   {
     id: '4',
-    url: 'https://images.pexels.com/photos/1274260/pexels-photo-1274260.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Desert sand dunes at sunset',
+    url: 'img/Eli4.jpg',
+    alt: 'Imagen 4',
     title: 'Imagen 4'
   },
   {
     id: '5',
-    url: 'https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'City skyline with reflection in water',
+    url: 'img/Eli5.jpg',
+    alt: 'Imagen 5',
     title: 'Imagen 5'
-  },
-  {
-    id: '6',
-    url: 'https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Lavender field in bloom',
-    title: 'Imagen 6'
   }
 ];
 
