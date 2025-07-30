@@ -13,7 +13,7 @@ import 'swiper/css/navigation';
 const samplePhotos = [
   {
     id: '1',
-    url: 'https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=800',
+    url: 'img/Eli1.jpg',
     alt: 'Mountain landscape with snow-capped peaks',
     title: 'Imagen 1'
   },
