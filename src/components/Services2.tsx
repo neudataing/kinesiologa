@@ -154,7 +154,7 @@ const Services: React.FC = () => {
           </div>
         </div>
 
-  
+        {/**
         <div className="bg-white w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-0">
             <div className="mt-8 lg:mt-12 bg-transparent">
@@ -173,6 +173,8 @@ const Services: React.FC = () => {
             </div>
           </div>
         </div>
+  |     */}
+
       </div>
     </section>
   );
