@@ -223,7 +223,7 @@ const About: React.FC = () => {
                         <IconComponent className="w-5 h-5 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-bold text-gray-900 text-lg mb-2 capitalize">
+                        <h4 className="font-bold text-gray-900 text-lg mb-2">
                           {valor.title}
                         </h4>
                         <p className="text-gray-700 leading-relaxed text-sm lg:text-base">
