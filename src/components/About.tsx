@@ -63,7 +63,7 @@ const About: React.FC = () => {
                   Con más de 10 años de experiencia en kinesiología y terapia del movimiento, he dedicado mi carrera 
                   a ayudar a personas a superar limitaciones físicas y alcanzar sus objetivos de bienestar. 
                   Mi enfoque combina técnicas basadas en la evidencia con atención personalizada para abordar 
-                  las necesidades únicas de cada cliente.
+                  las necesidades únicas de cada paciente.
                 </p>
               </div>
 
@@ -87,7 +87,7 @@ const About: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <Users className="h-8 w-8 text-brand-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 text-base lg:text-lg">Centrada en el cliente</h3>
+                    <h3 className="font-semibold text-gray-900 text-base lg:text-lg">Centrada en el paciente</h3>
                     <p className="text-sm lg:text-base text-gray-600">Tratamientos y planes personalizados para cada individuo.</p>
                   </div>
                 </div>
