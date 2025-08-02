@@ -44,8 +44,8 @@ const Header: React.FC = () => {
       isScrolled ? 'bg-white/98 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 lg:h-20">
-          <div className={"relative h-16 lg:h-20"}>
+        <div className="flex justify-between items-center h-14 lg:h-16">
+          <div className="relative h-12 lg:h-14 flex-shrink-0">
             <img
               src="/img/Logo-Completo-ES-Invertido.png"
               alt="Logo Dark"
@@ -63,14 +63,14 @@ const Header: React.FC = () => {
           </div>
 
           {/* Links de escritorio */}
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 xl:space-x-12">
             {['home','about','services2','FAQ','contact'].map((id, idx) => {
               const label = ['Inicio','Acerca de','Servicios','Preguntas frecuentes','Contacto'][idx];
               return (
                 <button
                   key={id}
                   onClick={() => scrollToSection(id)}
-                  className={`${navTextColor} text-base font-semibold transition-all duration-300 relative group`}
+                  className={`${navTextColor} text-sm lg:text-base font-semibold transition-all duration-300 relative group`}
                 >
                   {label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full" />
@@ -82,7 +82,7 @@ const Header: React.FC = () => {
               href="https://wa.me/5492993277906?text=Hola%2C%20quiero%20agendar%20una%20consulta"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-brand-300 text-white px-6 py-3 rounded-full hover:bg-brand-600 transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="bg-brand-300 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full hover:bg-brand-600 transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:scale-105 text-sm lg:text-base whitespace-nowrap"
             >
               Agendar consulta
             </a>
@@ -113,6 +113,15 @@ const Header: React.FC = () => {
                   </button>
                 );
               })}
+              
+              <a
+                href="https://wa.me/5492993277906?text=Hola%2C%20quiero%20agendar%20una%20consulta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-left px-4 py-3 bg-brand-300 text-white hover:bg-brand-600 rounded-lg transition-all duration-200"
+              >
+                Agendar consulta
+              </a>
             </div>
           </div>
         )}

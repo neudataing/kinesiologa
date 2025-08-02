@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, BookOpen, Users, Target, Crosshair, Eye, HeartHandshake } from 'lucide-react';
+import { Award, BookOpen, Users, Target, Eye } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import {Heart, Shield, Lightbulb, Leaf } from 'lucide-react';
 
