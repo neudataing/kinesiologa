@@ -68,7 +68,7 @@ const Services: React.FC = () => {
   const currentServices = activeTab === 'individuals' ? individualServices : businessServices;
 
   return (
-    <section id="services2" className="py-4 lg:py-6">
+    <section id="services2" className="pt-4 lg:pt-6">
       <div className="flex flex-col">
         
         <div className="bg-gray-50 w-full">
