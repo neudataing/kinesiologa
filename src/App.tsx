@@ -7,21 +7,25 @@ import Services2 from './components/Services2';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+
 import FloatingSocialButtons from './components/FloatingSocialButtons';
 
 function App() {
+  
+
   return (
     <Router>
       <div className="min-h-screen bg-white">
         <Header />
         <main className="relative">
-          {/* Hero Section - Full viewport height */}
-            <Hero />
-            <About />
-            <Services2 />
-            <FAQ />
-            <Contact />
-            <FloatingSocialButtons />
+          {/* Secciones principales */}
+          <Hero />
+          <About />
+          <Services2 />
+          {/* Galería */}
+          <FAQ />
+          <Contact />
+          <FloatingSocialButtons />
         </main>
         <Footer />
       </div>

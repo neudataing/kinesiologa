@@ -3,45 +3,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ServiceDetails from './ServiceDetails';
 import TabButton from './TabButton';
 import { individualServices, businessServices } from '../data/servicesData';
-import { PhotoGallery } from './PhotoGallery';
+import PhotoGallery from './PhotoGallery';
 import MobileServiceCard from './MobileServiceCard';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 
-const samplePhotos = [
-  {
-    id: '1',
-    url: 'img/Eli1.jpg',
-    alt: 'Imagen 1',
-    title: 'Imagen 1'
-  },
-  {
-    id: '2',
-    url: 'img/Eli2.jpg',
-    alt: 'Imagen 2',
-    title: 'Imagen 2'
-  },
-  {
-    id: '3',
-    url: 'img/Eli3.jpg',
-    alt: 'Imagen 3',
-    title: 'Imagen 3'
-  },
-  {
-    id: '4',
-    url: 'img/Eli4.jpg',
-    alt: 'Imagen 4',
-    title: 'Imagen 4'
-  },
-  {
-    id: '5',
-    url: 'img/Eli5.jpg',
-    alt: 'Imagen 5',
-    title: 'Imagen 5'
-  }
-];
+const photos = [
+    { id: '1', url: '/img/Foto_1.jpg', alt: 'Foto 1', title: 'Primera Jornada Patagónica de Salud Ocupacional' },
+    { id: '2', url: '/img/Foto_2.jpg', alt: 'Foto 2', title: 'Primera Jornada Patagónica de Salud Ocupacional' },
+    { id: '3', url: '/img/Foto_3.jpg', alt: 'Foto 3', title: 'Primera Jornada Patagónica de Salud Ocupacional' },
+  ];
 
 type TabType = 'individuals' | 'businesses';
 
@@ -154,7 +127,7 @@ const Services: React.FC = () => {
           </div>
         </div>
 
-        {/**
+        {
         <div className="bg-white w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-0">
             <div className="mt-8 lg:mt-12 bg-transparent">
@@ -162,18 +135,18 @@ const Services: React.FC = () => {
               Mi trabajo en <span className="text-brand-300">imágenes</span>
             </h2>
               <div className="max-w-5xl mx-auto">
-                <PhotoGallery
-                  photos={samplePhotos}
-                  autoPlay={true}
-                  autoPlayInterval={8000}
-                  showDots={true}
-                  showArrows={true}
-                />
+          <PhotoGallery
+            photos={photos}
+            autoPlay
+            autoPlayInterval={5000}
+            showDots
+            showArrows
+            className="my-8"
+          />
               </div>
             </div>
           </div>
-        </div>
-  |     */}
+        </div> }
 
       </div>
     </section>
